@@ -9,7 +9,6 @@
     <title>Eko Garden Katalog</title>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
     <style>
@@ -584,290 +583,350 @@
 </div>
 
 <script>
-let allData = [];
-let cart = {}; // { id: { data, qty, imgSrc } }
-let cardImages = {}; // { id: base64 }
+// ═══════════════════════════════════════════════════
+//  DURUM DEĞİŞKENLERİ
+// ═══════════════════════════════════════════════════
+let allData    = [];   // Ham Excel satırları
+let searchIdx  = [];   // Pre-computed arama metinleri [{ id, text }]
+let parsed     = [];   // Parse edilmiş, görünüme hazır satırlar
+let filtered   = [];   // Aktif arama sonucu (veya tümü)
+let cart       = {};   // { id: { ad, fiyat, qty, imgSrc } }
+let cardImages = {};   // { id: base64 }
 
-// ── EXCEL YÜKLEME ────────────────────────────────────────
+// ── Sanal liste değişkenleri
+const PAGE = 20;       // Bir seferde render edilecek kart sayısı
+let rendered  = 0;     // Şu ana kadar render edilmiş kart sayısı
+let rendering = false; // Aynı anda iki render çakışmasın
+
+// ═══════════════════════════════════════════════════
+//  YARDIMCI FONKSİYONLAR
+// ═══════════════════════════════════════════════════
+function escHtml(s) { return String(s).replace(/&/g,'&amp;').replace(/'/g,"&#39;").replace(/</g,'&lt;'); }
+
+function findVal(row, names) {
+    const key = Object.keys(row).find(k => names.includes(k.trim().toUpperCase()));
+    return key ? String(row[key]).trim() : '-';
+}
+
+// ═══════════════════════════════════════════════════
+//  EXCEL YÜKLEME
+// ═══════════════════════════════════════════════════
 document.getElementById('excel-file').addEventListener('change', function(e) {
     const file = e.target.files[0];
     if (!file) return;
-    const reader = new FileReader();
-    reader.onload = function(e) {
-        const data = new Uint8Array(e.target.result);
-        const workbook = XLSX.read(data, {type:'array'});
-        const sheet = workbook.Sheets[workbook.SheetNames[0]];
-        allData = XLSX.utils.sheet_to_json(sheet, { range:1, defval:"" });
 
-        // Her satıra benzersiz id
-        allData.forEach((row, i) => row.__id = i);
+    const reader = new FileReader();
+    reader.onload = function(ev) {
+        const wb    = XLSX.read(new Uint8Array(ev.target.result), { type: 'array' });
+        const sheet = wb.Sheets[wb.SheetNames[0]];
+        const raw   = XLSX.utils.sheet_to_json(sheet, { range: 1, defval: '' });
+
+        // Her satıra id ata + parse et + arama indexi oluştur
+        allData   = [];
+        parsed    = [];
+        searchIdx = [];
+
+        raw.forEach((row, i) => {
+            row.__id = i;
+            const p = parseRow(row);
+            if (p.trAd === '-' && p.ltAd === '-') return;
+            allData.push(row);
+            parsed.push(p);
+            // Arama için sadece ilgili alanları birleştir (küçük harf, bir kez)
+            searchIdx.push({
+                i: parsed.length - 1,
+                t: [p.trAd, p.ltAd, p.litre, p.boy, p.cap, p.govde]
+                    .join(' ').toLocaleLowerCase('tr')
+            });
+        });
+
+        filtered = parsed.slice(); // başta hepsi göster
 
         document.getElementById('upload-box').style.display = 'none';
         document.getElementById('search-box').style.display = 'block';
-        renderCards(allData);
+
+        resetList();
     };
     reader.readAsArrayBuffer(file);
 });
 
-// ── KART RENDER ───────────────────────────────────────────
-function renderCards(data) {
-    const list = document.getElementById('catalog-list');
-    list.innerHTML = '';
-
-    data.forEach(row => {
-        const id = row.__id;
-        const findVal = (names) => {
-            const key = Object.keys(row).find(k => names.includes(k.trim().toUpperCase()));
-            return key ? row[key] : "-";
-        };
-
-        const trAd  = findVal(['TÜRKÇE AD','TURKCE AD','TÜRKÇEAD','TURKCEAD']);
-        const ltAd  = findVal(['LATİNCE AD','LATINCE AD','LATİNCEAD','LATINCEAAD']);
-        const fiyat = findVal(['FİYAT','FIYAT','FİYAT ','FIYAT ']);
-        const litre = findVal(['LİTRE','LITRE','LİTRE ']);
-        const boy   = findVal(['BOY','BOY ']);
-        const cap   = findVal(['ÇAP','CAP']);
-        const govde = findVal(['GÖVDE','GOVDE']);
-        const fotoUrl = findVal(['FOTO','FOTOĞRAF','FOTOGRAF','IMAGE','IMG','RESIM','RESİM']);
-
-        if (trAd === "-" && ltAd === "-") return;
-
-        const fiyatNum = parseFloat(String(fiyat).replace(',','.')) || 0;
-        const cartItem = cart[id];
-        const qty = cartItem ? cartItem.qty : 0;
-
-        // Görsel: kayıtlı base64 > excel url > placeholder
-        const imgSrc = cardImages[id] || (fotoUrl !== '-' && fotoUrl !== '' ? fotoUrl : null);
-        const imgHtml = imgSrc
-            ? `<img src="${imgSrc}" onerror="this.parentElement.innerHTML='<div class=card-img-placeholder><span>🌿</span></div>'">`
-            : `<div class="card-img-placeholder"><span>🌿</span><p>Fotoğraf Yok</p></div>`;
-
-        list.innerHTML += `
-        <div class="plant-card" data-id="${id}">
-            <div class="card-img-wrap">
-                ${imgHtml}
-                <div class="img-upload-overlay">
-                    <label class="img-upload-label" for="img-input-${id}">📷 Fotoğraf</label>
-                    <input type="file" id="img-input-${id}" accept="image/*" style="display:none" onchange="handleImgUpload(event, ${id})">
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="plant-title">${trAd}</div>
-                <div class="plant-latin">${ltAd}</div>
-
-                <div class="info-grid">
-                    <div class="info-item"><span class="info-label">Litre</span>${litre}</div>
-                    <div class="info-item"><span class="info-label">Boy</span>${boy}</div>
-                    <div class="info-item"><span class="info-label">Çap</span>${cap}</div>
-                    <div class="info-item"><span class="info-label">Gövde</span>${govde}</div>
-                </div>
-
-                <div class="card-footer">
-                    <div class="price-tag">${fiyatNum > 0 ? fiyatNum.toLocaleString('tr-TR') + ' <small>TL</small>' : '-'}</div>
-                    <div>
-                        ${qty > 0
-                            ? `<div class="qty-control visible" id="qty-${id}">
-                                <button class="qty-btn" onclick="changeQty(${id}, -1)">−</button>
-                                <span class="qty-num" id="qn-${id}">${qty}</span>
-                                <button class="qty-btn" onclick="changeQty(${id}, 1)">+</button>
-                               </div>`
-                            : `<button class="add-to-cart-btn" id="acb-${id}" onclick="addToCart(${id}, ${fiyatNum}, '${escHtml(trAd)}')">
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
-                                Sepete Ekle
-                               </button>`
-                        }
-                    </div>
-                </div>
-            </div>
-        </div>`;
-    });
-
-    document.getElementById('stats').innerText = data.length + " ürün listeleniyor.";
+// ── Bir satırı parse et (bir kez yapılır, tekrar edilmez)
+function parseRow(row) {
+    return {
+        id:     row.__id,
+        trAd:   findVal(row, ['TÜRKÇE AD','TURKCE AD','TÜRKÇEAD','TURKCEAD']),
+        ltAd:   findVal(row, ['LATİNCE AD','LATINCE AD','LATİNCEAD']),
+        fiyat:  findVal(row, ['FİYAT','FIYAT','FİYAT ','FIYAT ']),
+        litre:  findVal(row, ['LİTRE','LITRE','LİTRE ']),
+        boy:    findVal(row, ['BOY','BOY ']),
+        cap:    findVal(row, ['ÇAP','CAP']),
+        govde:  findVal(row, ['GÖVDE','GOVDE']),
+        foto:   findVal(row, ['FOTO','FOTOĞRAF','FOTOGRAF','IMAGE','IMG','RESIM','RESİM']),
+        fiyatNum: parseFloat(findVal(row, ['FİYAT','FIYAT','FİYAT ','FIYAT ']).replace(',','.')) || 0
+    };
 }
 
-function escHtml(s) { return String(s).replace(/'/g,"&#39;"); }
+// ═══════════════════════════════════════════════════
+//  VİRTÜEL LİSTE — sadece görüneni yaz
+// ═══════════════════════════════════════════════════
+function resetList() {
+    rendered = 0;
+    document.getElementById('catalog-list').innerHTML = '';
+    document.getElementById('stats').textContent = filtered.length + ' ürün listeleniyor.';
+    appendCards(); // ilk sayfayı yaz
+}
 
-// ── FOTOĞRAF YÜKLEME ─────────────────────────────────────
+function appendCards() {
+    if (rendering) return;
+    rendering = true;
+
+    const list  = document.getElementById('catalog-list');
+    const batch = filtered.slice(rendered, rendered + PAGE);
+    if (!batch.length) { rendering = false; return; }
+
+    // DocumentFragment ile tek seferde DOM'a ekle
+    const frag = document.createDocumentFragment();
+    batch.forEach(p => {
+        const el = buildCard(p);
+        frag.appendChild(el);
+    });
+    list.appendChild(frag);
+
+    rendered  += batch.length;
+    rendering  = false;
+}
+
+// Scroll sonu yaklaşınca daha fazla yükle
+window.addEventListener('scroll', () => {
+    if (rendered >= filtered.length) return;
+    const distToBottom = document.documentElement.scrollHeight - window.scrollY - window.innerHeight;
+    if (distToBottom < 300) appendCards();
+}, { passive: true });
+
+// ═══════════════════════════════════════════════════
+//  KART OLUŞTUR (DOM element döner, string değil)
+// ═══════════════════════════════════════════════════
+function buildCard(p) {
+    const { id, trAd, ltAd, litre, boy, cap, govde, fiyatNum, foto } = p;
+    const qty    = cart[id] ? cart[id].qty : 0;
+    const imgSrc = cardImages[id] || (foto && foto !== '-' ? foto : null);
+
+    const card = document.createElement('div');
+    card.className = 'plant-card';
+    card.dataset.id = id;
+
+    // Görsel
+    const imgWrap = document.createElement('div');
+    imgWrap.className = 'card-img-wrap';
+    if (imgSrc) {
+        const img = document.createElement('img');
+        img.src = imgSrc;
+        img.loading = 'lazy'; // Lazy load — kritik performans kazanımı
+        img.onerror = () => { imgWrap.innerHTML = '<div class="card-img-placeholder"><span>🌿</span></div>'; addImgOverlay(imgWrap, id); };
+        imgWrap.appendChild(img);
+    } else {
+        imgWrap.innerHTML = '<div class="card-img-placeholder"><span>🌿</span><p>Fotoğraf Yok</p></div>';
+    }
+    addImgOverlay(imgWrap, id);
+    card.appendChild(imgWrap);
+
+    // Gövde
+    const body = document.createElement('div');
+    body.className = 'card-body';
+    body.innerHTML = `
+        <div class="plant-title">${escHtml(trAd)}</div>
+        <div class="plant-latin">${escHtml(ltAd)}</div>
+        <div class="info-grid">
+            <div class="info-item"><span class="info-label">Litre</span>${escHtml(litre)}</div>
+            <div class="info-item"><span class="info-label">Boy</span>${escHtml(boy)}</div>
+            <div class="info-item"><span class="info-label">Çap</span>${escHtml(cap)}</div>
+            <div class="info-item"><span class="info-label">Gövde</span>${escHtml(govde)}</div>
+        </div>
+        <div class="card-footer">
+            <div class="price-tag">${fiyatNum > 0 ? fiyatNum.toLocaleString('tr-TR') + ' <small>TL</small>' : '-'}</div>
+            <div id="cart-ctrl-${id}">${buildCartCtrl(id, fiyatNum, trAd, qty)}</div>
+        </div>`;
+    card.appendChild(body);
+    return card;
+}
+
+function addImgOverlay(wrap, id) {
+    const ov  = document.createElement('div');
+    ov.className = 'img-upload-overlay';
+    ov.innerHTML = `<label class="img-upload-label" for="img-input-${id}">📷 Fotoğraf</label>
+        <input type="file" id="img-input-${id}" accept="image/*" style="display:none">`;
+    ov.querySelector('input').addEventListener('change', ev => handleImgUpload(ev, id));
+    wrap.appendChild(ov);
+}
+
+function buildCartCtrl(id, fiyatNum, trAd, qty) {
+    if (qty > 0) {
+        return `<div class="qty-control visible" id="qty-${id}">
+            <button class="qty-btn" onclick="changeQty(${id},-1)">−</button>
+            <span class="qty-num" id="qn-${id}">${qty}</span>
+            <button class="qty-btn" onclick="changeQty(${id},1)">+</button>
+        </div>`;
+    }
+    return `<button class="add-to-cart-btn" id="acb-${id}" onclick="addToCart(${id},${fiyatNum},'${escHtml(trAd)}')">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+        Sepete Ekle
+    </button>`;
+}
+
+// ═══════════════════════════════════════════════════
+//  FOTOĞRAF YÜKLEME
+// ═══════════════════════════════════════════════════
 function handleImgUpload(event, id) {
     const file = event.target.files[0];
     if (!file) return;
     const reader = new FileReader();
     reader.onload = function(e) {
         cardImages[id] = e.target.result;
-        // Karttaki görseli güncelle
         const wrap = document.querySelector(`.plant-card[data-id="${id}"] .card-img-wrap`);
         if (wrap) {
-            const overlay = wrap.querySelector('.img-upload-overlay');
-            wrap.innerHTML = `<img src="${e.target.result}">`;
-            wrap.appendChild(overlay || document.createElement('div'));
+            const ov = wrap.querySelector('.img-upload-overlay');
+            wrap.innerHTML = `<img src="${e.target.result}" loading="lazy">`;
+            if (ov) wrap.appendChild(ov);
         }
-        // Sepette de güncelle
-        if (cart[id]) {
-            cart[id].imgSrc = e.target.result;
-            renderCartPanel();
-        }
-        showToast("📷 Fotoğraf eklendi!");
+        if (cart[id]) { cart[id].imgSrc = e.target.result; renderCartPanel(); }
+        showToast('📷 Fotoğraf eklendi!');
     };
     reader.readAsDataURL(file);
 }
 
-// ── SEPET ─────────────────────────────────────────────────
-function addToCart(id, fiyat, ad) {
-    if (!cart[id]) {
-        cart[id] = { id, ad, fiyat, qty: 1, imgSrc: cardImages[id] || null };
+// ═══════════════════════════════════════════════════
+//  ARAMA — debounce + pre-index
+// ═══════════════════════════════════════════════════
+let debounceTimer = null;
+
+document.getElementById('search-input').addEventListener('input', function(e) {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(() => doSearch(e.target.value), 280);
+});
+
+function doSearch(val) {
+    const term = val.toLocaleLowerCase('tr').trim();
+    if (!term) {
+        filtered = parsed.slice();
     } else {
-        cart[id].qty++;
+        // searchIdx üzerinden O(n) — nesne birleştirme yok, join yok
+        const hits = new Set();
+        searchIdx.forEach(s => { if (s.t.includes(term)) hits.add(s.i); });
+        filtered = [...hits].map(i => parsed[i]);
     }
-    // Kartı qty kontrolüne çevir
-    const acb = document.getElementById(`acb-${id}`);
-    if (acb) {
-        acb.outerHTML = `<div class="qty-control visible" id="qty-${id}">
-            <button class="qty-btn" onclick="changeQty(${id}, -1)">−</button>
-            <span class="qty-num" id="qn-${id}">${cart[id].qty}</span>
-            <button class="qty-btn" onclick="changeQty(${id}, 1)">+</button>
-        </div>`;
-    }
+    resetList();
+}
+
+// ═══════════════════════════════════════════════════
+//  SEPET
+// ═══════════════════════════════════════════════════
+function addToCart(id, fiyat, ad) {
+    if (!cart[id]) cart[id] = { id, ad, fiyat, qty: 0, imgSrc: cardImages[id] || null };
+    cart[id].qty++;
+    const ctrl = document.getElementById(`cart-ctrl-${id}`);
+    if (ctrl) ctrl.innerHTML = buildCartCtrl(id, fiyat, ad, cart[id].qty);
     updateCartBadge();
-    showToast("✅ Sepete eklendi");
+    showToast('✅ Sepete eklendi');
 }
 
 function changeQty(id, delta) {
     if (!cart[id]) return;
     cart[id].qty += delta;
+    const p = parsed.find(r => r.id == id);
     if (cart[id].qty <= 0) {
         delete cart[id];
-        const qc = document.getElementById(`qty-${id}`);
-        const fiyat = allData.find(r => r.__id == id);
-        const fiyatNum = fiyat ? (parseFloat(String(fiyat[Object.keys(fiyat).find(k => ['FİYAT','FIYAT'].includes(k.trim().toUpperCase()))] || '0').replace(',','.')) || 0) : 0;
-        const trAd = fiyat ? (fiyat[Object.keys(fiyat).find(k => ['TÜRKÇE AD','TURKCE AD'].includes(k.trim().toUpperCase()))] || '') : '';
-        if (qc) {
-            qc.outerHTML = `<button class="add-to-cart-btn" id="acb-${id}" onclick="addToCart(${id}, ${fiyatNum}, '${escHtml(trAd)}')">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
-                Sepete Ekle
-            </button>`;
-        }
+        const ctrl = document.getElementById(`cart-ctrl-${id}`);
+        if (ctrl && p) ctrl.innerHTML = buildCartCtrl(id, p.fiyatNum, p.trAd, 0);
     } else {
         const qn = document.getElementById(`qn-${id}`);
         if (qn) qn.textContent = cart[id].qty;
     }
     updateCartBadge();
-    renderCartPanel();
+    if (document.getElementById('cart-panel').classList.contains('open')) renderCartPanel();
 }
 
 function updateCartBadge() {
     const total = Object.values(cart).reduce((a, c) => a + c.qty, 0);
     const badge = document.getElementById('cart-badge');
     badge.style.display = total > 0 ? 'flex' : 'none';
-    badge.textContent = total;
+    badge.textContent   = total;
 }
 
 function renderCartPanel() {
     const container = document.getElementById('cart-items');
     const items = Object.values(cart);
-
-    if (items.length === 0) {
-        container.innerHTML = `<div class="cart-empty"><span>🌱</span>Sepetiniz boş</div>`;
+    if (!items.length) {
+        container.innerHTML = '<div class="cart-empty"><span>🌱</span>Sepetiniz boş</div>';
         document.getElementById('cart-total').textContent = '0 TL';
         return;
     }
-
-    let total = 0;
-    let html = '';
-
+    let total = 0, html = '';
     items.forEach(item => {
-        const subtotal = item.fiyat * item.qty;
-        total += subtotal;
-        const imgHtml = item.imgSrc
-            ? `<img src="${item.imgSrc}">`
-            : '🌿';
-        html += `
-        <div class="cart-item">
-            <div class="ci-img">${imgHtml}</div>
+        const sub = item.fiyat * item.qty;
+        total += sub;
+        html += `<div class="cart-item">
+            <div class="ci-img">${item.imgSrc ? `<img src="${item.imgSrc}">` : '🌿'}</div>
             <div class="ci-info">
-                <div class="ci-name">${item.ad}</div>
+                <div class="ci-name">${escHtml(item.ad)}</div>
                 <div class="ci-price">${item.qty} × ${item.fiyat.toLocaleString('tr-TR')} TL</div>
             </div>
             <div class="ci-right">
-                <div class="ci-total">${subtotal.toLocaleString('tr-TR')} TL</div>
-                <button class="ci-remove" onclick="changeQty(${item.id}, -${item.qty})">🗑</button>
+                <div class="ci-total">${sub.toLocaleString('tr-TR')} TL</div>
+                <button class="ci-remove" onclick="changeQty(${item.id},-${item.qty})">🗑</button>
             </div>
         </div>`;
     });
-
     container.innerHTML = html;
     document.getElementById('cart-total').textContent = total.toLocaleString('tr-TR') + ' TL';
 }
 
 function toggleCart() {
-    const panel = document.getElementById('cart-panel');
-    const ov = document.getElementById('overlay');
     renderCartPanel();
-    panel.classList.toggle('open');
-    ov.classList.toggle('show');
+    document.getElementById('cart-panel').classList.toggle('open');
+    document.getElementById('overlay').classList.toggle('show');
 }
-
 function closeCart() {
     document.getElementById('cart-panel').classList.remove('open');
     document.getElementById('overlay').classList.remove('show');
 }
-
 function clearCart() {
+    const ids = Object.keys(cart);
     cart = {};
+    ids.forEach(id => {
+        const p = parsed.find(r => r.id == id);
+        const ctrl = document.getElementById(`cart-ctrl-${id}`);
+        if (ctrl && p) ctrl.innerHTML = buildCartCtrl(id, p.fiyatNum, p.trAd, 0);
+    });
     updateCartBadge();
     renderCartPanel();
-    // Tüm kartlardaki qty'leri sıfırla
-    allData.forEach(row => {
-        const id = row.__id;
-        const qc = document.getElementById(`qty-${id}`);
-        if (qc) {
-            const fiyat = parseFloat(String(row[Object.keys(row).find(k => ['FİYAT','FIYAT'].includes(k.trim().toUpperCase()))] || '0').replace(',','.')) || 0;
-            const trAd = row[Object.keys(row).find(k => ['TÜRKÇE AD','TURKCE AD'].includes(k.trim().toUpperCase()))] || '';
-            qc.outerHTML = `<button class="add-to-cart-btn" id="acb-${id}" onclick="addToCart(${id}, ${fiyat}, '${escHtml(trAd)}')">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
-                Sepete Ekle
-            </button>`;
-        }
-    });
-    showToast("🗑 Sepet temizlendi");
+    showToast('🗑 Sepet temizlendi');
 }
 
 function buildCartText() {
     const items = Object.values(cart);
     if (!items.length) return '';
-    let text = '🌿 *Eko Garden Sipariş*\n\n';
-    let total = 0;
+    let text = '🌿 *Eko Garden Sipariş*\n\n', total = 0;
     items.forEach(item => {
         const sub = item.fiyat * item.qty;
         total += sub;
         text += `• ${item.ad} × ${item.qty} = ${sub.toLocaleString('tr-TR')} TL\n`;
     });
-    text += `\n💰 *Toplam: ${total.toLocaleString('tr-TR')} TL*`;
-    return text;
+    return text + `\n💰 *Toplam: ${total.toLocaleString('tr-TR')} TL*`;
 }
-
 function shareWhatsApp() {
-    const text = buildCartText();
-    if (!text) { showToast("Sepetiniz boş!"); return; }
-    window.open('https://wa.me/?text=' + encodeURIComponent(text));
+    const t = buildCartText();
+    if (!t) { showToast('Sepetiniz boş!'); return; }
+    window.open('https://wa.me/?text=' + encodeURIComponent(t));
 }
-
 function copyCart() {
-    const text = buildCartText();
-    if (!text) { showToast("Sepetiniz boş!"); return; }
-    navigator.clipboard.writeText(text).then(() => showToast("📋 Kopyalandı!")).catch(() => showToast("Kopyalanamadı"));
+    const t = buildCartText();
+    if (!t) { showToast('Sepetiniz boş!'); return; }
+    navigator.clipboard.writeText(t).then(() => showToast('📋 Kopyalandı!')).catch(() => showToast('Kopyalanamadı'));
 }
 
-// ── ARAMA ─────────────────────────────────────────────────
-document.getElementById('search-input').addEventListener('input', function(e) {
-    const term = e.target.value.toLocaleLowerCase('tr');
-    const filtered = allData.filter(row => {
-        const text = Object.values(row).join(' ').toLocaleLowerCase('tr');
-        return text.includes(term);
-    });
-    renderCards(filtered);
-});
-
-// ── TOAST ─────────────────────────────────────────────────
+// ═══════════════════════════════════════════════════
+//  TOAST
+// ═══════════════════════════════════════════════════
 function showToast(msg) {
     const t = document.getElementById('toast');
     t.textContent = msg;
