@@ -7,6 +7,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="#1b5e20">
     <title>Eko Garden Katalog</title>
+    <link rel="manifest" href="manifest.json">
+    <!-- iOS -->
+    <meta name="apple-mobile-web-app-title" content="Eko Garden">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <!-- Android Chrome otomatik manifest okur -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
@@ -1111,5 +1116,10 @@ function showToast(msg) {
 }
 </script>
 
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
+  </script>
 </body>
 </html>
