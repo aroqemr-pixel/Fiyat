@@ -1,8 +1,9 @@
 {
   "name": "Eko Garden Katalog",
   "short_name": "Eko Garden",
+  "scope": "/Fiyat/",
   "description": "Eko Garden bitki fiyat katalogu",
-  "start_url": "/",
+  "start_url": "/Fiyat/",
   "display": "standalone",
   "background_color": "#1b5e20",
   "theme_color": "#1b5e20",
