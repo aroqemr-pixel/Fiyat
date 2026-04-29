@@ -31,12 +31,15 @@
             font-family: 'Nunito', sans-serif;
             background: var(--bg);
             color: var(--text);
+            padding-top: 72px;
             padding-bottom: 100px;
         }
 
         /* ── HEADER ─────────────────────────────────── */
         .sticky-header {
-            position: sticky;
+            position: fixed;
+            left: 0;
+            right: 0;
             top: 0;
             z-index: 200;
             background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
@@ -154,6 +157,48 @@
             transition: border 0.2s;
         }
         #search-input:focus { border-color: var(--primary-light); }
+
+        /* ── EXPORT/IMPORT ───────────────────────────── */
+        .transfer-bar {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+        .btn-export {
+            flex: 1;
+            background: linear-gradient(135deg, #1565c0, #0d47a1);
+            color: white;
+            border: none;
+            border-radius: 14px;
+            padding: 13px 10px;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 800;
+            font-size: 14px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            box-shadow: 0 3px 8px rgba(13,71,161,0.3);
+        }
+        .btn-import {
+            flex: 1;
+            background: linear-gradient(135deg, #6a1b9a, #4a148c);
+            color: white;
+            border: none;
+            border-radius: 14px;
+            padding: 13px 10px;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 800;
+            font-size: 14px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            box-shadow: 0 3px 8px rgba(74,20,140,0.3);
+        }
+        .btn-export:active, .btn-import:active { transform: scale(0.95); }
 
         #stats {
             text-align: center;
@@ -572,11 +617,26 @@
         <input type="file" id="excel-file" accept=".xlsx, .xls, .csv" />
         <p>Dosyayı seçtiğinizde ürünler listelenir.</p>
         <p style="margin-top:6px; font-size:11px; color:#aaa;">Excel'de FOTO sütunu varsa otomatik yüklenir</p>
+        <div style="margin-top:16px; border-top:1px dashed #ddd; padding-top:14px;">
+            <p style="font-size:12px; color:#888; margin-bottom:10px;">📲 Başka telefondan aktardıysan:</p>
+            <label for="json-import-file" class="btn-import" style="display:inline-flex; border-radius:25px; padding:11px 20px; cursor:pointer;">
+                📥 Yedek Dosyası Yükle (.json)
+            </label>
+            <input type="file" id="json-import-file" accept=".json" style="display:none" />
+        </div>
     </div>
 
     <div class="search-container" id="search-box" style="display:none;">
         <input type="text" id="search-input" placeholder="🔍 Bitki adı veya özellik ara...">
-        <div id="stats"></div>
+        <div id="stats" style="display:flex;align-items:center;justify-content:center;gap:10px;">
+            <span id="stats-text"></span>
+            <button onclick="clearSavedData()" style="background:none;border:none;font-size:11px;color:#bbb;cursor:pointer;text-decoration:underline;font-family:inherit;">veriyi sil</button>
+        </div>
+        <div class="transfer-bar">
+            <button class="btn-export" onclick="exportJSON()">📤 Yedekle & Aktar</button>
+            <label for="json-import-file2" class="btn-import">📥 Yedek Yükle</label>
+            <input type="file" id="json-import-file2" accept=".json" style="display:none" />
+        </div>
     </div>
 
     <div id="catalog-list"></div>
@@ -597,6 +657,51 @@ let cardImages = {};   // { id: base64 }
 const PAGE = 20;       // Bir seferde render edilecek kart sayısı
 let rendered  = 0;     // Şu ana kadar render edilmiş kart sayısı
 let rendering = false; // Aynı anda iki render çakışmasın
+
+// ═══════════════════════════════════════════════════
+//  LOCAL STORAGE — veri telefonda kalıcı saklansın
+// ═══════════════════════════════════════════════════
+const LS_DATA   = 'ekg_parsed';
+const LS_IMGS   = 'ekg_images';
+const LS_SEARCH = 'ekg_search';
+
+function lsSave() {
+    try {
+        localStorage.setItem(LS_DATA, JSON.stringify(parsed));
+        localStorage.setItem(LS_IMGS, JSON.stringify(cardImages));
+    } catch(e) {
+        // Storage dolu olabilir (fotoğraflar büyük yer tutar)
+        try { localStorage.setItem(LS_DATA, JSON.stringify(parsed)); } catch(_) {}
+    }
+}
+
+function lsLoad() {
+    try {
+        const d = localStorage.getItem(LS_DATA);
+        const i = localStorage.getItem(LS_IMGS);
+        if (!d) return false;
+        parsed     = JSON.parse(d);
+        cardImages = i ? JSON.parse(i) : {};
+        // searchIdx'i yeniden oluştur
+        searchIdx  = parsed.map((p, idx) => ({
+            i: idx,
+            t: [p.trAd, p.ltAd, p.litre, p.boy, p.cap, p.govde]
+                .join(' ').toLocaleLowerCase('tr')
+        }));
+        filtered = parsed.slice();
+        return true;
+    } catch(e) { return false; }
+}
+
+function clearSavedData() {
+    localStorage.removeItem(LS_DATA);
+    localStorage.removeItem(LS_IMGS);
+    parsed = []; searchIdx = []; filtered = []; cardImages = {};
+    document.getElementById('upload-box').style.display = 'block';
+    document.getElementById('search-box').style.display = 'none';
+    document.getElementById('catalog-list').innerHTML = '';
+    showToast('🗑 Kayıtlı veri silindi');
+}
 
 // ═══════════════════════════════════════════════════
 //  YARDIMCI FONKSİYONLAR
@@ -642,6 +747,8 @@ document.getElementById('excel-file').addEventListener('change', function(e) {
 
         filtered = parsed.slice(); // başta hepsi göster
 
+        lsSave(); // Telefona kaydet
+
         document.getElementById('upload-box').style.display = 'none';
         document.getElementById('search-box').style.display = 'block';
 
@@ -672,7 +779,7 @@ function parseRow(row) {
 function resetList() {
     rendered = 0;
     document.getElementById('catalog-list').innerHTML = '';
-    document.getElementById('stats').textContent = filtered.length + ' ürün listeleniyor.';
+    const st = document.getElementById('stats-text'); if(st) st.textContent = filtered.length + ' ürün listeleniyor.';
     appendCards(); // ilk sayfayı yaz
 }
 
@@ -789,6 +896,7 @@ function handleImgUpload(event, id) {
             if (ov) wrap.appendChild(ov);
         }
         if (cart[id]) { cart[id].imgSrc = e.target.result; renderCartPanel(); }
+        lsSave(); // Fotoğrafı kaydet
         showToast('📷 Fotoğraf eklendi!');
     };
     reader.readAsDataURL(file);
@@ -927,6 +1035,74 @@ function copyCart() {
 // ═══════════════════════════════════════════════════
 //  TOAST
 // ═══════════════════════════════════════════════════
+// ═══════════════════════════════════════════════════
+//  DIŞA / İÇE AKTAR
+// ═══════════════════════════════════════════════════
+
+function exportJSON() {
+    if (!parsed.length) { showToast('Önce Excel yükleyin!'); return; }
+    showToast('⏳ Hazırlanıyor...');
+    // Küçük gecikme: toast görünsün, sonra ağır iş başlasın
+    setTimeout(() => {
+        const payload = JSON.stringify({ v: 1, parsed, cardImages });
+        const blob    = new Blob([payload], { type: 'application/json' });
+        const url     = URL.createObjectURL(blob);
+        const a       = document.createElement('a');
+        a.href        = url;
+        a.download    = 'ekogardenkatolog_yedek_' + new Date().toISOString().slice(0,10) + '.json';
+        a.click();
+        URL.revokeObjectURL(url);
+        showToast('✅ Yedek dosyası indirildi!');
+    }, 100);
+}
+
+function handleJSONImport(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(ev) {
+        try {
+            const data = JSON.parse(ev.target.result);
+            if (!data.parsed || !Array.isArray(data.parsed)) throw new Error('Geçersiz dosya');
+            parsed     = data.parsed;
+            cardImages = data.cardImages || {};
+            // searchIdx yeniden oluştur
+            searchIdx  = parsed.map((p, idx) => ({
+                i: idx,
+                t: [p.trAd, p.ltAd, p.litre, p.boy, p.cap, p.govde]
+                    .join(' ').toLocaleLowerCase('tr')
+            }));
+            filtered = parsed.slice();
+            lsSave();
+            document.getElementById('upload-box').style.display  = 'none';
+            document.getElementById('search-box').style.display  = 'block';
+            resetList();
+            showToast('✅ ' + parsed.length + ' ürün + fotoğraflar yüklendi!');
+        } catch(err) {
+            showToast('❌ Dosya okunamadı: ' + err.message);
+        }
+    };
+    reader.readAsText(file);
+}
+
+// Her iki import inputunu dinle
+['json-import-file','json-import-file2'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('change', handleJSONImport);
+});
+
+// ═══════════════════════════════════════════════════
+//  SAYFA AÇILIŞI — kayıtlı veri varsa direkt yükle
+// ═══════════════════════════════════════════════════
+(function boot() {
+    if (lsLoad()) {
+        document.getElementById('upload-box').style.display = 'none';
+        document.getElementById('search-box').style.display = 'block';
+        resetList();
+        showToast('✅ Katalog yüklendi (' + parsed.length + ' ürün)');
+    }
+})();
+
 function showToast(msg) {
     const t = document.getElementById('toast');
     t.textContent = msg;
