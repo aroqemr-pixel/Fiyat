@@ -8,12 +8,8 @@
     <meta name="theme-color" content="#1b5e20">
     <title>Eko Garden Katalog</title>
     <link rel="manifest" href="manifest.json">
-    <!-- iOS -->
     <meta name="apple-mobile-web-app-title" content="Eko Garden">
     <link rel="apple-touch-icon" href="icon-192.png">
-    <!-- Android Chrome otomatik manifest okur -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
     <style>
@@ -40,522 +36,163 @@
             padding-bottom: 100px;
         }
 
-        /* ── HEADER ─────────────────────────────────── */
         .sticky-header {
-            position: fixed;
-            left: 0;
-            right: 0;
-            top: 0;
-            z-index: 200;
+            position: fixed; left: 0; right: 0; top: 0; z-index: 200;
             background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
             padding: 12px 16px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            display: flex; align-items: center; justify-content: space-between;
             box-shadow: 0 3px 12px rgba(0,0,0,0.25);
         }
-
-        .logo-wrap {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
+        .logo-wrap { display: flex; align-items: center; gap: 10px; }
         .logo-icon {
-            width: 44px;
-            height: 44px;
+            width: 44px; height: 44px;
             background: rgba(255,255,255,0.15);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            border-radius: 12px; display: flex; align-items: center; justify-content: center;
             border: 2px solid rgba(255,255,255,0.3);
         }
+        .logo-text h1 { font-size: 18px; font-weight: 900; color: white; letter-spacing: -0.3px; line-height: 1.1; }
+        .logo-text span { font-size: 10px; color: var(--primary-light); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
 
-        .logo-text h1 {
-            font-size: 18px;
-            font-weight: 900;
-            color: white;
-            letter-spacing: -0.3px;
-            line-height: 1.1;
-        }
-
-        .logo-text span {
-            font-size: 10px;
-            color: var(--primary-light);
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        /* Sepet Butonu (Header) */
         .cart-btn-header {
             position: relative;
-            background: rgba(255,255,255,0.2);
-            border: 2px solid rgba(255,255,255,0.4);
-            border-radius: 12px;
-            width: 48px;
-            height: 48px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.2s;
+            background: rgba(255,255,255,0.2); border: 2px solid rgba(255,255,255,0.4);
+            border-radius: 12px; width: 48px; height: 48px;
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer; transition: all 0.2s;
         }
         .cart-btn-header:active { transform: scale(0.92); }
         .cart-badge {
-            position: absolute;
-            top: -6px;
-            right: -6px;
-            background: var(--accent);
-            color: white;
-            font-size: 11px;
-            font-weight: 800;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            display: none;
+            position: absolute; top: -6px; right: -6px;
+            background: var(--accent); color: white;
+            font-size: 11px; font-weight: 800;
+            width: 20px; height: 20px; border-radius: 50%;
+            display: none; align-items: center; justify-content: center;
         }
 
-        /* ── CONTAINER ───────────────────────────────── */
         .container { padding: 14px; }
 
-        /* ── UPLOAD ──────────────────────────────────── */
-        .upload-card {
-            background: white;
-            padding: 28px 20px;
-            border-radius: 18px;
-            text-align: center;
-            margin-bottom: 16px;
-            border: 2px dashed var(--primary-light);
+        .loading-card {
+            background: white; padding: 40px 20px; border-radius: 18px;
+            text-align: center; margin-bottom: 16px;
+            border: 2px solid #e8f5e9;
         }
-        .upload-card p { font-size: 13px; color: var(--text-light); margin-top: 10px; }
-
-        #excel-file { display: none; }
-        .btn-upload {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
-            padding: 14px 24px;
-            border-radius: 30px;
-            font-weight: 800;
-            font-size: 15px;
-            display: inline-block;
-            box-shadow: 0 4px 12px rgba(46,125,50,0.4);
-            cursor: pointer;
+        .loading-card p { font-size: 14px; color: var(--text-light); margin-top: 12px; font-weight: 600; }
+        .spinner {
+            width: 40px; height: 40px; margin: 0 auto;
+            border: 4px solid var(--primary-light);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
         }
+        @keyframes spin { to { transform: rotate(360deg); } }
 
-        /* ── SEARCH ──────────────────────────────────── */
         .search-container { margin-bottom: 14px; }
         #search-input {
-            width: 100%;
-            padding: 14px 20px;
-            border-radius: 30px;
-            border: 2px solid transparent;
-            background: white;
-            font-family: 'Nunito', sans-serif;
-            font-size: 16px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-            outline: none;
-            transition: border 0.2s;
+            width: 100%; padding: 14px 20px; border-radius: 30px;
+            border: 2px solid transparent; background: white;
+            font-family: 'Nunito', sans-serif; font-size: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07); outline: none; transition: border 0.2s;
         }
         #search-input:focus { border-color: var(--primary-light); }
 
-        /* ── EXPORT/IMPORT ───────────────────────────── */
-        .transfer-bar {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 14px;
-        }
-        .btn-export {
-            flex: 1;
-            background: linear-gradient(135deg, #1565c0, #0d47a1);
-            color: white;
-            border: none;
-            border-radius: 14px;
-            padding: 13px 10px;
-            font-family: 'Nunito', sans-serif;
-            font-weight: 800;
-            font-size: 14px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            box-shadow: 0 3px 8px rgba(13,71,161,0.3);
-        }
-        .btn-import {
-            flex: 1;
-            background: linear-gradient(135deg, #6a1b9a, #4a148c);
-            color: white;
-            border: none;
-            border-radius: 14px;
-            padding: 13px 10px;
-            font-family: 'Nunito', sans-serif;
-            font-weight: 800;
-            font-size: 14px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            box-shadow: 0 3px 8px rgba(74,20,140,0.3);
-        }
-        .btn-export:active, .btn-import:active { transform: scale(0.95); }
+        #stats { text-align: center; font-size: 12px; color: var(--text-light); margin-top: 8px; font-weight: 600; }
 
-        #stats {
-            text-align: center;
-            font-size: 12px;
-            color: var(--text-light);
-            margin-top: 8px;
-            font-weight: 600;
-        }
-
-        /* ── PLANT CARD ──────────────────────────────── */
         .plant-card {
-            background: white;
-            border-radius: 16px;
-            margin-bottom: 14px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-            overflow: hidden;
-            border: 1px solid #e8f5e9;
+            background: white; border-radius: 16px; margin-bottom: 14px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06); overflow: hidden; border: 1px solid #e8f5e9;
         }
-
         .card-img-wrap {
-            width: 100%;
-            height: 180px;
+            width: 100%; height: 180px;
             background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
-            overflow: hidden;
-            position: relative;
+            overflow: hidden; position: relative;
         }
-        .card-img-wrap img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+        .card-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
         .card-img-placeholder {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            color: var(--primary);
+            width: 100%; height: 100%;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            gap: 6px; color: var(--primary);
         }
         .card-img-placeholder span { font-size: 38px; }
         .card-img-placeholder p { font-size: 11px; color: var(--text-light); font-weight: 600; }
 
-        /* Fotoğraf Yükleme Overlay */
-        .img-upload-overlay {
-            position: absolute;
-            bottom: 8px;
-            right: 8px;
-        }
-        .img-upload-label {
-            background: rgba(0,0,0,0.55);
-            color: white;
-            border-radius: 20px;
-            padding: 6px 12px;
-            font-size: 12px;
-            font-weight: 700;
-            cursor: pointer;
-            backdrop-filter: blur(4px);
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-
         .card-body { padding: 14px; }
-
         .plant-title { font-weight: 900; font-size: 17px; color: var(--primary-dark); line-height: 1.2; }
         .plant-latin { font-style: italic; color: var(--text-light); font-size: 13px; margin-top: 3px; }
 
         .info-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8px;
-            margin-top: 12px;
-            background: #f9fbf9;
-            padding: 10px;
-            border-radius: 10px;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+            margin-top: 12px; background: #f9fbf9; padding: 10px; border-radius: 10px;
         }
         .info-item { font-size: 13px; color: #444; }
-        .info-label {
-            font-weight: 700;
-            color: #999;
-            font-size: 10px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            display: block;
-            margin-bottom: 1px;
-        }
+        .info-label { font-weight: 700; color: #999; font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; display: block; margin-bottom: 1px; }
 
-        .card-footer {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-top: 12px;
-        }
-
-        .price-tag {
-            font-size: 22px;
-            font-weight: 900;
-            color: var(--red);
-        }
+        .card-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 12px; }
+        .price-tag { font-size: 22px; font-weight: 900; color: var(--red); }
         .price-tag small { font-size: 14px; font-weight: 700; }
 
-        /* Sepete Ekle */
         .add-to-cart-btn {
             background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: white;
-            border: none;
-            border-radius: 24px;
-            padding: 10px 18px;
-            font-family: 'Nunito', sans-serif;
-            font-weight: 800;
-            font-size: 14px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            box-shadow: 0 3px 8px rgba(46,125,50,0.35);
-            transition: all 0.15s;
+            color: white; border: none; border-radius: 24px; padding: 10px 18px;
+            font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 14px;
+            cursor: pointer; display: flex; align-items: center; gap: 6px;
+            box-shadow: 0 3px 8px rgba(46,125,50,0.35); transition: all 0.15s;
         }
         .add-to-cart-btn:active { transform: scale(0.94); }
-        .add-to-cart-btn.in-cart {
-            background: linear-gradient(135deg, var(--accent), #e65100);
-            box-shadow: 0 3px 8px rgba(255,111,0,0.35);
-        }
 
-        /* Miktar Kontrolü */
-        .qty-control {
-            display: none;
-            align-items: center;
-            gap: 0;
-            background: #f1f5f0;
-            border-radius: 24px;
-            overflow: hidden;
-        }
+        .qty-control { display: none; align-items: center; background: #f1f5f0; border-radius: 24px; overflow: hidden; }
         .qty-control.visible { display: flex; }
-        .qty-btn {
-            background: none;
-            border: none;
-            width: 36px;
-            height: 36px;
-            font-size: 20px;
-            font-weight: 900;
-            color: var(--primary);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .qty-num {
-            font-weight: 900;
-            font-size: 16px;
-            min-width: 28px;
-            text-align: center;
-            color: var(--primary-dark);
-        }
+        .qty-btn { background: none; border: none; width: 36px; height: 36px; font-size: 20px; font-weight: 900; color: var(--primary); cursor: pointer; display: flex; align-items: center; justify-content: center; }
+        .qty-num { font-weight: 900; font-size: 16px; min-width: 28px; text-align: center; color: var(--primary-dark); }
 
-        /* ── SEPETİ GÖR PANEL ────────────────────────── */
         .cart-panel {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            z-index: 300;
-            background: white;
-            border-radius: 24px 24px 0 0;
+            position: fixed; bottom: 0; left: 0; right: 0; z-index: 300;
+            background: white; border-radius: 24px 24px 0 0;
             box-shadow: 0 -8px 30px rgba(0,0,0,0.2);
-            transform: translateY(100%);
-            transition: transform 0.35s cubic-bezier(.32,.72,0,1);
-            max-height: 85vh;
-            display: flex;
-            flex-direction: column;
+            transform: translateY(100%); transition: transform 0.35s cubic-bezier(.32,.72,0,1);
+            max-height: 85vh; display: flex; flex-direction: column;
         }
         .cart-panel.open { transform: translateY(0); }
-
-        .cart-handle {
-            width: 40px;
-            height: 4px;
-            background: #ddd;
-            border-radius: 4px;
-            margin: 12px auto 0;
-        }
-
-        .cart-header {
-            padding: 16px 20px 12px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 1px solid #f0f0f0;
-        }
+        .cart-handle { width: 40px; height: 4px; background: #ddd; border-radius: 4px; margin: 12px auto 0; }
+        .cart-header { padding: 16px 20px 12px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #f0f0f0; }
         .cart-header h2 { font-size: 18px; font-weight: 900; color: var(--primary-dark); }
-        .cart-close {
-            background: #f5f5f5;
-            border: none;
-            border-radius: 50%;
-            width: 34px;
-            height: 34px;
-            font-size: 20px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-        }
-
-        .cart-items {
-            overflow-y: auto;
-            flex: 1;
-            padding: 12px 16px;
-        }
-
-        .cart-empty {
-            text-align: center;
-            padding: 40px;
-            color: var(--text-light);
-        }
+        .cart-close { background: #f5f5f5; border: none; border-radius: 50%; width: 34px; height: 34px; font-size: 20px; cursor: pointer; display: flex; align-items: center; justify-content: center; color: #666; }
+        .cart-items { overflow-y: auto; flex: 1; padding: 12px 16px; }
+        .cart-empty { text-align: center; padding: 40px; color: var(--text-light); }
         .cart-empty span { font-size: 48px; display: block; margin-bottom: 10px; }
-
-        .cart-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 10px 0;
-            border-bottom: 1px solid #f5f5f5;
-        }
-        .ci-img {
-            width: 48px;
-            height: 48px;
-            border-radius: 10px;
-            background: #e8f5e9;
-            overflow: hidden;
-            flex-shrink: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-        }
+        .cart-item { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid #f5f5f5; }
+        .ci-img { width: 48px; height: 48px; border-radius: 10px; background: #e8f5e9; overflow: hidden; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 22px; }
         .ci-img img { width: 100%; height: 100%; object-fit: cover; }
         .ci-info { flex: 1; min-width: 0; }
         .ci-name { font-weight: 800; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .ci-price { font-size: 12px; color: var(--text-light); font-weight: 600; margin-top: 2px; }
         .ci-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
         .ci-total { font-weight: 900; color: var(--red); font-size: 15px; }
-        .ci-remove {
-            background: #fce4ec;
-            border: none;
-            border-radius: 8px;
-            width: 28px;
-            height: 28px;
-            font-size: 16px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--red);
-        }
-
-        .cart-footer {
-            padding: 14px 16px 20px;
-            border-top: 2px solid #f0f0f0;
-            background: white;
-        }
-        .cart-total-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 14px;
-        }
+        .ci-remove { background: #fce4ec; border: none; border-radius: 8px; width: 28px; height: 28px; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--red); }
+        .cart-footer { padding: 14px 16px 20px; border-top: 2px solid #f0f0f0; background: white; }
+        .cart-total-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
         .cart-total-label { font-size: 14px; font-weight: 700; color: var(--text-light); }
         .cart-total-amount { font-size: 24px; font-weight: 900; color: var(--red); }
-
         .cart-actions { display: flex; gap: 10px; }
-        .btn-share {
-            flex: 1;
-            background: #25D366;
-            color: white;
-            border: none;
-            border-radius: 14px;
-            padding: 14px;
-            font-family: 'Nunito', sans-serif;
-            font-weight: 800;
-            font-size: 15px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-        }
-        .btn-copy {
-            background: #f1f5f0;
-            color: var(--primary-dark);
-            border: none;
-            border-radius: 14px;
-            padding: 14px;
-            font-family: 'Nunito', sans-serif;
-            font-weight: 800;
-            font-size: 15px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-        }
-        .btn-clear {
-            background: #fce4ec;
-            color: var(--red);
-            border: none;
-            border-radius: 14px;
-            padding: 14px 16px;
-            font-family: 'Nunito', sans-serif;
-            font-weight: 800;
-            font-size: 15px;
-            cursor: pointer;
-        }
+        .btn-share { flex: 1; background: #25D366; color: white; border: none; border-radius: 14px; padding: 14px; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 15px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; }
+        .btn-copy { background: #f1f5f0; color: var(--primary-dark); border: none; border-radius: 14px; padding: 14px; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 15px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; }
+        .btn-clear { background: #fce4ec; color: var(--red); border: none; border-radius: 14px; padding: 14px 16px; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 15px; cursor: pointer; }
 
-        /* Overlay */
-        .overlay {
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.4);
-            z-index: 250;
-            display: none;
-            backdrop-filter: blur(2px);
-        }
+        .overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 250; display: none; backdrop-filter: blur(2px); }
         .overlay.show { display: block; }
 
-        /* ── TOAST ───────────────────────────────────── */
         .toast {
-            position: fixed;
-            bottom: 90px;
-            left: 50%;
+            position: fixed; bottom: 90px; left: 50%;
             transform: translateX(-50%) translateY(20px);
-            background: var(--primary-dark);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 30px;
-            font-weight: 700;
-            font-size: 14px;
-            opacity: 0;
-            transition: all 0.3s;
-            z-index: 400;
-            white-space: nowrap;
+            background: var(--primary-dark); color: white;
+            padding: 10px 20px; border-radius: 30px;
+            font-weight: 700; font-size: 14px; opacity: 0; transition: all 0.3s;
+            z-index: 400; white-space: nowrap;
         }
-        .toast.show {
-            opacity: 1;
-            transform: translateX(-50%) translateY(0);
-        }
+        .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
     </style>
 </head>
 <body>
 
-<!-- HEADER -->
 <div class="sticky-header">
     <div class="logo-wrap">
         <div class="logo-icon">
@@ -580,10 +217,8 @@
     </div>
 </div>
 
-<!-- OVERLAY -->
 <div class="overlay" id="overlay" onclick="closeCart()"></div>
 
-<!-- SEPET PANEL -->
 <div class="cart-panel" id="cart-panel">
     <div class="cart-handle"></div>
     <div class="cart-header">
@@ -591,10 +226,7 @@
         <button class="cart-close" onclick="closeCart()">✕</button>
     </div>
     <div class="cart-items" id="cart-items">
-        <div class="cart-empty">
-            <span>🌱</span>
-            Sepetiniz boş
-        </div>
+        <div class="cart-empty"><span>🌱</span>Sepetiniz boş</div>
     </div>
     <div class="cart-footer">
         <div class="cart-total-row">
@@ -612,216 +244,104 @@
     </div>
 </div>
 
-<!-- TOAST -->
 <div class="toast" id="toast"></div>
 
-<!-- MAIN -->
 <div class="container">
-    <div class="upload-card" id="upload-box">
-        <label for="excel-file" class="btn-upload">📂 EXCEL DOSYASI YÜKLE</label>
-        <input type="file" id="excel-file" accept=".xlsx, .xls, .csv" />
-        <p>Dosyayı seçtiğinizde ürünler listelenir.</p>
-        <p style="margin-top:6px; font-size:11px; color:#aaa;">Excel'de FOTO sütunu varsa otomatik yüklenir</p>
-        <div style="margin-top:16px; border-top:1px dashed #ddd; padding-top:14px;">
-            <p style="font-size:12px; color:#888; margin-bottom:10px;">📲 Başka telefondan aktardıysan:</p>
-            <label for="json-import-file" class="btn-import" style="display:inline-flex; border-radius:25px; padding:11px 20px; cursor:pointer;">
-                📥 Yedek Dosyası Yükle (.json)
-            </label>
-            <input type="file" id="json-import-file" accept=".json" style="display:none" />
-        </div>
+    <div class="loading-card" id="loading-box">
+        <div class="spinner"></div>
+        <p>Katalog yükleniyor...</p>
     </div>
-
     <div class="search-container" id="search-box" style="display:none;">
         <input type="text" id="search-input" placeholder="🔍 Bitki adı veya özellik ara...">
-        <div id="stats" style="display:flex;align-items:center;justify-content:center;gap:10px;">
-            <span id="stats-text"></span>
-            <button onclick="clearSavedData()" style="background:none;border:none;font-size:11px;color:#bbb;cursor:pointer;text-decoration:underline;font-family:inherit;">veriyi sil</button>
-        </div>
-        <div class="transfer-bar">
-            <button class="btn-export" onclick="exportJSON()">📤 Yedekle & Aktar</button>
-            <label for="json-import-file2" class="btn-import">📥 Yedek Yükle</label>
-            <input type="file" id="json-import-file2" accept=".json" style="display:none" />
-        </div>
+        <div id="stats"><span id="stats-text"></span></div>
     </div>
-
     <div id="catalog-list"></div>
 </div>
 
 <script>
-// ═══════════════════════════════════════════════════
-//  DURUM DEĞİŞKENLERİ
-// ═══════════════════════════════════════════════════
-let allData    = [];   // Ham Excel satırları
-let searchIdx  = [];   // Pre-computed arama metinleri [{ id, text }]
-let parsed     = [];   // Parse edilmiş, görünüme hazır satırlar
-let filtered   = [];   // Aktif arama sonucu (veya tümü)
-let cart       = {};   // { id: { ad, fiyat, qty, imgSrc } }
-let cardImages = {};   // { id: base64 }
+// ── Repo base URL — bunu kendi repo adresinle değiştir
+const REPO_BASE = 'https://aroqemr-pixel.github.io/Fiyat';
+const IMG_BASE  = REPO_BASE + '/images/';
 
-// ── Sanal liste değişkenleri
-const PAGE = 20;       // Bir seferde render edilecek kart sayısı
-let rendered  = 0;     // Şu ana kadar render edilmiş kart sayısı
-let rendering = false; // Aynı anda iki render çakışmasın
+let searchIdx  = [];
+let parsed     = [];
+let filtered   = [];
+let cart       = {};
 
-// ═══════════════════════════════════════════════════
-//  LOCAL STORAGE — veri telefonda kalıcı saklansın
-// ═══════════════════════════════════════════════════
-const LS_DATA   = 'ekg_parsed';
-const LS_IMGS   = 'ekg_images';
-const LS_SEARCH = 'ekg_search';
+const PAGE = 20;
+let rendered  = 0;
+let rendering = false;
 
-function lsSave() {
+function escHtml(s) { return String(s).replace(/&/g,'&amp;').replace(/'/g,"&#39;").replace(/</g,'&lt;'); }
+function imgUrl(ltAd) { return IMG_BASE + encodeURIComponent(ltAd) + '.jpg'; }
+
+// ── JSON'dan veri yükle
+async function loadData() {
     try {
-        localStorage.setItem(LS_DATA, JSON.stringify(parsed));
-        localStorage.setItem(LS_IMGS, JSON.stringify(cardImages));
+        const res = await fetch(REPO_BASE + '/data/urunler.json?t=' + Date.now());
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const data = await res.json();
+        parsed = data.map((p, i) => ({ ...p, id: i }));
+        searchIdx = parsed.map((p, idx) => ({
+            i: idx,
+            t: [p.trAd, p.ltAd, p.litre, p.boy, p.cap, p.govde].join(' ').toLocaleLowerCase('tr')
+        }));
+        filtered = parsed.slice();
+        document.getElementById('loading-box').style.display = 'none';
+        document.getElementById('search-box').style.display  = 'block';
+        resetList();
     } catch(e) {
-        // Storage dolu olabilir (fotoğraflar büyük yer tutar)
-        try { localStorage.setItem(LS_DATA, JSON.stringify(parsed)); } catch(_) {}
+        document.getElementById('loading-box').innerHTML =
+            '<p style="color:#c62828;font-size:14px;font-weight:700;">⚠️ Katalog yüklenemedi.<br>data/urunler.json bulunamadı.</p>';
     }
 }
 
-function lsLoad() {
-    try {
-        const d = localStorage.getItem(LS_DATA);
-        const i = localStorage.getItem(LS_IMGS);
-        if (!d) return false;
-        parsed     = JSON.parse(d);
-        cardImages = i ? JSON.parse(i) : {};
-        // searchIdx'i yeniden oluştur
-        searchIdx  = parsed.map((p, idx) => ({
-            i: idx,
-            t: [p.trAd, p.ltAd, p.litre, p.boy, p.cap, p.govde]
-                .join(' ').toLocaleLowerCase('tr')
-        }));
-        filtered = parsed.slice();
-        return true;
-    } catch(e) { return false; }
-}
-
-function clearSavedData() {
-    localStorage.removeItem(LS_DATA);
-    localStorage.removeItem(LS_IMGS);
-    parsed = []; searchIdx = []; filtered = []; cardImages = {};
-    document.getElementById('upload-box').style.display = 'block';
-    document.getElementById('search-box').style.display = 'none';
-    document.getElementById('catalog-list').innerHTML = '';
-    showToast('🗑 Kayıtlı veri silindi');
-}
-
-// ═══════════════════════════════════════════════════
-//  YARDIMCI FONKSİYONLAR
-// ═══════════════════════════════════════════════════
-function escHtml(s) { return String(s).replace(/&/g,'&amp;').replace(/'/g,"&#39;").replace(/</g,'&lt;'); }
-
-function findVal(row, names) {
-    const key = Object.keys(row).find(k => names.includes(k.trim().toUpperCase()));
-    return key ? String(row[key]).trim() : '-';
-}
-
-// ═══════════════════════════════════════════════════
-//  EXCEL YÜKLEME
-// ═══════════════════════════════════════════════════
-document.getElementById('excel-file').addEventListener('change', function(e) {
-    const file = e.target.files[0];
-    if (!file) return;
-
-    const reader = new FileReader();
-    reader.onload = function(ev) {
-        const wb    = XLSX.read(new Uint8Array(ev.target.result), { type: 'array' });
-        const sheet = wb.Sheets[wb.SheetNames[0]];
-        const raw   = XLSX.utils.sheet_to_json(sheet, { range: 1, defval: '' });
-
-        // Her satıra id ata + parse et + arama indexi oluştur
-        allData   = [];
-        parsed    = [];
-        searchIdx = [];
-
-        raw.forEach((row, i) => {
-            row.__id = i;
-            const p = parseRow(row);
-            if (p.trAd === '-' && p.ltAd === '-') return;
-            allData.push(row);
-            parsed.push(p);
-            // Arama için sadece ilgili alanları birleştir (küçük harf, bir kez)
-            searchIdx.push({
-                i: parsed.length - 1,
-                t: [p.trAd, p.ltAd, p.litre, p.boy, p.cap, p.govde]
-                    .join(' ').toLocaleLowerCase('tr')
-            });
-        });
-
-        filtered = parsed.slice(); // başta hepsi göster
-
-        lsSave(); // Telefona kaydet
-
-        document.getElementById('upload-box').style.display = 'none';
-        document.getElementById('search-box').style.display = 'block';
-
-        resetList();
-    };
-    reader.readAsArrayBuffer(file);
+// ── Arama
+let debounceTimer = null;
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('search-input').addEventListener('input', function(e) {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => {
+            const term = e.target.value.toLocaleLowerCase('tr').trim();
+            filtered = term
+                ? [...new Set(searchIdx.filter(s => s.t.includes(term)).map(s => s.i))].map(i => parsed[i])
+                : parsed.slice();
+            resetList();
+        }, 280);
+    });
 });
 
-// ── Bir satırı parse et (bir kez yapılır, tekrar edilmez)
-function parseRow(row) {
-    return {
-        id:     row.__id,
-        trAd:   findVal(row, ['TÜRKÇE AD','TURKCE AD','TÜRKÇEAD','TURKCEAD']),
-        ltAd:   findVal(row, ['LATİNCE AD','LATINCE AD','LATİNCEAD']),
-        fiyat:  findVal(row, ['FİYAT','FIYAT','FİYAT ','FIYAT ']),
-        litre:  findVal(row, ['LİTRE','LITRE','LİTRE ']),
-        boy:    findVal(row, ['BOY','BOY ']),
-        cap:    findVal(row, ['ÇAP','CAP']),
-        govde:  findVal(row, ['GÖVDE','GOVDE']),
-        foto:   findVal(row, ['FOTO','FOTOĞRAF','FOTOGRAF','IMAGE','IMG','RESIM','RESİM']),
-        fiyatNum: parseFloat(findVal(row, ['FİYAT','FIYAT','FİYAT ','FIYAT ']).replace(',','.')) || 0
-    };
-}
-
-// ═══════════════════════════════════════════════════
-//  VİRTÜEL LİSTE — sadece görüneni yaz
-// ═══════════════════════════════════════════════════
+// ── Sanal liste
 function resetList() {
     rendered = 0;
     document.getElementById('catalog-list').innerHTML = '';
-    const st = document.getElementById('stats-text'); if(st) st.textContent = filtered.length + ' ürün listeleniyor.';
-    appendCards(); // ilk sayfayı yaz
+    const st = document.getElementById('stats-text');
+    if (st) st.textContent = filtered.length + ' ürün listeleniyor.';
+    appendCards();
 }
 
 function appendCards() {
     if (rendering) return;
     rendering = true;
-
     const list  = document.getElementById('catalog-list');
     const batch = filtered.slice(rendered, rendered + PAGE);
     if (!batch.length) { rendering = false; return; }
-
-    // DocumentFragment ile tek seferde DOM'a ekle
     const frag = document.createDocumentFragment();
-    batch.forEach(p => {
-        const el = buildCard(p);
-        frag.appendChild(el);
-    });
+    batch.forEach(p => frag.appendChild(buildCard(p)));
     list.appendChild(frag);
-
     rendered  += batch.length;
     rendering  = false;
 }
 
-// Scroll sonu yaklaşınca daha fazla yükle
 window.addEventListener('scroll', () => {
     if (rendered >= filtered.length) return;
-    const distToBottom = document.documentElement.scrollHeight - window.scrollY - window.innerHeight;
-    if (distToBottom < 300) appendCards();
+    if (document.documentElement.scrollHeight - window.scrollY - window.innerHeight < 300) appendCards();
 }, { passive: true });
 
-// ═══════════════════════════════════════════════════
-//  KART OLUŞTUR (DOM element döner, string değil)
-// ═══════════════════════════════════════════════════
+// ── Kart oluştur
 function buildCard(p) {
-    const { id, trAd, ltAd, litre, boy, cap, govde, fiyatNum, foto } = p;
-    const qty    = cart[id] ? cart[id].qty : 0;
-    const imgSrc = cardImages[id] || (foto && foto !== '-' ? foto : null);
+    const { id, trAd, ltAd, litre, boy, cap, govde, fiyatNum } = p;
+    const qty = cart[id] ? cart[id].qty : 0;
 
     const card = document.createElement('div');
     card.className = 'plant-card';
@@ -830,16 +350,11 @@ function buildCard(p) {
     // Görsel
     const imgWrap = document.createElement('div');
     imgWrap.className = 'card-img-wrap';
-    if (imgSrc) {
-        const img = document.createElement('img');
-        img.src = imgSrc;
-        img.loading = 'lazy'; // Lazy load — kritik performans kazanımı
-        img.onerror = () => { imgWrap.innerHTML = '<div class="card-img-placeholder"><span>🌿</span></div>'; addImgOverlay(imgWrap, id); };
-        imgWrap.appendChild(img);
-    } else {
-        imgWrap.innerHTML = '<div class="card-img-placeholder"><span>🌿</span><p>Fotoğraf Yok</p></div>';
-    }
-    addImgOverlay(imgWrap, id);
+    const img = document.createElement('img');
+    img.src = imgUrl(ltAd);
+    img.loading = 'lazy';
+    img.onerror = () => { imgWrap.innerHTML = '<div class="card-img-placeholder"><span>🌿</span><p>Fotoğraf Yok</p></div>'; };
+    imgWrap.appendChild(img);
     card.appendChild(imgWrap);
 
     // Gövde
@@ -856,22 +371,13 @@ function buildCard(p) {
         </div>
         <div class="card-footer">
             <div class="price-tag">${fiyatNum > 0 ? fiyatNum.toLocaleString('tr-TR') + ' <small>TL</small>' : '-'}</div>
-            <div id="cart-ctrl-${id}">${buildCartCtrl(id, fiyatNum, trAd, qty)}</div>
+            <div id="cart-ctrl-${id}">${buildCartCtrl(id, fiyatNum, trAd, ltAd, qty)}</div>
         </div>`;
     card.appendChild(body);
     return card;
 }
 
-function addImgOverlay(wrap, id) {
-    const ov  = document.createElement('div');
-    ov.className = 'img-upload-overlay';
-    ov.innerHTML = `<label class="img-upload-label" for="img-input-${id}">📷 Fotoğraf</label>
-        <input type="file" id="img-input-${id}" accept="image/*" style="display:none">`;
-    ov.querySelector('input').addEventListener('change', ev => handleImgUpload(ev, id));
-    wrap.appendChild(ov);
-}
-
-function buildCartCtrl(id, fiyatNum, trAd, qty) {
+function buildCartCtrl(id, fiyatNum, trAd, ltAd, qty) {
     if (qty > 0) {
         return `<div class="qty-control visible" id="qty-${id}">
             <button class="qty-btn" onclick="changeQty(${id},-1)">−</button>
@@ -879,65 +385,18 @@ function buildCartCtrl(id, fiyatNum, trAd, qty) {
             <button class="qty-btn" onclick="changeQty(${id},1)">+</button>
         </div>`;
     }
-    return `<button class="add-to-cart-btn" id="acb-${id}" onclick="addToCart(${id},${fiyatNum},'${escHtml(trAd)}')">
+    return `<button class="add-to-cart-btn" onclick="addToCart(${id},${fiyatNum},'${escHtml(trAd)}','${escHtml(ltAd)}')">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
         Sepete Ekle
     </button>`;
 }
 
-// ═══════════════════════════════════════════════════
-//  FOTOĞRAF YÜKLEME
-// ═══════════════════════════════════════════════════
-function handleImgUpload(event, id) {
-    const file = event.target.files[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = function(e) {
-        cardImages[id] = e.target.result;
-        const wrap = document.querySelector(`.plant-card[data-id="${id}"] .card-img-wrap`);
-        if (wrap) {
-            const ov = wrap.querySelector('.img-upload-overlay');
-            wrap.innerHTML = `<img src="${e.target.result}" loading="lazy">`;
-            if (ov) wrap.appendChild(ov);
-        }
-        if (cart[id]) { cart[id].imgSrc = e.target.result; renderCartPanel(); }
-        lsSave(); // Fotoğrafı kaydet
-        showToast('📷 Fotoğraf eklendi!');
-    };
-    reader.readAsDataURL(file);
-}
-
-// ═══════════════════════════════════════════════════
-//  ARAMA — debounce + pre-index
-// ═══════════════════════════════════════════════════
-let debounceTimer = null;
-
-document.getElementById('search-input').addEventListener('input', function(e) {
-    clearTimeout(debounceTimer);
-    debounceTimer = setTimeout(() => doSearch(e.target.value), 280);
-});
-
-function doSearch(val) {
-    const term = val.toLocaleLowerCase('tr').trim();
-    if (!term) {
-        filtered = parsed.slice();
-    } else {
-        // searchIdx üzerinden O(n) — nesne birleştirme yok, join yok
-        const hits = new Set();
-        searchIdx.forEach(s => { if (s.t.includes(term)) hits.add(s.i); });
-        filtered = [...hits].map(i => parsed[i]);
-    }
-    resetList();
-}
-
-// ═══════════════════════════════════════════════════
-//  SEPET
-// ═══════════════════════════════════════════════════
-function addToCart(id, fiyat, ad) {
-    if (!cart[id]) cart[id] = { id, ad, fiyat, qty: 0, imgSrc: cardImages[id] || null };
+// ── Sepet
+function addToCart(id, fiyat, trAd, ltAd) {
+    if (!cart[id]) cart[id] = { id, ad: trAd, ltAd, fiyat, qty: 0 };
     cart[id].qty++;
-    const ctrl = document.getElementById(`cart-ctrl-${id}`);
-    if (ctrl) ctrl.innerHTML = buildCartCtrl(id, fiyat, ad, cart[id].qty);
+    const ctrl = document.getElementById('cart-ctrl-' + id);
+    if (ctrl) ctrl.innerHTML = buildCartCtrl(id, fiyat, trAd, ltAd, cart[id].qty);
     updateCartBadge();
     showToast('✅ Sepete eklendi');
 }
@@ -948,10 +407,10 @@ function changeQty(id, delta) {
     const p = parsed.find(r => r.id == id);
     if (cart[id].qty <= 0) {
         delete cart[id];
-        const ctrl = document.getElementById(`cart-ctrl-${id}`);
-        if (ctrl && p) ctrl.innerHTML = buildCartCtrl(id, p.fiyatNum, p.trAd, 0);
+        const ctrl = document.getElementById('cart-ctrl-' + id);
+        if (ctrl && p) ctrl.innerHTML = buildCartCtrl(id, p.fiyatNum, p.trAd, p.ltAd, 0);
     } else {
-        const qn = document.getElementById(`qn-${id}`);
+        const qn = document.getElementById('qn-' + id);
         if (qn) qn.textContent = cart[id].qty;
     }
     updateCartBadge();
@@ -978,7 +437,7 @@ function renderCartPanel() {
         const sub = item.fiyat * item.qty;
         total += sub;
         html += `<div class="cart-item">
-            <div class="ci-img">${item.imgSrc ? `<img src="${item.imgSrc}">` : '🌿'}</div>
+            <div class="ci-img"><img src="${imgUrl(item.ltAd)}" onerror="this.parentElement.innerHTML='🌿'"></div>
             <div class="ci-info">
                 <div class="ci-name">${escHtml(item.ad)}</div>
                 <div class="ci-price">${item.qty} × ${item.fiyat.toLocaleString('tr-TR')} TL</div>
@@ -993,22 +452,16 @@ function renderCartPanel() {
     document.getElementById('cart-total').textContent = total.toLocaleString('tr-TR') + ' TL';
 }
 
-function toggleCart() {
-    renderCartPanel();
-    document.getElementById('cart-panel').classList.toggle('open');
-    document.getElementById('overlay').classList.toggle('show');
-}
-function closeCart() {
-    document.getElementById('cart-panel').classList.remove('open');
-    document.getElementById('overlay').classList.remove('show');
-}
+function toggleCart() { renderCartPanel(); document.getElementById('cart-panel').classList.toggle('open'); document.getElementById('overlay').classList.toggle('show'); }
+function closeCart() { document.getElementById('cart-panel').classList.remove('open'); document.getElementById('overlay').classList.remove('show'); }
+
 function clearCart() {
     const ids = Object.keys(cart);
     cart = {};
     ids.forEach(id => {
         const p = parsed.find(r => r.id == id);
-        const ctrl = document.getElementById(`cart-ctrl-${id}`);
-        if (ctrl && p) ctrl.innerHTML = buildCartCtrl(id, p.fiyatNum, p.trAd, 0);
+        const ctrl = document.getElementById('cart-ctrl-' + id);
+        if (ctrl && p) ctrl.innerHTML = buildCartCtrl(id, p.fiyatNum, p.trAd, p.ltAd, 0);
     });
     updateCartBadge();
     renderCartPanel();
@@ -1026,100 +479,23 @@ function buildCartText() {
     });
     return text + `\n💰 *Toplam: ${total.toLocaleString('tr-TR')} TL*`;
 }
-function shareWhatsApp() {
-    const t = buildCartText();
-    if (!t) { showToast('Sepetiniz boş!'); return; }
-    window.open('https://wa.me/?text=' + encodeURIComponent(t));
-}
-function copyCart() {
-    const t = buildCartText();
-    if (!t) { showToast('Sepetiniz boş!'); return; }
-    navigator.clipboard.writeText(t).then(() => showToast('📋 Kopyalandı!')).catch(() => showToast('Kopyalanamadı'));
-}
-
-// ═══════════════════════════════════════════════════
-//  TOAST
-// ═══════════════════════════════════════════════════
-// ═══════════════════════════════════════════════════
-//  DIŞA / İÇE AKTAR
-// ═══════════════════════════════════════════════════
-
-function exportJSON() {
-    if (!parsed.length) { showToast('Önce Excel yükleyin!'); return; }
-    showToast('⏳ Hazırlanıyor...');
-    // Küçük gecikme: toast görünsün, sonra ağır iş başlasın
-    setTimeout(() => {
-        const payload = JSON.stringify({ v: 1, parsed, cardImages });
-        const blob    = new Blob([payload], { type: 'application/json' });
-        const url     = URL.createObjectURL(blob);
-        const a       = document.createElement('a');
-        a.href        = url;
-        a.download    = 'ekogardenkatolog_yedek_' + new Date().toISOString().slice(0,10) + '.json';
-        a.click();
-        URL.revokeObjectURL(url);
-        showToast('✅ Yedek dosyası indirildi!');
-    }, 100);
-}
-
-function handleJSONImport(e) {
-    const file = e.target.files[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = function(ev) {
-        try {
-            const data = JSON.parse(ev.target.result);
-            if (!data.parsed || !Array.isArray(data.parsed)) throw new Error('Geçersiz dosya');
-            parsed     = data.parsed;
-            cardImages = data.cardImages || {};
-            // searchIdx yeniden oluştur
-            searchIdx  = parsed.map((p, idx) => ({
-                i: idx,
-                t: [p.trAd, p.ltAd, p.litre, p.boy, p.cap, p.govde]
-                    .join(' ').toLocaleLowerCase('tr')
-            }));
-            filtered = parsed.slice();
-            lsSave();
-            document.getElementById('upload-box').style.display  = 'none';
-            document.getElementById('search-box').style.display  = 'block';
-            resetList();
-            showToast('✅ ' + parsed.length + ' ürün + fotoğraflar yüklendi!');
-        } catch(err) {
-            showToast('❌ Dosya okunamadı: ' + err.message);
-        }
-    };
-    reader.readAsText(file);
-}
-
-// Her iki import inputunu dinle
-['json-import-file','json-import-file2'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.addEventListener('change', handleJSONImport);
-});
-
-// ═══════════════════════════════════════════════════
-//  SAYFA AÇILIŞI — kayıtlı veri varsa direkt yükle
-// ═══════════════════════════════════════════════════
-(function boot() {
-    if (lsLoad()) {
-        document.getElementById('upload-box').style.display = 'none';
-        document.getElementById('search-box').style.display = 'block';
-        resetList();
-        showToast('✅ Katalog yüklendi (' + parsed.length + ' ürün)');
-    }
-})();
+function shareWhatsApp() { const t = buildCartText(); if (!t) { showToast('Sepetiniz boş!'); return; } window.open('https://wa.me/?text=' + encodeURIComponent(t)); }
+function copyCart() { const t = buildCartText(); if (!t) { showToast('Sepetiniz boş!'); return; } navigator.clipboard.writeText(t).then(() => showToast('📋 Kopyalandı!')).catch(() => showToast('Kopyalanamadı')); }
 
 function showToast(msg) {
     const t = document.getElementById('toast');
-    t.textContent = msg;
-    t.classList.add('show');
+    t.textContent = msg; t.classList.add('show');
     setTimeout(() => t.classList.remove('show'), 2200);
 }
+
+// ── Başlat
+loadData();
 </script>
 
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/Fiyat/sw.js');
-    }
-  </script>
+<script>
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/Fiyat/sw.js');
+}
+</script>
 </body>
 </html>
