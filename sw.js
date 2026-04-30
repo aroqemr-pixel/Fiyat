@@ -1,4 +1,4 @@
-const CACHE = 'ekogardenkatolog-v1';
+const CACHE = 'ekogardenkatolog-v2';
 const ASSETS = [
   '/Fiyat/',
   '/Fiyat/index.html',
