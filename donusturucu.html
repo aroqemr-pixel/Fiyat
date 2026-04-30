@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel → JSON Dönüştürücü</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Nunito', sans-serif; background: #f1f5f0; color: #1a1a1a; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; }
+
+        .card {
+            background: white; border-radius: 20px; padding: 32px 28px;
+            max-width: 500px; width: 100%;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+        }
+
+        .logo { display: flex; align-items: center; gap: 12px; margin-bottom: 28px; }
+        .logo-icon { width: 48px; height: 48px; background: linear-gradient(135deg, #1b5e20, #2e7d32); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 22px; }
+        .logo h1 { font-size: 20px; font-weight: 900; color: #1b5e20; }
+        .logo p { font-size: 12px; color: #888; font-weight: 600; }
+
+        .drop-zone {
+            border: 2.5px dashed #a5d6a7; border-radius: 16px;
+            padding: 40px 20px; text-align: center; cursor: pointer;
+            transition: all 0.2s; background: #f9fbf9; margin-bottom: 20px;
+        }
+        .drop-zone:hover, .drop-zone.dragover { border-color: #2e7d32; background: #e8f5e9; }
+        .drop-zone .icon { font-size: 42px; margin-bottom: 10px; }
+        .drop-zone h2 { font-size: 16px; font-weight: 800; color: #2e7d32; margin-bottom: 6px; }
+        .drop-zone p { font-size: 13px; color: #888; }
+        #file-input { display: none; }
+
+        .btn {
+            width: 100%; padding: 16px; border: none; border-radius: 30px;
+            font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 16px;
+            cursor: pointer; transition: all 0.2s; display: none;
+        }
+        .btn-download {
+            background: linear-gradient(135deg, #1b5e20, #2e7d32);
+            color: white; box-shadow: 0 4px 14px rgba(46,125,50,0.4);
+        }
+        .btn-download:active { transform: scale(0.97); }
+
+        .result {
+            margin-top: 20px; padding: 16px; background: #f9fbf9;
+            border-radius: 12px; display: none;
+        }
+        .result.success { border: 2px solid #a5d6a7; }
+        .result.error   { border: 2px solid #ef9a9a; background: #fff5f5; }
+        .result h3 { font-size: 15px; font-weight: 800; margin-bottom: 8px; }
+        .result.success h3 { color: #2e7d32; }
+        .result.error   h3 { color: #c62828; }
+        .result p  { font-size: 13px; color: #555; line-height: 1.6; }
+
+        .info-box {
+            margin-top: 20px; padding: 14px 16px;
+            background: #e8f5e9; border-radius: 12px;
+            font-size: 12px; color: #2e7d32; font-weight: 600; line-height: 1.8;
+        }
+        .info-box strong { display: block; margin-bottom: 4px; font-size: 13px; }
+    </style>
+</head>
+<body>
+<div class="card">
+    <div class="logo">
+        <div class="logo-icon">🌿</div>
+        <div>
+            <h1>Excel → JSON</h1>
+            <p>Eko Garden Katalog Dönüştürücü</p>
+        </div>
+    </div>
+
+    <div class="drop-zone" id="drop-zone" onclick="document.getElementById('file-input').click()">
+        <div class="icon">📂</div>
+        <h2>Excel dosyasını seç veya sürükle</h2>
+        <p>.xlsx veya .xls formatı</p>
+    </div>
+    <input type="file" id="file-input" accept=".xlsx,.xls">
+
+    <button class="btn btn-download" id="btn-download">⬇️ urunler.json İndir</button>
+
+    <div class="result" id="result"></div>
+
+    <div class="info-box">
+        <strong>📋 Excel sütun başlıkları:</strong>
+        TÜRKÇE AD · LATİNCE AD · FİYAT · LİTRE · BOY · ÇAP · GÖVDE
+        <br><br>
+        <strong>📁 İndirilen dosyayı nereye koy:</strong>
+        repo → <code>data/urunler.json</code>
+    </div>
+</div>
+
+<script>
+let jsonData = null;
+
+function findVal(row, names) {
+    const key = Object.keys(row).find(k => names.includes(k.trim().toUpperCase()));
+    return key ? String(row[key]).trim() : '-';
+}
+
+function processFile(file) {
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(ev) {
+        try {
+            const wb    = XLSX.read(new Uint8Array(ev.target.result), { type: 'array' });
+            const sheet = wb.Sheets[wb.SheetNames[0]];
+            const raw   = XLSX.utils.sheet_to_json(sheet, { range: 1, defval: '' });
+
+            const result = [];
+            raw.forEach(row => {
+                const trAd = findVal(row, ['TÜRKÇE AD','TURKCE AD','TÜRKÇEAD','TURKCEAD']);
+                const ltAd = findVal(row, ['LATİNCE AD','LATINCE AD','LATİNCEAD']);
+                if (trAd === '-' && ltAd === '-') return;
+
+                const fiyatStr = findVal(row, ['FİYAT','FIYAT','FİYAT ','FIYAT ']);
+                result.push({
+                    trAd,
+                    ltAd,
+                    fiyat:    fiyatStr,
+                    litre:    findVal(row, ['LİTRE','LITRE','LİTRE ']),
+                    boy:      findVal(row, ['BOY','BOY ']),
+                    cap:      findVal(row, ['ÇAP','CAP']),
+                    govde:    findVal(row, ['GÖVDE','GOVDE']),
+                    fiyatNum: parseFloat(fiyatStr.replace(',','.')) || 0
+                });
+            });
+
+            jsonData = result;
+
+            const el = document.getElementById('result');
+            el.className = 'result success';
+            el.style.display = 'block';
+            el.innerHTML = `<h3>✅ ${result.length} ürün hazır</h3>
+                <p>JSON dosyası oluşturuldu. İndir ve <strong>data/urunler.json</strong> olarak repoya at.</p>`;
+
+            document.getElementById('btn-download').style.display = 'block';
+
+        } catch(e) {
+            const el = document.getElementById('result');
+            el.className = 'result error';
+            el.style.display = 'block';
+            el.innerHTML = `<h3>❌ Hata</h3><p>${e.message}</p>`;
+        }
+    };
+    reader.readAsArrayBuffer(file);
+}
+
+document.getElementById('file-input').addEventListener('change', e => processFile(e.target.files[0]));
+
+document.getElementById('btn-download').addEventListener('click', () => {
+    if (!jsonData) return;
+    const blob = new Blob([JSON.stringify(jsonData, null, 2)], { type: 'application/json' });
+    const url  = URL.createObjectURL(blob);
+    const a    = document.createElement('a');
+    a.href     = url;
+    a.download = 'urunler.json';
+    a.click();
+    URL.revokeObjectURL(url);
+});
+
+// Sürükle bırak
+const zone = document.getElementById('drop-zone');
+zone.addEventListener('dragover',  e => { e.preventDefault(); zone.classList.add('dragover'); });
+zone.addEventListener('dragleave', () => zone.classList.remove('dragover'));
+zone.addEventListener('drop', e => {
+    e.preventDefault();
+    zone.classList.remove('dragover');
+    const file = e.dataTransfer.files[0];
+    if (file) processFile(file);
+});
+</script>
+</body>
+</html>
