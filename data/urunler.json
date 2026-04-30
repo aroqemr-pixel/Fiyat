@@ -1,1 +1,5953 @@
 
+[
+  {
+    "trAd": "FİL KULAĞI",
+    "ltAd": "ALOCASİA YUCATAN PRİNCESS",
+    "fiyat": "350",
+    "litre": "5",
+    "boy": "40-50",
+    "cap": "S-22",
+    "govde": "30-40",
+    "fiyatNum": 350
+  },
+  {
+    "trAd": "FİL KULAĞI",
+    "ltAd": "ALOCASİA CUCULLATA",
+    "fiyat": "350",
+    "litre": "3",
+    "boy": "30-40",
+    "cap": "S-19",
+    "govde": "20-30",
+    "fiyatNum": 350
+  },
+  {
+    "trAd": "FİL KULAĞI",
+    "ltAd": "ALOCASİA CUCULLATA",
+    "fiyat": "450",
+    "litre": "7",
+    "boy": "40-50",
+    "cap": "S-25",
+    "govde": "30-40",
+    "fiyatNum": 450
+  },
+  {
+    "trAd": "FİL KULAĞI",
+    "ltAd": "ALOCASİA ODORA X REGİNULA",
+    "fiyat": "950",
+    "litre": "30",
+    "boy": "60-80",
+    "cap": "S-40",
+    "govde": "40 60",
+    "fiyatNum": 950
+  },
+  {
+    "trAd": "AKASYA",
+    "ltAd": "ACACİA ARABİCA",
+    "fiyat": "3000",
+    "litre": "55",
+    "boy": "200-250",
+    "cap": "S-45",
+    "govde": "Q12-14",
+    "fiyatNum": 3000
+  },
+  {
+    "trAd": "AKASYA",
+    "ltAd": "ACACİA ARABİCA",
+    "fiyat": "3000",
+    "litre": "55",
+    "boy": "200-250",
+    "cap": "S-45",
+    "govde": "Q14-16",
+    "fiyatNum": 3000
+  },
+  {
+    "trAd": "AKASYA",
+    "ltAd": "ACACİA ARABİCA",
+    "fiyat": "5000",
+    "litre": "55",
+    "boy": "200-250",
+    "cap": "S-45",
+    "govde": "Q16-18",
+    "fiyatNum": 5000
+  },
+  {
+    "trAd": "AKASYA",
+    "ltAd": "ACACİA ARABİCA",
+    "fiyat": "5000",
+    "litre": "55",
+    "boy": "200-250",
+    "cap": "S-45",
+    "govde": "Q18-20",
+    "fiyatNum": 5000
+  },
+  {
+    "trAd": "AKASYA",
+    "ltAd": "ACACİA ARABİCA",
+    "fiyat": "5000",
+    "litre": "55",
+    "boy": "200-250",
+    "cap": "S-45",
+    "govde": "Q20-25",
+    "fiyatNum": 5000
+  },
+  {
+    "trAd": "KOKULU AKASYA",
+    "ltAd": "ACACİA FARNESİANA",
+    "fiyat": "5000",
+    "litre": "55",
+    "boy": "200-250",
+    "cap": "S-45",
+    "govde": "Q18-20-25",
+    "fiyatNum": 5000
+  },
+  {
+    "trAd": "AFRİKA ZAMBAĞI",
+    "ltAd": "AGAPANTHUS",
+    "fiyat": "250",
+    "litre": "5",
+    "boy": "30 40",
+    "cap": "S-22",
+    "govde": "20 30",
+    "fiyatNum": 250
+  },
+  {
+    "trAd": "SALON ÇAMI",
+    "ltAd": "ARAUCARİA HETEROPHYLLA",
+    "fiyat": "2500",
+    "litre": "70",
+    "boy": "180-200",
+    "cap": "S-50",
+    "govde": "Q12-14",
+    "fiyatNum": 2500
+  },
+  {
+    "trAd": "KRAL PALMİYESİ",
+    "ltAd": "ARCONTOPHOENİX ALEXANDREA",
+    "fiyat": "10000",
+    "litre": "",
+    "boy": "TEKLİ  225-250",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 10000
+  },
+  {
+    "trAd": "KRAL PALMİYESİ",
+    "ltAd": "ARCONTOPHOENİX ALEXANDREA",
+    "fiyat": "20000",
+    "litre": "",
+    "boy": "ÜÇLÜ  200-250",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 20000
+  },
+  {
+    "trAd": "AREKA PALM",
+    "ltAd": "ARECA",
+    "fiyat": "450",
+    "litre": "7",
+    "boy": "40-60",
+    "cap": "S-25",
+    "govde": "30-40",
+    "fiyatNum": 450
+  },
+  {
+    "trAd": "AREKA PALM",
+    "ltAd": "ARECA",
+    "fiyat": "7000",
+    "litre": "",
+    "boy": "150 CM",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 7000
+  },
+  {
+    "trAd": "AREKA PALM",
+    "ltAd": "ARECA",
+    "fiyat": "2500",
+    "litre": "",
+    "boy": "300 CM",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 2500
+  },
+  {
+    "trAd": "COCOS PALM",
+    "ltAd": "ARECASTRUM ROMANZOFFİANUM",
+    "fiyat": "",
+    "litre": "240",
+    "boy": "12.500/METRE",
+    "cap": "S-80",
+    "govde": "300 CM GÖVDE BOYU",
+    "fiyatNum": 0
+  },
+  {
+    "trAd": "KUŞKONMAZ",
+    "ltAd": "ASPARAGUS DENSİFLORUS MEYERİİ",
+    "fiyat": "400",
+    "litre": "10",
+    "boy": "40-60",
+    "cap": "S-28",
+    "govde": "30-40",
+    "fiyatNum": 400
+  },
+  {
+    "trAd": "ÇİN MENEKŞESİ",
+    "ltAd": "ASYSTASİA GANGETİCA VARİEGATA",
+    "fiyat": "150",
+    "litre": "5",
+    "boy": "10 15",
+    "cap": "S-22",
+    "govde": "20-30",
+    "fiyatNum": 150
+  },
+  {
+    "trAd": "BAMBU",
+    "ltAd": "BAMBUSA METAKE",
+    "fiyat": "2000",
+    "litre": "35",
+    "boy": "100+",
+    "cap": "S-40",
+    "govde": "30-35",
+    "fiyatNum": 2000
+  },
+  {
+    "trAd": "BAMBU",
+    "ltAd": "BAMBUSA METAKE",
+    "fiyat": "4000",
+    "litre": "90",
+    "boy": "250+",
+    "cap": "S-55",
+    "govde": "60-80",
+    "fiyatNum": 4000
+  },
+  {
+    "trAd": "ÇİM BAMBUSU",
+    "ltAd": "BAMBUSA VENTRİCOSA",
+    "fiyat": "5000",
+    "litre": "110",
+    "boy": "200-250",
+    "cap": "S-60",
+    "govde": "100-120",
+    "fiyatNum": 5000
+  },
+  {
+    "trAd": "ORKİDE AĞACI",
+    "ltAd": "BAUHUNİA VARİEGATA",
+    "fiyat": "5000",
+    "litre": "",
+    "boy": "200-250",
+    "cap": "",
+    "govde": "Q18-20",
+    "fiyatNum": 5000
+  },
+  {
+    "trAd": "ORKİDE AĞACI",
+    "ltAd": "BAUHUNİA VARİEGATA",
+    "fiyat": "15000",
+    "litre": "",
+    "boy": "200-250",
+    "cap": "",
+    "govde": "Q35-40",
+    "fiyatNum": 15000
+  },
+  {
+    "trAd": "BONSAİ",
+    "ltAd": "BONSAİ",
+    "fiyat": "7500",
+    "litre": "ROOTBALL",
+    "boy": "100+",
+    "cap": "",
+    "govde": "TAŞLI GÖVDE",
+    "fiyatNum": 7500
+  },
+  {
+    "trAd": "BEGONVİL",
+    "ltAd": "BOUGAİNVİLLEA SP.",
+    "fiyat": "800",
+    "litre": "35",
+    "boy": "60-80",
+    "cap": "S-40",
+    "govde": "30-50",
+    "fiyatNum": 800
+  },
+  {
+    "trAd": "BEGONVİL",
+    "ltAd": "BOUGAİNVİLLEA SP.",
+    "fiyat": "800",
+    "litre": "70/90",
+    "boy": "80-100",
+    "cap": "S-50",
+    "govde": "60-80",
+    "fiyatNum": 800
+  },
+  {
+    "trAd": "BEGONVİL",
+    "ltAd": "BOUGAİNVİLLEA SP.",
+    "fiyat": "800",
+    "litre": "20/35",
+    "boy": "80-100-175",
+    "cap": "S-35",
+    "govde": "30-50",
+    "fiyatNum": 800
+  },
+  {
+    "trAd": "BEGONVİL",
+    "ltAd": "BOUGAİNVİLLEA SP.",
+    "fiyat": "3000",
+    "litre": "55/90",
+    "boy": "200-250",
+    "cap": "S-45",
+    "govde": "50-60",
+    "fiyatNum": 3000
+  },
+  {
+    "trAd": "JAPON KAVAĞI",
+    "ltAd": "BRACHYHİTON ACERİFOLİUS",
+    "fiyat": "15000",
+    "litre": "150",
+    "boy": "250-300",
+    "cap": "S-75",
+    "govde": "Q30-35",
+    "fiyatNum": 15000
+  },
+  {
+    "trAd": "ŞİMŞİR",
+    "ltAd": "BUXUS SEMPERVİRENS",
+    "fiyat": "750",
+    "litre": "25",
+    "boy": "40-60",
+    "cap": "S-35",
+    "govde": "40-60",
+    "fiyatNum": 750
+  },
+  {
+    "trAd": "ŞİMŞİR",
+    "ltAd": "BUXUS SEMPERVİRENS",
+    "fiyat": "3000",
+    "litre": "70",
+    "boy": "70-90",
+    "cap": "S-50",
+    "govde": "70-90",
+    "fiyatNum": 3000
+  },
+  {
+    "trAd": "FIRÇA ÇALISI",
+    "ltAd": "CALLİSTEMON VİMİNALİS",
+    "fiyat": "300",
+    "litre": "10",
+    "boy": "40-50",
+    "cap": "S-28",
+    "govde": "40-50",
+    "fiyatNum": 300
+  },
+  {
+    "trAd": "FIRÇA ÇALISI",
+    "ltAd": "CALLİSTEMON VİMİNALİS",
+    "fiyat": "1500",
+    "litre": "55",
+    "boy": "80-100",
+    "cap": "S-45",
+    "govde": "60-80",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "NATAL ERİĞİ",
+    "ltAd": "CARİSSA PROSTRATA",
+    "fiyat": "175",
+    "litre": "5",
+    "boy": "20-30",
+    "cap": "S-22",
+    "govde": "20-30",
+    "fiyatNum": 175
+  },
+  {
+    "trAd": "PAŞA BIYIĞI",
+    "ltAd": "CAESALPİNİA GİLLESİ",
+    "fiyat": "3000",
+    "litre": "50",
+    "boy": "ÇOKLU GÖVDE",
+    "cap": "S-55",
+    "govde": "150-180",
+    "fiyatNum": 3000
+  },
+  {
+    "trAd": "KILLI PALMİYE",
+    "ltAd": "CHAMAEROPS   EXCELSA",
+    "fiyat": "8000",
+    "litre": "55",
+    "boy": "160 CM GÖVDE",
+    "cap": "S-45",
+    "govde": "5.000/METRE",
+    "fiyatNum": 8000
+  },
+  {
+    "trAd": "KILLI PALMİYE",
+    "ltAd": "CHAMAEROPS   EXCELSA",
+    "fiyat": "8500",
+    "litre": "55",
+    "boy": "170 CM GÖVDE",
+    "cap": "S-45",
+    "govde": "5.000/METRE",
+    "fiyatNum": 8500
+  },
+  {
+    "trAd": "KILLI PALMİYE",
+    "ltAd": "CHAMAEROPS   EXCELSA",
+    "fiyat": "8500",
+    "litre": "55",
+    "boy": "175 CM GÖVDE",
+    "cap": "S-45",
+    "govde": "5.000/METRE",
+    "fiyatNum": 8500
+  },
+  {
+    "trAd": "KILLI PALMİYE",
+    "ltAd": "CHAMAEROPS   EXCELSA",
+    "fiyat": "10500",
+    "litre": "55",
+    "boy": "210 CM GÖVDE",
+    "cap": "S-45",
+    "govde": "5.000/METRE",
+    "fiyatNum": 10500
+  },
+  {
+    "trAd": "KILLI PALMİYE",
+    "ltAd": "CHAMAEROPS   EXCELSA",
+    "fiyat": "12000",
+    "litre": "55",
+    "boy": "240 CM GÖVDE",
+    "cap": "S-45",
+    "govde": "5.000/METRE",
+    "fiyatNum": 12000
+  },
+  {
+    "trAd": "DAĞ PALMİYESİ",
+    "ltAd": "CHAMAEDORA SEİFRİİZİ",
+    "fiyat": "2750",
+    "litre": "18",
+    "boy": "100+",
+    "cap": "S-30",
+    "govde": "",
+    "fiyatNum": 2750
+  },
+  {
+    "trAd": "KILLI PALMİYE",
+    "ltAd": "CHAMAEROPS  HUMİLİS",
+    "fiyat": "10000",
+    "litre": "110",
+    "boy": "TÜM BOY 100-125+",
+    "cap": "S-60",
+    "govde": "90-100",
+    "fiyatNum": 10000
+  },
+  {
+    "trAd": "KILLI PALMİYE",
+    "ltAd": "CHAMAEROPS  HUMİLİS",
+    "fiyat": "18000",
+    "litre": "110",
+    "boy": "160 CM GÖVDE BOYU",
+    "cap": "S-60",
+    "govde": "90-100",
+    "fiyatNum": 18000
+  },
+  {
+    "trAd": "KILLI PALMİYE",
+    "ltAd": "CHAMAEROPS  HUMİLİS",
+    "fiyat": "3000",
+    "litre": "25",
+    "boy": "80-100 TÜM BOY",
+    "cap": "S-35",
+    "govde": "",
+    "fiyatNum": 3000
+  },
+  {
+    "trAd": "KILLI PALMİYE",
+    "ltAd": "CHAMAEROPS  HUMİLİS",
+    "fiyat": "4500",
+    "litre": "35",
+    "boy": "80-100 TÜM BOY",
+    "cap": "S-40",
+    "govde": "",
+    "fiyatNum": 4500
+  },
+  {
+    "trAd": "KILLI PALMİYE",
+    "ltAd": "CHAMAEROPS  HUMİLİS",
+    "fiyat": "7000",
+    "litre": "35",
+    "boy": "100-125 TÜM BOY",
+    "cap": "S-40",
+    "govde": "",
+    "fiyatNum": 7000
+  },
+  {
+    "trAd": "KILLI PALMİYE",
+    "ltAd": "CHAMAEROPS  HUMİLİS",
+    "fiyat": "15000",
+    "litre": "110",
+    "boy": "125-150 TÜM BOY",
+    "cap": "S-60",
+    "govde": "",
+    "fiyatNum": 15000
+  },
+  {
+    "trAd": "MAYMUN ÇIKAMAZ",
+    "ltAd": "CHORİSİA SPECİOSA",
+    "fiyat": "15000",
+    "litre": "165",
+    "boy": "250+",
+    "cap": "S-75",
+    "govde": "Q25-30",
+    "fiyatNum": 15000
+  },
+  {
+    "trAd": "MAYMUN ÇIKAMAZ",
+    "ltAd": "CHORİSİA SPECİOSA",
+    "fiyat": "15000",
+    "litre": "165",
+    "boy": "250+",
+    "cap": "S-75",
+    "govde": "Q40-45",
+    "fiyatNum": 15000
+  },
+  {
+    "trAd": "MAYMUN ÇIKAMAZ",
+    "ltAd": "CHORİSİA SPECİOSA",
+    "fiyat": "15000",
+    "litre": "165",
+    "boy": "250+",
+    "cap": "S-75",
+    "govde": "Q45-50",
+    "fiyatNum": 15000
+  },
+  {
+    "trAd": "MAYMUN ÇIKAMAZ",
+    "ltAd": "CHORİSİA SPECİOSA",
+    "fiyat": "15000",
+    "litre": "165",
+    "boy": "250+",
+    "cap": "S-75",
+    "govde": "Q50-55",
+    "fiyatNum": 15000
+  },
+  {
+    "trAd": "MAYMUN ÇIKAMAZ",
+    "ltAd": "CHORİSİA SPECİOSA",
+    "fiyat": "15000",
+    "litre": "165",
+    "boy": "250+",
+    "cap": "S-75",
+    "govde": "Q55-60",
+    "fiyatNum": 15000
+  },
+  {
+    "trAd": "MAYMUN ÇIKAMAZ",
+    "ltAd": "CHORİSİA SPECİOSA",
+    "fiyat": "15000",
+    "litre": "165",
+    "boy": "250+",
+    "cap": "S-75",
+    "govde": "Q60-65",
+    "fiyatNum": 15000
+  },
+  {
+    "trAd": "TARÇIN",
+    "ltAd": "CİNNAMOMUM CAMPHORA",
+    "fiyat": "6750",
+    "litre": "90",
+    "boy": "180-200",
+    "cap": "S-55",
+    "govde": "60-70",
+    "fiyatNum": 6750
+  },
+  {
+    "trAd": "TARÇIN",
+    "ltAd": "CİNNAMOMUM CAMPHORA",
+    "fiyat": "17500",
+    "litre": "110",
+    "boy": "250-300",
+    "cap": "S-60",
+    "govde": "90-100",
+    "fiyatNum": 17500
+  },
+  {
+    "trAd": "TARÇIN",
+    "ltAd": "CİNNAMOMUM CAMPHORA",
+    "fiyat": "17500",
+    "litre": "160",
+    "boy": "250-300",
+    "cap": "S-75",
+    "govde": "90-100",
+    "fiyatNum": 17500
+  },
+  {
+    "trAd": "TURUNÇ",
+    "ltAd": "CİTRUS AURANTİUM",
+    "fiyat": "2500",
+    "litre": "25",
+    "boy": "150-200",
+    "cap": "S-35",
+    "govde": "Q8-10-12",
+    "fiyatNum": 2500
+  },
+  {
+    "trAd": "TURUNÇ",
+    "ltAd": "CİTRUS AURANTİUM",
+    "fiyat": "8500",
+    "litre": "",
+    "boy": "150-200",
+    "cap": "",
+    "govde": "Q16-18",
+    "fiyatNum": 8500
+  },
+  {
+    "trAd": "KAMKAT",
+    "ltAd": "CİTRUS FORTUNELLA",
+    "fiyat": "750",
+    "litre": "20",
+    "boy": "60-80",
+    "cap": "S-35",
+    "govde": "30-50",
+    "fiyatNum": 750
+  },
+  {
+    "trAd": "KAMKAT",
+    "ltAd": "CİTRUS FORTUNELLA",
+    "fiyat": "750",
+    "litre": "20",
+    "boy": "50 CM TİGE",
+    "cap": "S-35",
+    "govde": "30-50",
+    "fiyatNum": 750
+  },
+  {
+    "trAd": "KAMKAT",
+    "ltAd": "CİTRUS FORTUNELLA",
+    "fiyat": "2500",
+    "litre": "30",
+    "boy": "70/90 CM TİGE",
+    "cap": "S-40",
+    "govde": "60-70",
+    "fiyatNum": 2500
+  },
+  {
+    "trAd": "KAMKAT",
+    "ltAd": "CİTRUS FORTUNELLA",
+    "fiyat": "4000",
+    "litre": "",
+    "boy": "100-125 TİJLİ",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 4000
+  },
+  {
+    "trAd": "KAMKAT",
+    "ltAd": "CİTRUS FORTUNELLA",
+    "fiyat": "7500",
+    "litre": "",
+    "boy": "ÇATALLI AĞAÇ 100+",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 7500
+  },
+  {
+    "trAd": "LİMON",
+    "ltAd": "CİTRUS LEMON RED",
+    "fiyat": "3500",
+    "litre": "55",
+    "boy": "90 CM TİGE",
+    "cap": "S-45",
+    "govde": "Q10-12",
+    "fiyatNum": 3500
+  },
+  {
+    "trAd": "MEKSİKA LİME",
+    "ltAd": "CİTRUS MEKSİKA LİME",
+    "fiyat": "2000",
+    "litre": "20",
+    "boy": "100-125",
+    "cap": "S-35",
+    "govde": "30-40",
+    "fiyatNum": 2000
+  },
+  {
+    "trAd": "LİME LİMON",
+    "ltAd": "CİTRUS LİME",
+    "fiyat": "2000",
+    "litre": "20",
+    "boy": "80-100",
+    "cap": "S-35",
+    "govde": "40-60",
+    "fiyatNum": 2000
+  },
+  {
+    "trAd": "LİME LİMON",
+    "ltAd": "CİTRUS LEMON LİME",
+    "fiyat": "2000",
+    "litre": "55",
+    "boy": "50 CM TİGE / 100+",
+    "cap": "S-45",
+    "govde": "50-60",
+    "fiyatNum": 2000
+  },
+  {
+    "trAd": "KLEMANTİN MANDALİNA",
+    "ltAd": "CİTRUS RETİCULATA KLEMANTİN",
+    "fiyat": "1500",
+    "litre": "20",
+    "boy": "100-125",
+    "cap": "S-35",
+    "govde": "30-40",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "MANDALİNA",
+    "ltAd": "CİTRUS RETİCULATA",
+    "fiyat": "3500",
+    "litre": "35",
+    "boy": "80-100",
+    "cap": "S-40",
+    "govde": "Q18-20",
+    "fiyatNum": 3500
+  },
+  {
+    "trAd": "PORTAKAL",
+    "ltAd": "CİTRUS SİNENSİS",
+    "fiyat": "5000",
+    "litre": "35",
+    "boy": "125+",
+    "cap": "S-40",
+    "govde": "Q20-25-30",
+    "fiyatNum": 5000
+  },
+  {
+    "trAd": "PORTAKAL",
+    "ltAd": "CİTRUS SİNENSİS",
+    "fiyat": "8000",
+    "litre": "",
+    "boy": "150-160",
+    "cap": "",
+    "govde": "Q30-40",
+    "fiyatNum": 8000
+  },
+  {
+    "trAd": "TURUNÇGİL",
+    "ltAd": "CİTRUS SP",
+    "fiyat": "3000",
+    "litre": "",
+    "boy": "100-200",
+    "cap": "",
+    "govde": "Q30-40",
+    "fiyatNum": 3000
+  },
+  {
+    "trAd": "TURUNÇGİL",
+    "ltAd": "CİTRUS SP (NARENCİYE MİX)",
+    "fiyat": "450",
+    "litre": "20",
+    "boy": "50-60",
+    "cap": "S-35",
+    "govde": "20-30",
+    "fiyatNum": 450
+  },
+  {
+    "trAd": "PAMPAS OTU",
+    "ltAd": "CORTADERİA SELLOANA + PUMİLA",
+    "fiyat": "250",
+    "litre": "5",
+    "boy": "60 80",
+    "cap": "S-22",
+    "govde": "20 30",
+    "fiyatNum": 250
+  },
+  {
+    "trAd": "KALEM SELVİ",
+    "ltAd": "CUPRESSUS SEMPERVİRENS STRİCTA",
+    "fiyat": "4500",
+    "litre": "",
+    "boy": "250-300",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 4500
+  },
+  {
+    "trAd": "YALANCI SAGO PALM",
+    "ltAd": "CYCAS REVOULATA",
+    "fiyat": "CM x 4 $",
+    "litre": "",
+    "boy": "",
+    "cap": "",
+    "govde": "GÖVDE BOYU 50 CM'E  KADAR",
+    "fiyatNum": 0
+  },
+  {
+    "trAd": "YALANCI SAGO PALM",
+    "ltAd": "CYCAS REVOULATA",
+    "fiyat": "CM x 6 $",
+    "litre": "",
+    "boy": "",
+    "cap": "",
+    "govde": "GÖVDE BOYU 50 CM'DEN SONRA",
+    "fiyatNum": 0
+  },
+  {
+    "trAd": "YALANCI SAGO PALM",
+    "ltAd": "CYCAS REVOULATA - ÇOKLU GÖVDE",
+    "fiyat": "40000",
+    "litre": "70",
+    "boy": "60 CM GÖVDE 120+",
+    "cap": "S-50",
+    "govde": "80-100",
+    "fiyatNum": 40000
+  },
+  {
+    "trAd": "YALANCI SAGO PALM",
+    "ltAd": "CYCAS REVOULATA - ÇOKLU GÖVDE",
+    "fiyat": "40000",
+    "litre": "110",
+    "boy": "60 CM GÖVDE 120+",
+    "cap": "S-60",
+    "govde": "80-100",
+    "fiyatNum": 40000
+  },
+  {
+    "trAd": "YALANCI SAGO PALM",
+    "ltAd": "CYCAS REVOULATA - ÇOKLU GÖVDE",
+    "fiyat": "40000",
+    "litre": "230",
+    "boy": "60 CM GÖVDE 120+",
+    "cap": "S-80",
+    "govde": "80-100",
+    "fiyatNum": 40000
+  },
+  {
+    "trAd": "JAPON ŞEMSİYESİ",
+    "ltAd": "CYPERUS ALTERNİFOLİUS",
+    "fiyat": "175",
+    "litre": "5",
+    "boy": "80-90",
+    "cap": "S-22",
+    "govde": "20-30",
+    "fiyatNum": 175
+  },
+  {
+    "trAd": "JAPON ŞEMSİYESİ",
+    "ltAd": "CYPERUS ALTERNİFOLİUS",
+    "fiyat": "750",
+    "litre": "35",
+    "boy": "80-90",
+    "cap": "S-40",
+    "govde": "60-70",
+    "fiyatNum": 750
+  },
+  {
+    "trAd": "MEKSİKA ÇİM AĞACI",
+    "ltAd": "DASYLİRİON LONGİSİMUM",
+    "fiyat": "2500",
+    "litre": "35",
+    "boy": "60-70",
+    "cap": "S-40",
+    "govde": "100",
+    "fiyatNum": 2500
+  },
+  {
+    "trAd": "MEKSİKA ÇİM AĞACI",
+    "ltAd": "DASYLİRİON LONGİSİMUM",
+    "fiyat": "7500",
+    "litre": "55",
+    "boy": "60-80",
+    "cap": "S-45",
+    "govde": "60-80",
+    "fiyatNum": 7500
+  },
+  {
+    "trAd": "MEKSİKA ÇİM AĞACI",
+    "ltAd": "DASYLİRİON SERRATİFOLİUM",
+    "fiyat": "9000",
+    "litre": "90",
+    "boy": "80-100",
+    "cap": "S-55",
+    "govde": "80-100",
+    "fiyatNum": 9000
+  },
+  {
+    "trAd": "DODENYA",
+    "ltAd": "DODONEA VİSCOSA PURPUREA",
+    "fiyat": "500",
+    "litre": "20/35",
+    "boy": "80-100",
+    "cap": "S-35",
+    "govde": "40-50",
+    "fiyatNum": 500
+  },
+  {
+    "trAd": "EJDER KANI AĞACI",
+    "ltAd": "DRACENA DRAGO",
+    "fiyat": "2000",
+    "litre": "35",
+    "boy": "60-70",
+    "cap": "S-40",
+    "govde": "50-60",
+    "fiyatNum": 2000
+  },
+  {
+    "trAd": "EJDER KANI AĞACI",
+    "ltAd": "DRACENA DRAGO",
+    "fiyat": "7500",
+    "litre": "35",
+    "boy": "30-40 CM GÖVDE/80-100",
+    "cap": "S-40",
+    "govde": "60-80",
+    "fiyatNum": 7500
+  },
+  {
+    "trAd": "EJDER KANI AĞACI",
+    "ltAd": "DRACENA DRAGO",
+    "fiyat": "3225",
+    "litre": "",
+    "boy": "Q80-90 / 180-200",
+    "cap": "",
+    "govde": "TEKLİ GÖVDE",
+    "fiyatNum": 3225
+  },
+  {
+    "trAd": "EJDER KANI AĞACI",
+    "ltAd": "DRACENA DRAGO",
+    "fiyat": "2000",
+    "litre": "",
+    "boy": "100 ÇOKLU KAFALI",
+    "cap": "",
+    "govde": "60 CM GÖVDE",
+    "fiyatNum": 2000
+  },
+  {
+    "trAd": "DRASENA",
+    "ltAd": "DRACENA MARGİNATA",
+    "fiyat": "400",
+    "litre": "7.5",
+    "boy": "30-40",
+    "cap": "S-25",
+    "govde": "10 15",
+    "fiyatNum": 400
+  },
+  {
+    "trAd": "DRASENA",
+    "ltAd": "DRACENA İNDİVİSA",
+    "fiyat": "500",
+    "litre": "18",
+    "boy": "50-60",
+    "cap": "S-30",
+    "govde": "30-40",
+    "fiyatNum": 500
+  },
+  {
+    "trAd": "AĞAÇ MENEKŞESİ",
+    "ltAd": "DURANTA LEMON",
+    "fiyat": "175",
+    "litre": "5",
+    "boy": "30-40",
+    "cap": "S-22",
+    "govde": "20-30",
+    "fiyatNum": 175
+  },
+  {
+    "trAd": "AĞAÇ MENEKŞESİ",
+    "ltAd": "DURANTA REPENS",
+    "fiyat": "450",
+    "litre": "20",
+    "boy": "40-60",
+    "cap": "S-35",
+    "govde": "30-40",
+    "fiyatNum": 450
+  },
+  {
+    "trAd": "AĞAÇ MENEKŞESİ",
+    "ltAd": "DURANTA GOLD ERECTA",
+    "fiyat": "400",
+    "litre": "12.5",
+    "boy": "40-60",
+    "cap": "S-28",
+    "govde": "30-40",
+    "fiyatNum": 400
+  },
+  {
+    "trAd": "SÜS İĞDESİ",
+    "ltAd": "ELEAGNUS EBBİNGEİ + GİLT EDGE",
+    "fiyat": "1500",
+    "litre": "35",
+    "boy": "60-80",
+    "cap": "S-40",
+    "govde": "60-80",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "İPEKSİ EROMOPHİLA",
+    "ltAd": "EREMOPHİLA NİVEA",
+    "fiyat": "450",
+    "litre": "10",
+    "boy": "40-50",
+    "cap": "S-28",
+    "govde": "30-40",
+    "fiyatNum": 450
+  },
+  {
+    "trAd": "ALEV",
+    "ltAd": "ERYTHRİNA CRİSTA GALLİ",
+    "fiyat": "5000",
+    "litre": "12.5",
+    "boy": "60-80",
+    "cap": "S-28",
+    "govde": "15 20",
+    "fiyatNum": 5000
+  },
+  {
+    "trAd": "DİKENLER TACI",
+    "ltAd": "EUPHORBİA MİLİİ",
+    "fiyat": "200",
+    "litre": "3",
+    "boy": "15 20",
+    "cap": "S-19",
+    "govde": "15 20",
+    "fiyatNum": 200
+  },
+  {
+    "trAd": "EVGENYA",
+    "ltAd": "EUGENİA ETNA FİRE",
+    "fiyat": "1500",
+    "litre": "35",
+    "boy": "175+",
+    "cap": "S-40",
+    "govde": "30-40",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "KAUÇUK",
+    "ltAd": "FİCUS AUSTRALİS",
+    "fiyat": "7000",
+    "litre": "35",
+    "boy": "250-300",
+    "cap": "S-40",
+    "govde": "Q18-20",
+    "fiyatNum": 7000
+  },
+  {
+    "trAd": "KAUÇUK",
+    "ltAd": "FİCUS AUSTRALİS",
+    "fiyat": "8000",
+    "litre": "90",
+    "boy": "250-300",
+    "cap": "S-55",
+    "govde": "Q20-25",
+    "fiyatNum": 8000
+  },
+  {
+    "trAd": "KAUÇUK",
+    "ltAd": "FİCUS AUSTRALİS",
+    "fiyat": "12500",
+    "litre": "90",
+    "boy": "250-300",
+    "cap": "S-55",
+    "govde": "Q25-30",
+    "fiyatNum": 12500
+  },
+  {
+    "trAd": "KAUÇUK",
+    "ltAd": "FİCUS AUSTRALİS",
+    "fiyat": "15000",
+    "litre": "90",
+    "boy": "250-300",
+    "cap": "S-55",
+    "govde": "Q30-35",
+    "fiyatNum": 15000
+  },
+  {
+    "trAd": "KAUÇUK",
+    "ltAd": "FİCUS DANİEL            (SAÇ ÖRGÜ)",
+    "fiyat": "3000",
+    "litre": "35",
+    "boy": "60 CM TİGE 120-140",
+    "cap": "S-40",
+    "govde": "60-80",
+    "fiyatNum": 3000
+  },
+  {
+    "trAd": "KAUÇUK",
+    "ltAd": "FİCUS ALİİ TİJLİ",
+    "fiyat": "4000",
+    "litre": "35",
+    "boy": "180-200",
+    "cap": "S-40",
+    "govde": "40-50",
+    "fiyatNum": 4000
+  },
+  {
+    "trAd": "KAUÇUK",
+    "ltAd": "FİCUS ALİİ",
+    "fiyat": "2500",
+    "litre": "20",
+    "boy": "180-200",
+    "cap": "S-35",
+    "govde": "40-50",
+    "fiyatNum": 2500
+  },
+  {
+    "trAd": "KAUÇUK",
+    "ltAd": "FİCUS ALİİ",
+    "fiyat": "3500",
+    "litre": "35",
+    "boy": "180-200",
+    "cap": "S-40",
+    "govde": "40-50",
+    "fiyatNum": 3500
+  },
+  {
+    "trAd": "KAUÇUK",
+    "ltAd": "FİCUS BURGUNDY",
+    "fiyat": "4000",
+    "litre": "35",
+    "boy": "200-250",
+    "cap": "S-40",
+    "govde": "30-40",
+    "fiyatNum": 4000
+  },
+  {
+    "trAd": "KAUÇUK",
+    "ltAd": "FİCUS TİNEKE",
+    "fiyat": "2000",
+    "litre": "20",
+    "boy": "100-120",
+    "cap": "S-35",
+    "govde": "40-50",
+    "fiyatNum": 2000
+  },
+  {
+    "trAd": "KAUÇUK",
+    "ltAd": "FİCUS LYRATA",
+    "fiyat": "2000",
+    "litre": "18",
+    "boy": "80",
+    "cap": "S-30",
+    "govde": "15",
+    "fiyatNum": 2000
+  },
+  {
+    "trAd": "KAUÇUK",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "7500",
+    "litre": "70",
+    "boy": "100+",
+    "cap": "S-50",
+    "govde": "40-60",
+    "fiyatNum": 7500
+  },
+  {
+    "trAd": "KAUÇUK",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "7500",
+    "litre": "70",
+    "boy": "150+",
+    "cap": "S-50",
+    "govde": "60-80",
+    "fiyatNum": 7500
+  },
+  {
+    "trAd": "KAUÇUK",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "7500",
+    "litre": "70",
+    "boy": "150-175",
+    "cap": "S-50",
+    "govde": "60-80",
+    "fiyatNum": 7500
+  },
+  {
+    "trAd": "KAUÇUK",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "7500",
+    "litre": "70",
+    "boy": "80 CM TİJ /180-200",
+    "cap": "S-50",
+    "govde": "Q30-35",
+    "fiyatNum": 7500
+  },
+  {
+    "trAd": "KAUÇUK",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "7500",
+    "litre": "90",
+    "boy": "110 CM TİJ / 180-200",
+    "cap": "S-55",
+    "govde": "Q25-30",
+    "fiyatNum": 7500
+  },
+  {
+    "trAd": "KAUÇUK",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "7500",
+    "litre": "90",
+    "boy": "120 CM TİJ / 180-200",
+    "cap": "S-55",
+    "govde": "Q20-25",
+    "fiyatNum": 7500
+  },
+  {
+    "trAd": "KAUÇUK",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "750",
+    "litre": "20",
+    "boy": "180-200",
+    "cap": "S-35",
+    "govde": "Q6-8-10",
+    "fiyatNum": 750
+  },
+  {
+    "trAd": "KAUÇUK",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "4500",
+    "litre": "90",
+    "boy": "250-300",
+    "cap": "S-55",
+    "govde": "Q14-16",
+    "fiyatNum": 4500
+  },
+  {
+    "trAd": "KAUÇUK",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "5500",
+    "litre": "90",
+    "boy": "250-300",
+    "cap": "S-55",
+    "govde": "Q16-18",
+    "fiyatNum": 5500
+  },
+  {
+    "trAd": "KAUÇUK",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "6500",
+    "litre": "90",
+    "boy": "250-300",
+    "cap": "S-55",
+    "govde": "Q18-20",
+    "fiyatNum": 6500
+  },
+  {
+    "trAd": "KAUÇUK",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "8500",
+    "litre": "90",
+    "boy": "250-300",
+    "cap": "S-55",
+    "govde": "Q20-25",
+    "fiyatNum": 8500
+  },
+  {
+    "trAd": "KAUÇUK",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "10500",
+    "litre": "90",
+    "boy": "250-300",
+    "cap": "S-55",
+    "govde": "Q25-30",
+    "fiyatNum": 10500
+  },
+  {
+    "trAd": "KAUÇUK",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "15000",
+    "litre": "110",
+    "boy": "250-300",
+    "cap": "S-60",
+    "govde": "Q30-35",
+    "fiyatNum": 15000
+  },
+  {
+    "trAd": "KAUÇUK",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "20000",
+    "litre": "110",
+    "boy": "250-300",
+    "cap": "S-60",
+    "govde": "Q35-40",
+    "fiyatNum": 20000
+  },
+  {
+    "trAd": "KAUÇUK",
+    "ltAd": "FİCUS PANDA",
+    "fiyat": "3000",
+    "litre": "35",
+    "boy": "125-150",
+    "cap": "S-40",
+    "govde": "60-80",
+    "fiyatNum": 3000
+  },
+  {
+    "trAd": "KAUÇUK",
+    "ltAd": "FİCUS REDUSA HAWAİ",
+    "fiyat": "5500",
+    "litre": "35",
+    "boy": "250-300",
+    "cap": "S-40",
+    "govde": "Q20-25",
+    "fiyatNum": 5500
+  },
+  {
+    "trAd": "AŞK MERDİVENİ",
+    "ltAd": "FUJER",
+    "fiyat": "250",
+    "litre": "",
+    "boy": "40-50",
+    "cap": "MAKROME",
+    "govde": "40-50",
+    "fiyatNum": 250
+  },
+  {
+    "trAd": "PAMUK GÜL",
+    "ltAd": "HİBİSCUS MUTABİLİS",
+    "fiyat": "7500",
+    "litre": "240",
+    "boy": "250+",
+    "cap": "S-80",
+    "govde": "Q30-35",
+    "fiyatNum": 7500
+  },
+  {
+    "trAd": "PAMUK GÜL",
+    "ltAd": "HİBİSCUS MUTABİLİS",
+    "fiyat": "7500",
+    "litre": "240",
+    "boy": "250+",
+    "cap": "S-80",
+    "govde": "Q35-40",
+    "fiyatNum": 7500
+  },
+  {
+    "trAd": "PAMUK GÜL",
+    "ltAd": "HİBİSCUS MUTABİLİS",
+    "fiyat": "7500",
+    "litre": "240",
+    "boy": "250+",
+    "cap": "S-80",
+    "govde": "Q40-45",
+    "fiyatNum": 7500
+  },
+  {
+    "trAd": "JAKARANDA",
+    "ltAd": "JACARANDA MİMOSİFOLİA",
+    "fiyat": "3000",
+    "litre": "45",
+    "boy": "300-350",
+    "cap": "S-50",
+    "govde": "ÇATAL JAK.",
+    "fiyatNum": 3000
+  },
+  {
+    "trAd": "JAKARANDA",
+    "ltAd": "JACARANDA MİMOSİFOLİA",
+    "fiyat": "8000",
+    "litre": "",
+    "boy": "200+",
+    "cap": "",
+    "govde": "Q16-18",
+    "fiyatNum": 8000
+  },
+  {
+    "trAd": "JAKARANDA",
+    "ltAd": "JACARANDA MİMOSİFOLİA",
+    "fiyat": "10000",
+    "litre": "90",
+    "boy": "250+",
+    "cap": "S-55",
+    "govde": "Q20-25",
+    "fiyatNum": 10000
+  },
+  {
+    "trAd": "YASEMİN",
+    "ltAd": "JASMİNUM HUMİLE",
+    "fiyat": "500",
+    "litre": "7",
+    "boy": "80-100",
+    "cap": "S-25",
+    "govde": "20-25",
+    "fiyatNum": 500
+  },
+  {
+    "trAd": "YASEMİN",
+    "ltAd": "JASMİNUM HUMİLE",
+    "fiyat": "750",
+    "litre": "35",
+    "boy": "180-200",
+    "cap": "S-40",
+    "govde": "30-35",
+    "fiyatNum": 750
+  },
+  {
+    "trAd": "YASEMİN",
+    "ltAd": "JASMİNUM OFFİCİNALE",
+    "fiyat": "500",
+    "litre": "7",
+    "boy": "180-200",
+    "cap": "S-25",
+    "govde": "20-25",
+    "fiyatNum": 500
+  },
+  {
+    "trAd": "YASEMİN",
+    "ltAd": "JASMİNUM OFFİCİNALE",
+    "fiyat": "750",
+    "litre": "20",
+    "boy": "180-200",
+    "cap": "S-35",
+    "govde": "30-35",
+    "fiyatNum": 750
+  },
+  {
+    "trAd": "YASEMİN",
+    "ltAd": "JASMİNUM OFFİCİNALE",
+    "fiyat": "750",
+    "litre": "35",
+    "boy": "200-250",
+    "cap": "S-40",
+    "govde": "30-40",
+    "fiyatNum": 750
+  },
+  {
+    "trAd": "OYA AĞACI",
+    "ltAd": "LAGERSTROMİA İNDİCA",
+    "fiyat": "1500",
+    "litre": "",
+    "boy": "150+",
+    "cap": "",
+    "govde": "50-60",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "OYA AĞACI",
+    "ltAd": "LAGERSTROMİA İNDİCA",
+    "fiyat": "5000",
+    "litre": "",
+    "boy": "250-300",
+    "cap": "",
+    "govde": "Q16-18",
+    "fiyatNum": 5000
+  },
+  {
+    "trAd": "OYA AĞACI",
+    "ltAd": "LAGERSTROMİA İNDİCA",
+    "fiyat": "5000",
+    "litre": "",
+    "boy": "250-300",
+    "cap": "",
+    "govde": "Q18-20",
+    "fiyatNum": 5000
+  },
+  {
+    "trAd": "NORFOLK ADASI HATMİSİ",
+    "ltAd": "LAGUNERİA PETERSONİİ",
+    "fiyat": "2750",
+    "litre": "55",
+    "boy": "250-300",
+    "cap": "S-45",
+    "govde": "Q12-14",
+    "fiyatNum": 2750
+  },
+  {
+    "trAd": "NORFOLK ADASI HATMİSİ",
+    "ltAd": "LAGUNERİA PETERSONİİ",
+    "fiyat": "2750",
+    "litre": "55",
+    "boy": "250-300",
+    "cap": "S-45",
+    "govde": "Q14-16",
+    "fiyatNum": 2750
+  },
+  {
+    "trAd": "NORFOLK ADASI HATMİSİ",
+    "ltAd": "LAGUNERİA PETERSONİİ",
+    "fiyat": "2750",
+    "litre": "55",
+    "boy": "250-300",
+    "cap": "S-45",
+    "govde": "Q16-18",
+    "fiyatNum": 2750
+  },
+  {
+    "trAd": "NORFOLK ADASI HATMİSİ",
+    "ltAd": "LAGUNERİA PETERSONİİ",
+    "fiyat": "4000",
+    "litre": "55",
+    "boy": "250-300",
+    "cap": "S-45",
+    "govde": "Q18-20",
+    "fiyatNum": 4000
+  },
+  {
+    "trAd": "NORFOLK ADASI HATMİSİ",
+    "ltAd": "LAGUNERİA PETERSONİİ",
+    "fiyat": "300",
+    "litre": "7",
+    "boy": "30-40",
+    "cap": "S-25",
+    "govde": "30-40",
+    "fiyatNum": 300
+  },
+  {
+    "trAd": "NORFOLK ADASI HATMİSİ",
+    "ltAd": "LAGUNERİA PETERSONİİ",
+    "fiyat": "500",
+    "litre": "12.5",
+    "boy": "40-60",
+    "cap": "S-28",
+    "govde": "30-40",
+    "fiyatNum": 500
+  },
+  {
+    "trAd": "NORFOLK ADASI HATMİSİ",
+    "ltAd": "LAGUNERİA PETERSONİİ",
+    "fiyat": "750",
+    "litre": "25",
+    "boy": "100-125",
+    "cap": "S-35",
+    "govde": "40-45",
+    "fiyatNum": 750
+  },
+  {
+    "trAd": "NORFOLK ADASI HATMİSİ",
+    "ltAd": "LAGUNERİA PETERSONİİ",
+    "fiyat": "2500",
+    "litre": "35/55",
+    "boy": "150-200",
+    "cap": "S-40",
+    "govde": "40-45",
+    "fiyatNum": 2500
+  },
+  {
+    "trAd": "NORFOLK ADASI HATMİSİ",
+    "ltAd": "LAGUNERİA PETERSONİİ",
+    "fiyat": "7500",
+    "litre": "160",
+    "boy": "200-250",
+    "cap": "S-75",
+    "govde": "40-45",
+    "fiyatNum": 7500
+  },
+  {
+    "trAd": "DEFNE",
+    "ltAd": "LAURUS NOBİLİS",
+    "fiyat": "1000",
+    "litre": "20",
+    "boy": "70-80-100",
+    "cap": "S-35",
+    "govde": "50-60",
+    "fiyatNum": 1000
+  },
+  {
+    "trAd": "DEFNE",
+    "ltAd": "LAURUS NOBİLİS",
+    "fiyat": "2000",
+    "litre": "35/45",
+    "boy": "125+",
+    "cap": "S-40",
+    "govde": "50-60",
+    "fiyatNum": 2000
+  },
+  {
+    "trAd": "DEFNE",
+    "ltAd": "LAURUS NOBİLİS",
+    "fiyat": "2500",
+    "litre": "70",
+    "boy": "130-140",
+    "cap": "S-50",
+    "govde": "40-60",
+    "fiyatNum": 2500
+  },
+  {
+    "trAd": "ALACALI LAVANTA",
+    "ltAd": "LAVANDULA ANGUSTİFOLİA PLATİNİUM BLONDE",
+    "fiyat": "150",
+    "litre": "5",
+    "boy": "30-35",
+    "cap": "S-22",
+    "govde": "30-35",
+    "fiyatNum": 150
+  },
+  {
+    "trAd": "KURTBAĞRI",
+    "ltAd": "LİGUSTRUM",
+    "fiyat": "750",
+    "litre": "90",
+    "boy": "150-175",
+    "cap": "S-55",
+    "govde": "50-60",
+    "fiyatNum": 750
+  },
+  {
+    "trAd": "HANIMELİ",
+    "ltAd": "LONİCERA CARPİFPOLİUM",
+    "fiyat": "500",
+    "litre": "12.5",
+    "boy": "150-200",
+    "cap": "S-28",
+    "govde": "30-40",
+    "fiyatNum": 500
+  },
+  {
+    "trAd": "PEMBE RÜYA ÇALISI",
+    "ltAd": "LOROPETALUM CHİNENSE BLACK PEARL",
+    "fiyat": "2000",
+    "litre": "35",
+    "boy": "50-60",
+    "cap": "S-40",
+    "govde": "50-60",
+    "fiyatNum": 2000
+  },
+  {
+    "trAd": "MANOLYA",
+    "ltAd": "MAGNOLİA GRANDİFLORA",
+    "fiyat": "40000",
+    "litre": "",
+    "boy": "400",
+    "cap": "",
+    "govde": "100+",
+    "fiyatNum": 40000
+  },
+  {
+    "trAd": "HİNT DEFNESİ",
+    "ltAd": "MELALEUCA ALTERNİFOLİA",
+    "fiyat": "400",
+    "litre": "10",
+    "boy": "30-40",
+    "cap": "S-28",
+    "govde": "30-40",
+    "fiyatNum": 400
+  },
+  {
+    "trAd": "HİNT DEFNESİ",
+    "ltAd": "MELALEUCA ALTERNİFOLİA",
+    "fiyat": "950",
+    "litre": "35",
+    "boy": "60-80",
+    "cap": "S-40",
+    "govde": "60-80",
+    "fiyatNum": 950
+  },
+  {
+    "trAd": "TESBİH AĞACI",
+    "ltAd": "MELİA AZEDARACH",
+    "fiyat": "5000",
+    "litre": "70",
+    "boy": "200-250",
+    "cap": "S-50",
+    "govde": "Q20-25",
+    "fiyatNum": 5000
+  },
+  {
+    "trAd": "TESBİH AĞACI",
+    "ltAd": "MELİA AZEDARACH",
+    "fiyat": "5000",
+    "litre": "70",
+    "boy": "200-250",
+    "cap": "S-50",
+    "govde": "Q25-30",
+    "fiyatNum": 5000
+  },
+  {
+    "trAd": "TESBİH AĞACI",
+    "ltAd": "MELİA AZEDARACH",
+    "fiyat": "10000",
+    "litre": "70",
+    "boy": "200-250",
+    "cap": "S-50",
+    "govde": "Q30-35",
+    "fiyatNum": 10000
+  },
+  {
+    "trAd": "PAMUK ŞEKERİ",
+    "ltAd": "MUHLENBERGİA CAPİLLARİS",
+    "fiyat": "105",
+    "litre": "3",
+    "boy": "40 60",
+    "cap": "S-19",
+    "govde": "10 20",
+    "fiyatNum": 105
+  },
+  {
+    "trAd": "DEVE TABANI",
+    "ltAd": "MONSTERA DELİCİOSA",
+    "fiyat": "450",
+    "litre": "7",
+    "boy": "30-40",
+    "cap": "S-25",
+    "govde": "30-40",
+    "fiyatNum": 450
+  },
+  {
+    "trAd": "DEVE TABANI",
+    "ltAd": "MONSTERA DELİCİOSA",
+    "fiyat": "500",
+    "litre": "12.5",
+    "boy": "60-80",
+    "cap": "S-28",
+    "govde": "40-50",
+    "fiyatNum": 500
+  },
+  {
+    "trAd": "DEVE TABANI",
+    "ltAd": "MONSTERA DELİCİOSA",
+    "fiyat": "600",
+    "litre": "20",
+    "boy": "60-80",
+    "cap": "S-35",
+    "govde": "40-60",
+    "fiyatNum": 600
+  },
+  {
+    "trAd": "DEVE TABANI",
+    "ltAd": "MONSTERA DELİCİOSA",
+    "fiyat": "750",
+    "litre": "35",
+    "boy": "80-100",
+    "cap": "S-40",
+    "govde": "60-80",
+    "fiyatNum": 750
+  },
+  {
+    "trAd": "MERSİN",
+    "ltAd": "MYRTUS COMMUNİS",
+    "fiyat": "245",
+    "litre": "7",
+    "boy": "30 40",
+    "cap": "S-25",
+    "govde": "20-30",
+    "fiyatNum": 245
+  },
+  {
+    "trAd": "BODUR MERSİN",
+    "ltAd": "MYRTUS TARANTİA",
+    "fiyat": "245",
+    "litre": "7",
+    "boy": "30 40",
+    "cap": "S-25",
+    "govde": "20-30",
+    "fiyatNum": 245
+  },
+  {
+    "trAd": "CENNET BAMBUSU",
+    "ltAd": "NANDİNA DOMESTİCA",
+    "fiyat": "700",
+    "litre": "15",
+    "boy": "40-50",
+    "cap": "S-30",
+    "govde": "40-50",
+    "fiyatNum": 700
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER ANGİOLOPUCCİ",
+    "fiyat": "225",
+    "litre": "7",
+    "boy": "40 60",
+    "cap": "S-25",
+    "govde": "20 30",
+    "fiyatNum": 225
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER ANGİOLOPUCCİ",
+    "fiyat": "600",
+    "litre": "20",
+    "boy": "80 90",
+    "cap": "S-35",
+    "govde": "30 40",
+    "fiyatNum": 600
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER BEYAZ",
+    "fiyat": "225",
+    "litre": "7 10",
+    "boy": "40 60",
+    "cap": "S-25",
+    "govde": "20 30",
+    "fiyatNum": 225
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER BEYAZ",
+    "fiyat": "600",
+    "litre": "20",
+    "boy": "80 100",
+    "cap": "S-35",
+    "govde": "40 50",
+    "fiyatNum": 600
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER BODUR KIRMIZI",
+    "fiyat": "225",
+    "litre": "10",
+    "boy": "15 20",
+    "cap": "S-28",
+    "govde": "5 10",
+    "fiyatNum": 225
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER BODUR KIRMIZI",
+    "fiyat": "600",
+    "litre": "20",
+    "boy": "35 40",
+    "cap": "S-35",
+    "govde": "40 60",
+    "fiyatNum": 600
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER BOYLU KIRMIZI",
+    "fiyat": "225",
+    "litre": "7 10",
+    "boy": "40 60",
+    "cap": "S-25",
+    "govde": "30-40",
+    "fiyatNum": 225
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER BOYLU KIRMIZI",
+    "fiyat": "600",
+    "litre": "20",
+    "boy": "70 80",
+    "cap": "S-35",
+    "govde": "40 45",
+    "fiyatNum": 600
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER KATMERLİ PEMBE",
+    "fiyat": "225",
+    "litre": "10",
+    "boy": "40 60",
+    "cap": "S-28",
+    "govde": "20 30",
+    "fiyatNum": 225
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER MİX",
+    "fiyat": "225",
+    "litre": "10",
+    "boy": "100 110",
+    "cap": "S-28",
+    "govde": "50 60",
+    "fiyatNum": 225
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER MİX",
+    "fiyat": "600",
+    "litre": "20",
+    "boy": "100 110",
+    "cap": "S-35",
+    "govde": "50 60",
+    "fiyatNum": 600
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER MİX",
+    "fiyat": "1100",
+    "litre": "35",
+    "boy": "150+",
+    "cap": "S-40",
+    "govde": "60-80",
+    "fiyatNum": 1100
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER MİX",
+    "fiyat": "2200",
+    "litre": "90/110",
+    "boy": "100+",
+    "cap": "S-55",
+    "govde": "80 100",
+    "fiyatNum": 2200
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER PAPAGAMBETTA",
+    "fiyat": "225",
+    "litre": "7",
+    "boy": "40-50",
+    "cap": "S-25",
+    "govde": "30-40",
+    "fiyatNum": 225
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER PAPAGAMBETTA",
+    "fiyat": "225",
+    "litre": "12.5",
+    "boy": "40-50",
+    "cap": "S-28",
+    "govde": "30-40",
+    "fiyatNum": 225
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER PAPAGAMBETTA",
+    "fiyat": "600",
+    "litre": "20",
+    "boy": "60 80",
+    "cap": "S-35",
+    "govde": "30 40",
+    "fiyatNum": 600
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER PAPAGAMBETTA",
+    "fiyat": "1100",
+    "litre": "35",
+    "boy": "60 80",
+    "cap": "S-40",
+    "govde": "50 60",
+    "fiyatNum": 1100
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER PEMBE MİX",
+    "fiyat": "225",
+    "litre": "10",
+    "boy": "40 60",
+    "cap": "S-28",
+    "govde": "20 30",
+    "fiyatNum": 225
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER PEMBE MİX",
+    "fiyat": "600",
+    "litre": "20",
+    "boy": "40 60 80",
+    "cap": "S-35",
+    "govde": "20 30",
+    "fiyatNum": 600
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER SALMON NANA",
+    "fiyat": "225",
+    "litre": "7 10",
+    "boy": "20 30",
+    "cap": "S-25",
+    "govde": "20 30",
+    "fiyatNum": 225
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER SALMON NANA",
+    "fiyat": "600",
+    "litre": "20 25",
+    "boy": "10 15",
+    "cap": "S-35",
+    "govde": "30 40",
+    "fiyatNum": 600
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER SALMON NANA",
+    "fiyat": "1100",
+    "litre": "35",
+    "boy": "15 20",
+    "cap": "S-40",
+    "govde": "40 50",
+    "fiyatNum": 1100
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER SALMON NANA",
+    "fiyat": "1750",
+    "litre": "55",
+    "boy": "60-80",
+    "cap": "S-45",
+    "govde": "60-80",
+    "fiyatNum": 1750
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER SARI ÇİÇEKLİ",
+    "fiyat": "225",
+    "litre": "7",
+    "boy": "20 30",
+    "cap": "S-25",
+    "govde": "20 30",
+    "fiyatNum": 225
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER SARI ÇİÇEKLİ",
+    "fiyat": "600",
+    "litre": "20",
+    "boy": "60 80",
+    "cap": "S-35",
+    "govde": "30 40",
+    "fiyatNum": 600
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER SOLEİL LEVANT",
+    "fiyat": "225",
+    "litre": "7",
+    "boy": "30-40",
+    "cap": "S-25",
+    "govde": "20-25",
+    "fiyatNum": 225
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER SOLEİL LEVANT",
+    "fiyat": "1100",
+    "litre": "35",
+    "boy": "40-60",
+    "cap": "S-40",
+    "govde": "30-35",
+    "fiyatNum": 1100
+  },
+  {
+    "trAd": "FİL AYAĞI",
+    "ltAd": "NOLİNA",
+    "fiyat": "2500",
+    "litre": "12.5",
+    "boy": "40-50",
+    "cap": "S-28",
+    "govde": "30-40",
+    "fiyatNum": 2500
+  },
+  {
+    "trAd": "FİL AYAĞI",
+    "ltAd": "NOLİNA",
+    "fiyat": "6000",
+    "litre": "25",
+    "boy": "80-100",
+    "cap": "S-35",
+    "govde": "50-60",
+    "fiyatNum": 6000
+  },
+  {
+    "trAd": "FİL AYAĞI",
+    "ltAd": "NOLİNA",
+    "fiyat": "7500",
+    "litre": "65",
+    "boy": "140-150",
+    "cap": "S-70",
+    "govde": "80-100",
+    "fiyatNum": 7500
+  },
+  {
+    "trAd": "NİLÜFER",
+    "ltAd": "NYMPHAEA",
+    "fiyat": "550",
+    "litre": "",
+    "boy": "50-60",
+    "cap": "",
+    "govde": "50-60",
+    "fiyatNum": 550
+  },
+  {
+    "trAd": "ZEYTİN",
+    "ltAd": "OLEA MİX",
+    "fiyat": "6000",
+    "litre": "",
+    "boy": "100+",
+    "cap": "",
+    "govde": "TEKLİ/ÇOKLU",
+    "fiyatNum": 6000
+  },
+  {
+    "trAd": "ZEYTİN",
+    "ltAd": "OLEA EUROPEAE -ANIT",
+    "fiyat": "40000",
+    "litre": "TEL SAKSI",
+    "boy": "250-300",
+    "cap": "",
+    "govde": "80-100",
+    "fiyatNum": 40000
+  },
+  {
+    "trAd": "ZEYTİN",
+    "ltAd": "OLEA EUROPEAE -ANIT",
+    "fiyat": "85000",
+    "litre": "TEL SAKSI",
+    "boy": "250-300",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 85000
+  },
+  {
+    "trAd": "ZEYTİN",
+    "ltAd": "OLEA EUROPEAE -ANIT",
+    "fiyat": "125000",
+    "litre": "TEL SAKSI",
+    "boy": "250-300",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 125000
+  },
+  {
+    "trAd": "ZEYTİN",
+    "ltAd": "OLEA EUROPEAE DALLI",
+    "fiyat": "8500",
+    "litre": "125",
+    "boy": "100-125",
+    "cap": "S-60",
+    "govde": "",
+    "fiyatNum": 8500
+  },
+  {
+    "trAd": "ZEYTİN",
+    "ltAd": "OLEA EUROPEAE ARBEQUİNE",
+    "fiyat": "10000",
+    "litre": "125",
+    "boy": "100-125",
+    "cap": "S-60",
+    "govde": "30-40",
+    "fiyatNum": 10000
+  },
+  {
+    "trAd": "ZEYTİN",
+    "ltAd": "OLEA EUROPEAE MANTAR",
+    "fiyat": "13500",
+    "litre": "125-160",
+    "boy": "80-100",
+    "cap": "S-70",
+    "govde": "",
+    "fiyatNum": 13500
+  },
+  {
+    "trAd": "PANDORA YASEMİN",
+    "ltAd": "PANDORA JASMİNİODES",
+    "fiyat": "500",
+    "litre": "7 10",
+    "boy": "60-100+",
+    "cap": "S-25",
+    "govde": "20-30",
+    "fiyatNum": 500
+  },
+  {
+    "trAd": "PARA ÇİÇEĞİ",
+    "ltAd": "PACHİRA  ÖRGÜLÜ",
+    "fiyat": "2000",
+    "litre": "18",
+    "boy": "80-100",
+    "cap": "S-30",
+    "govde": "30-40",
+    "fiyatNum": 2000
+  },
+  {
+    "trAd": "MADAGASKAR PALM",
+    "ltAd": "PACHYPODİUM LAMEREİİ",
+    "fiyat": "1000",
+    "litre": "7",
+    "boy": "60-80",
+    "cap": "S-25",
+    "govde": "30-40",
+    "fiyatNum": 1000
+  },
+  {
+    "trAd": "MADAGASKAR PALM",
+    "ltAd": "PACHYPODİUM LAMEREİİ",
+    "fiyat": "3000",
+    "litre": "15",
+    "boy": "125+",
+    "cap": "S-30",
+    "govde": "40-60",
+    "fiyatNum": 3000
+  },
+  {
+    "trAd": "İSA DİKENİ",
+    "ltAd": "PARKİNSONİA ACULEATA",
+    "fiyat": "2000",
+    "litre": "85",
+    "boy": "250-300",
+    "cap": "S-55",
+    "govde": "Q10-12",
+    "fiyatNum": 2000
+  },
+  {
+    "trAd": "İSA DİKENİ",
+    "ltAd": "PARKİNSONİA ACULEATA",
+    "fiyat": "2000",
+    "litre": "85",
+    "boy": "250-301",
+    "cap": "S-55",
+    "govde": "Q12-14",
+    "fiyatNum": 2000
+  },
+  {
+    "trAd": "İSA DİKENİ",
+    "ltAd": "PARKİNSONİA ACULEATA",
+    "fiyat": "2000",
+    "litre": "85",
+    "boy": "250-302",
+    "cap": "S-55",
+    "govde": "Q14-16",
+    "fiyatNum": 2000
+  },
+  {
+    "trAd": "İSA DİKENİ",
+    "ltAd": "PARKİNSONİA ACULEATA",
+    "fiyat": "5000",
+    "litre": "85",
+    "boy": "250-303",
+    "cap": "S-55",
+    "govde": "Q16-18",
+    "fiyatNum": 5000
+  },
+  {
+    "trAd": "İSA DİKENİ",
+    "ltAd": "PARKİNSONİA ACULEATA",
+    "fiyat": "5000",
+    "litre": "85",
+    "boy": "250-304",
+    "cap": "S-55",
+    "govde": "Q18-20",
+    "fiyatNum": 5000
+  },
+  {
+    "trAd": "İSA DİKENİ",
+    "ltAd": "PARKİNSONİA ACULEATA",
+    "fiyat": "7500",
+    "litre": "85",
+    "boy": "250-305",
+    "cap": "S-55",
+    "govde": "Q20-25",
+    "fiyatNum": 7500
+  },
+  {
+    "trAd": "İSA DİKENİ",
+    "ltAd": "PARKİNSONİA ACULEATA",
+    "fiyat": "7500",
+    "litre": "85",
+    "boy": "250-305",
+    "cap": "S-55",
+    "govde": "Q25-30",
+    "fiyatNum": 7500
+  },
+  {
+    "trAd": "ÇARKIFELEK",
+    "ltAd": "PASSİFLORA",
+    "fiyat": "500",
+    "litre": "7-7,5",
+    "boy": "180-200",
+    "cap": "S-25",
+    "govde": "10 15",
+    "fiyatNum": 500
+  },
+  {
+    "trAd": "ÇARKIFELEK",
+    "ltAd": "PASSİFLORA",
+    "fiyat": "500",
+    "litre": "12.5",
+    "boy": "180-200",
+    "cap": "S-28",
+    "govde": "30-40",
+    "fiyatNum": 500
+  },
+  {
+    "trAd": "PENNİSETUM",
+    "ltAd": "PENNİSETUM ALOPECUROİDES VİRİDESCENS",
+    "fiyat": "105",
+    "litre": "3",
+    "boy": "40 60",
+    "cap": "S-19",
+    "govde": "20 30",
+    "fiyatNum": 105
+  },
+  {
+    "trAd": "PENNİSETUM",
+    "ltAd": "PENNİSETUM SETACEUM FİREWORKS",
+    "fiyat": "105",
+    "litre": "3",
+    "boy": "40 60",
+    "cap": "S-19",
+    "govde": "20 30",
+    "fiyatNum": 105
+  },
+  {
+    "trAd": "PENNİSETUM",
+    "ltAd": "PENNİSETUM SETACEUM",
+    "fiyat": "105",
+    "litre": "3",
+    "boy": "40 60",
+    "cap": "S-19",
+    "govde": "20 30",
+    "fiyatNum": 105
+  },
+  {
+    "trAd": "CÜCE PALMİYE",
+    "ltAd": "PHOENİX ROEBELLİNİ",
+    "fiyat": "4500",
+    "litre": "25",
+    "boy": "40-50 CM GÖVDE",
+    "cap": "S-35",
+    "govde": "30-40",
+    "fiyatNum": 4500
+  },
+  {
+    "trAd": "CÜCE PALMİYE",
+    "ltAd": "PHOENİX ROEBELLİNİ",
+    "fiyat": "10000",
+    "litre": "55",
+    "boy": "90-100 GÖVDE",
+    "cap": "S-45",
+    "govde": "40-50",
+    "fiyatNum": 10000
+  },
+  {
+    "trAd": "CÜCE PALMİYE",
+    "ltAd": "PHOENİX ROEBELLİNİ",
+    "fiyat": "12000",
+    "litre": "",
+    "boy": "140-180 GÖVDE",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 12000
+  },
+  {
+    "trAd": "CÜCE PALMİYE",
+    "ltAd": "PHOENİX ROEBELLİNİ ÜÇLÜ DİKİM",
+    "fiyat": "10000",
+    "litre": "25",
+    "boy": "80-100",
+    "cap": "S-35",
+    "govde": "80-100",
+    "fiyatNum": 10000
+  },
+  {
+    "trAd": "CÜCE PALMİYE",
+    "ltAd": "PHOENİX ROEBELLİNİ ÜÇLÜ DİKİM",
+    "fiyat": "15000",
+    "litre": "55",
+    "boy": "80-100",
+    "cap": "S-45",
+    "govde": "80-100",
+    "fiyatNum": 15000
+  },
+  {
+    "trAd": "",
+    "ltAd": "PHİLODENDRON SELLOUM",
+    "fiyat": "650",
+    "litre": "7",
+    "boy": "40-50",
+    "cap": "S-25",
+    "govde": "40-60",
+    "fiyatNum": 650
+  },
+  {
+    "trAd": "YILDIZ ÇALISI",
+    "ltAd": "PİTTOSPORUM TOBİRA",
+    "fiyat": "3250",
+    "litre": "90",
+    "boy": "100+",
+    "cap": "S-55",
+    "govde": "90-100",
+    "fiyatNum": 3250
+  },
+  {
+    "trAd": "YILDIZ ÇALISI",
+    "ltAd": "PİTTOSPORUM TOBİRA",
+    "fiyat": "5750",
+    "litre": "160",
+    "boy": "150+",
+    "cap": "S-75",
+    "govde": "90-100",
+    "fiyatNum": 5750
+  },
+  {
+    "trAd": "SAKIZ AĞACI",
+    "ltAd": "PİSTACİA",
+    "fiyat": "350",
+    "litre": "7",
+    "boy": "30-40",
+    "cap": "S-25",
+    "govde": "30-40",
+    "fiyatNum": 350
+  },
+  {
+    "trAd": "AMERİKAN FULU",
+    "ltAd": "PLUMERİA ACUTİFOLİA",
+    "fiyat": "2000",
+    "litre": "20",
+    "boy": "125-150",
+    "cap": "S-35",
+    "govde": "40-50",
+    "fiyatNum": 2000
+  },
+  {
+    "trAd": "AMERİKAN FULU",
+    "ltAd": "PLUMERİA ACUTİFOLİA",
+    "fiyat": "4500",
+    "litre": "35",
+    "boy": "150+",
+    "cap": "S-40",
+    "govde": "60-80",
+    "fiyatNum": 4500
+  },
+  {
+    "trAd": "AMERİKAN FULU",
+    "ltAd": "PLUMERİA ACUTİFOLİA",
+    "fiyat": "9500",
+    "litre": "55",
+    "boy": "200+",
+    "cap": "S-45",
+    "govde": "70-80",
+    "fiyatNum": 9500
+  },
+  {
+    "trAd": "AMERİKAN FULU",
+    "ltAd": "PLUMERİA ACUTİFOLİA",
+    "fiyat": "9500",
+    "litre": "70",
+    "boy": "200+",
+    "cap": "S-50",
+    "govde": "70-80",
+    "fiyatNum": 9500
+  },
+  {
+    "trAd": "BADEM",
+    "ltAd": "PRUNUS DULCİS",
+    "fiyat": "3500",
+    "litre": "",
+    "boy": "150+",
+    "cap": "",
+    "govde": "Q12-14",
+    "fiyatNum": 3500
+  },
+  {
+    "trAd": "NAR",
+    "ltAd": "PUNİCA GRANATUM",
+    "fiyat": "1250",
+    "litre": "",
+    "boy": "200 250",
+    "cap": "",
+    "govde": "ÇOKLU",
+    "fiyatNum": 1250
+  },
+  {
+    "trAd": "ARAP YASEMİNİ",
+    "ltAd": "RHYNCOSPERMUM JASMİNİODES",
+    "fiyat": "500",
+    "litre": "10",
+    "boy": "180-200",
+    "cap": "S-28",
+    "govde": "10 15",
+    "fiyatNum": 500
+  },
+  {
+    "trAd": "ARAP YASEMİNİ",
+    "ltAd": "RHYNCOSPERMUM JASMİNİODES",
+    "fiyat": "950",
+    "litre": "35",
+    "boy": "250",
+    "cap": "S-40",
+    "govde": "10 15",
+    "fiyatNum": 950
+  },
+  {
+    "trAd": "ARAP YASEMİNİ",
+    "ltAd": "RHYNCOSPERMUM JASMİNİODES",
+    "fiyat": "15000",
+    "litre": "YATAY SAKSI",
+    "boy": "150+",
+    "cap": "",
+    "govde": "150+",
+    "fiyatNum": 15000
+  },
+  {
+    "trAd": "GÜL",
+    "ltAd": "ROSE CLİMBİNG",
+    "fiyat": "950",
+    "litre": "18",
+    "boy": "180-200",
+    "cap": "S-30",
+    "govde": "10 15",
+    "fiyatNum": 950
+  },
+  {
+    "trAd": "BİBERİYE",
+    "ltAd": "ROSMARİNUS OFFİCİNALİS",
+    "fiyat": "105",
+    "litre": "5",
+    "boy": "20-30",
+    "cap": "S-22",
+    "govde": "10 15",
+    "fiyatNum": 105
+  },
+  {
+    "trAd": "MEKSİYA PETUNYASI",
+    "ltAd": "RUELLİA BRİTONİANNA",
+    "fiyat": "150",
+    "litre": "3 4 5",
+    "boy": "40-45",
+    "cap": "S-19",
+    "govde": "15-20",
+    "fiyatNum": 150
+  },
+  {
+    "trAd": "MEKSİYA PETUNYASI",
+    "ltAd": "RUELLİA BRİTONİANNA",
+    "fiyat": "650",
+    "litre": "35",
+    "boy": "80-100",
+    "cap": "S-40",
+    "govde": "50-60",
+    "fiyatNum": 650
+  },
+  {
+    "trAd": "MEKSİYA PETUNYASI",
+    "ltAd": "RUELLİA BRİTONİANNA WHİTE",
+    "fiyat": "200",
+    "litre": "5",
+    "boy": "80-100",
+    "cap": "S-22",
+    "govde": "50-60",
+    "fiyatNum": 200
+  },
+  {
+    "trAd": "MERCAN",
+    "ltAd": "RUSSELİA EQUİSETİFORMİS",
+    "fiyat": "150",
+    "litre": "5",
+    "boy": "20 30",
+    "cap": "S-22",
+    "govde": "10 15",
+    "fiyatNum": 150
+  },
+  {
+    "trAd": "MERCAN",
+    "ltAd": "RUSSELİA EQUİSETİFORMİS",
+    "fiyat": "400",
+    "litre": "10",
+    "boy": "30 35",
+    "cap": "S-28",
+    "govde": "10 15",
+    "fiyatNum": 400
+  },
+  {
+    "trAd": "PAŞA KILICI",
+    "ltAd": "SANSEVİERİA",
+    "fiyat": "150",
+    "litre": "3",
+    "boy": "40-60",
+    "cap": "S-19",
+    "govde": "20-30",
+    "fiyatNum": 150
+  },
+  {
+    "trAd": "PAŞA KILICI",
+    "ltAd": "SANSEVİERİA",
+    "fiyat": "750",
+    "litre": "7",
+    "boy": "60-80",
+    "cap": "S-21",
+    "govde": "30-40",
+    "fiyatNum": 750
+  },
+  {
+    "trAd": "ADAÇAYI",
+    "ltAd": "SALVİA LEUCANTHA",
+    "fiyat": "105",
+    "litre": "3",
+    "boy": "15-20",
+    "cap": "S-19",
+    "govde": "15-20",
+    "fiyatNum": 105
+  },
+  {
+    "trAd": "ADAÇAYI",
+    "ltAd": "SALVİA LEUCANTHA",
+    "fiyat": "150",
+    "litre": "7",
+    "boy": "30 50",
+    "cap": "S-25",
+    "govde": "20 30",
+    "fiyatNum": 150
+  },
+  {
+    "trAd": "ŞEFLERA",
+    "ltAd": "SCHEFFLERA ARBORESCENS GOLD CAPELLA",
+    "fiyat": "450",
+    "litre": "35",
+    "boy": "55-60",
+    "cap": "S-40",
+    "govde": "50",
+    "fiyatNum": 450
+  },
+  {
+    "trAd": "ŞEFLERA",
+    "ltAd": "SCHEFFLERA ARBORESCENS GOLD CAPELLA",
+    "fiyat": "4000",
+    "litre": "70",
+    "boy": "140 150",
+    "cap": "S-50",
+    "govde": "80-100",
+    "fiyatNum": 4000
+  },
+  {
+    "trAd": "ŞEFLERA",
+    "ltAd": "SCHEFFLERA ARBORESCENS GOLD CAPELLA",
+    "fiyat": "7500",
+    "litre": "90",
+    "boy": "180-200",
+    "cap": "S-70",
+    "govde": "80-100",
+    "fiyatNum": 7500
+  },
+  {
+    "trAd": "YALANCI KARABİBER",
+    "ltAd": "SCHİNUS MOLLE",
+    "fiyat": "4000",
+    "litre": "85",
+    "boy": "250-300",
+    "cap": "S-55",
+    "govde": "Q16-18",
+    "fiyatNum": 4000
+  },
+  {
+    "trAd": "YALANCI KARABİBER",
+    "ltAd": "SCHİNUS MOLLE",
+    "fiyat": "8000",
+    "litre": "85",
+    "boy": "250-300",
+    "cap": "S-55",
+    "govde": "Q30-35",
+    "fiyatNum": 8000
+  },
+  {
+    "trAd": "CENNET KUŞU ÇİÇEĞİ",
+    "ltAd": "STRELİTZİA REGİNEA",
+    "fiyat": "950",
+    "litre": "12.5",
+    "boy": "100+",
+    "cap": "S-28",
+    "govde": "50-60",
+    "fiyatNum": 950
+  },
+  {
+    "trAd": "CENNET KUŞU ÇİÇEĞİ",
+    "ltAd": "STRELİTZİA NİCOLAİ",
+    "fiyat": "2000",
+    "litre": "35",
+    "boy": "150+",
+    "cap": "S-40",
+    "govde": "40-60",
+    "fiyatNum": 2000
+  },
+  {
+    "trAd": "CENNET KUŞU ÇİÇEĞİ",
+    "ltAd": "STRELİTZİA NİCOLAİ",
+    "fiyat": "3500",
+    "litre": "70",
+    "boy": "200+",
+    "cap": "S-50",
+    "govde": "60-80",
+    "fiyatNum": 3500
+  },
+  {
+    "trAd": "TROMPET ÇİÇEĞİ",
+    "ltAd": "TECOMA STANS",
+    "fiyat": "2000",
+    "litre": "35",
+    "boy": "200-250",
+    "cap": "S-40",
+    "govde": "Q10-12",
+    "fiyatNum": 2000
+  },
+  {
+    "trAd": "TROMPET ÇİÇEĞİ",
+    "ltAd": "TECOMA STANS",
+    "fiyat": "3000",
+    "litre": "35",
+    "boy": "200-250",
+    "cap": "S-40",
+    "govde": "Q12-14",
+    "fiyatNum": 3000
+  },
+  {
+    "trAd": "TROMPET ÇİÇEĞİ",
+    "ltAd": "TECOMA STANS",
+    "fiyat": "3000",
+    "litre": "35",
+    "boy": "200-250",
+    "cap": "S-40",
+    "govde": "Q14-16",
+    "fiyatNum": 3000
+  },
+  {
+    "trAd": "TROMPET ÇİÇEĞİ",
+    "ltAd": "TECOMA STANS",
+    "fiyat": "5000",
+    "litre": "35",
+    "boy": "200-250",
+    "cap": "S-40",
+    "govde": "Q18-20",
+    "fiyatNum": 5000
+  },
+  {
+    "trAd": "TROMPET ÇİÇEĞİ",
+    "ltAd": "TECOMA STANS",
+    "fiyat": "200",
+    "litre": "7",
+    "boy": "30-40",
+    "cap": "S-25",
+    "govde": "20-30",
+    "fiyatNum": 200
+  },
+  {
+    "trAd": "TROMPET ÇİÇEĞİ",
+    "ltAd": "TECOMA STANS",
+    "fiyat": "500",
+    "litre": "20-25",
+    "boy": "50-55",
+    "cap": "S-35",
+    "govde": "40-45",
+    "fiyatNum": 500
+  },
+  {
+    "trAd": "YILDIZ ÇALISI",
+    "ltAd": "TECOMARİA CAPENSİS",
+    "fiyat": "375",
+    "litre": "12.5",
+    "boy": "40-60",
+    "cap": "S-28",
+    "govde": "40-60",
+    "fiyatNum": 375
+  },
+  {
+    "trAd": "YILDIZ ÇALISI",
+    "ltAd": "TECOMARİA CAPENSİS",
+    "fiyat": "750",
+    "litre": "35",
+    "boy": "80-100",
+    "cap": "S-40",
+    "govde": "60-70",
+    "fiyatNum": 750
+  },
+  {
+    "trAd": "YILDIZ ÇALISI",
+    "ltAd": "TECOMARİA CAPENSİS",
+    "fiyat": "2000",
+    "litre": "90",
+    "boy": "120",
+    "cap": "S-55",
+    "govde": "80-90",
+    "fiyatNum": 2000
+  },
+  {
+    "trAd": "PERU ZAKKUMU",
+    "ltAd": "THEVETİA PERUVİANA",
+    "fiyat": "200",
+    "litre": "7",
+    "boy": "25-30",
+    "cap": "S-25",
+    "govde": "15-20",
+    "fiyatNum": 200
+  },
+  {
+    "trAd": "PERU ZAKKUMU",
+    "ltAd": "THEVETİA PERUVİANA",
+    "fiyat": "375",
+    "litre": "12.5",
+    "boy": "30-40",
+    "cap": "S-28",
+    "govde": "15-20",
+    "fiyatNum": 375
+  },
+  {
+    "trAd": "PERU ZAKKUMU",
+    "ltAd": "THEVETİA PERUVİANA",
+    "fiyat": "750",
+    "litre": "35",
+    "boy": "80-90",
+    "cap": "S-40",
+    "govde": "60-70",
+    "fiyatNum": 750
+  },
+  {
+    "trAd": "KAR TOPU",
+    "ltAd": "VİBURNUM LUCİDUM",
+    "fiyat": "300",
+    "litre": "10",
+    "boy": "50-80",
+    "cap": "S-28",
+    "govde": "40-50",
+    "fiyatNum": 300
+  },
+  {
+    "trAd": "KAR TOPU",
+    "ltAd": "VİBURNUM LUCİDUM",
+    "fiyat": "600",
+    "litre": "20",
+    "boy": "80-100",
+    "cap": "S-35",
+    "govde": "50-60",
+    "fiyatNum": 600
+  },
+  {
+    "trAd": "KAR TOPU",
+    "ltAd": "VİBURNUM LUCİDUM",
+    "fiyat": "600",
+    "litre": "25",
+    "boy": "80-100",
+    "cap": "S-35",
+    "govde": "50-60",
+    "fiyatNum": 600
+  },
+  {
+    "trAd": "KAR TOPU",
+    "ltAd": "VİBURNUM LUCİDUM",
+    "fiyat": "750",
+    "litre": "35",
+    "boy": "90-120",
+    "cap": "S-40",
+    "govde": "50-60",
+    "fiyatNum": 750
+  },
+  {
+    "trAd": "KAR TOPU",
+    "ltAd": "VİBURNUM LUCİDUM",
+    "fiyat": "1200",
+    "litre": "55",
+    "boy": "150+",
+    "cap": "S-45",
+    "govde": "60-80",
+    "fiyatNum": 1200
+  },
+  {
+    "trAd": "KAR TOPU",
+    "ltAd": "VİBURNUM LUCİDUM",
+    "fiyat": "1500",
+    "litre": "70/110",
+    "boy": "150-200",
+    "cap": "S-85",
+    "govde": "80-90",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "AVİZE ÇİÇEĞİ",
+    "ltAd": "YUCCA ALACALI",
+    "fiyat": "1250",
+    "litre": "35",
+    "boy": "80-100",
+    "cap": "S-40",
+    "govde": "40-50",
+    "fiyatNum": 1250
+  },
+  {
+    "trAd": "AVİZE ÇİÇEĞİ",
+    "ltAd": "YUCCA ELEPHATİENS",
+    "fiyat": "1250",
+    "litre": "35",
+    "boy": "80-100",
+    "cap": "S-40",
+    "govde": "40-60",
+    "fiyatNum": 1250
+  },
+  {
+    "trAd": "AVİZE ÇİÇEĞİ",
+    "ltAd": "YUCCA ELEPHATİENS",
+    "fiyat": "3000",
+    "litre": "55",
+    "boy": "125+",
+    "cap": "S-45",
+    "govde": "60-80",
+    "fiyatNum": 3000
+  },
+  {
+    "trAd": "AVİZE ÇİÇEĞİ",
+    "ltAd": "YUCCA ELEPHATİENS",
+    "fiyat": "8500",
+    "litre": "180",
+    "boy": "180-200",
+    "cap": "S-75",
+    "govde": "100+",
+    "fiyatNum": 8500
+  },
+  {
+    "trAd": "MAVİ YUKKA",
+    "ltAd": "YUCCA ROSTRATA",
+    "fiyat": "3000",
+    "litre": "18",
+    "boy": "30-40",
+    "cap": "S-30",
+    "govde": "30-40",
+    "fiyatNum": 3000
+  },
+  {
+    "trAd": "MAVİ YUKKA",
+    "ltAd": "YUCCA ROSTRATA",
+    "fiyat": "7500",
+    "litre": "55",
+    "boy": "ÇOK KAFALI",
+    "cap": "S-45",
+    "govde": "50-60",
+    "fiyatNum": 7500
+  },
+  {
+    "trAd": "MAVİ YUKKA",
+    "ltAd": "YUCCA ROSTRATA",
+    "fiyat": "6500",
+    "litre": "55",
+    "boy": "60-80 CM TÜM BOY",
+    "cap": "S-45",
+    "govde": "50-60",
+    "fiyatNum": 6500
+  },
+  {
+    "trAd": "MAVİ YUKKA",
+    "ltAd": "YUCCA ROSTRATA",
+    "fiyat": "12500",
+    "litre": "55",
+    "boy": "100-125 CM TÜM BOY",
+    "cap": "S-40",
+    "govde": "60-80",
+    "fiyatNum": 12500
+  },
+  {
+    "trAd": "MAVİ YUKKA",
+    "ltAd": "YUCCA ROSTRATA - İTHALLER",
+    "fiyat": "12500",
+    "litre": "35/55",
+    "boy": "60-80",
+    "cap": "S-40",
+    "govde": "80-100",
+    "fiyatNum": 12500
+  },
+  {
+    "trAd": "MAVİ YUKKA",
+    "ltAd": "YUCCA ROSTRATA - İTHALLER",
+    "fiyat": "15000",
+    "litre": "35/55",
+    "boy": "80-100",
+    "cap": "S-40",
+    "govde": "80-100",
+    "fiyatNum": 15000
+  },
+  {
+    "trAd": "MAVİ YUKKA",
+    "ltAd": "YUCCA ROSTRATA - İTHALLER",
+    "fiyat": "17500",
+    "litre": "35/55",
+    "boy": "100",
+    "cap": "S-40",
+    "govde": "80-100",
+    "fiyatNum": 17500
+  },
+  {
+    "trAd": "ÇİN BİBERİ",
+    "ltAd": "ZANTOXYLLUM PİPERATUM",
+    "fiyat": "250",
+    "litre": "7",
+    "boy": "30-40",
+    "cap": "S-25",
+    "govde": "30-40",
+    "fiyatNum": 250
+  },
+  {
+    "trAd": "HÜNNAP",
+    "ltAd": "ZİZİPHUS ZİZYPHUS",
+    "fiyat": "2500",
+    "litre": "",
+    "boy": "180-200",
+    "cap": "S-60",
+    "govde": "",
+    "fiyatNum": 2500
+  },
+  {
+    "trAd": "ÇİM BAMBUSU",
+    "ltAd": "BAMBUSA VENTRİCOSA",
+    "fiyat": "20000",
+    "litre": "450",
+    "boy": "200-250",
+    "cap": "",
+    "govde": "100+",
+    "fiyatNum": 20000
+  },
+  {
+    "trAd": "ORKİDE AĞACI",
+    "ltAd": "BAUHUNİA VARİEGATA",
+    "fiyat": "10000",
+    "litre": "285",
+    "boy": "200+",
+    "cap": "ÇATALLI GÖVDE",
+    "govde": "",
+    "fiyatNum": 10000
+  },
+  {
+    "trAd": "KILLI PALMİYE",
+    "ltAd": "CHAMAEROPS  HUMULİS",
+    "fiyat": "45000",
+    "litre": "450",
+    "boy": "150+",
+    "cap": "",
+    "govde": "150+",
+    "fiyatNum": 45000
+  },
+  {
+    "trAd": "MAYMUN ÇIKAMAZ",
+    "ltAd": "CHORİSİA SPECİOSA",
+    "fiyat": "50000",
+    "litre": "285/350",
+    "boy": "250+",
+    "cap": "",
+    "govde": "Q90-100",
+    "fiyatNum": 50000
+  },
+  {
+    "trAd": "KEÇİBOYNUZU",
+    "ltAd": "CERATONİA SİLİQUA BONSAİ",
+    "fiyat": "50000",
+    "litre": "350-450",
+    "boy": "150-200",
+    "cap": "",
+    "govde": "60-80",
+    "fiyatNum": 50000
+  },
+  {
+    "trAd": "TURUNÇ",
+    "ltAd": "CİTRUS AURANTİUM",
+    "fiyat": "15000",
+    "litre": "350",
+    "boy": "200+",
+    "cap": "ÇATALLI GÖVDE",
+    "govde": "Q40-50",
+    "fiyatNum": 15000
+  },
+  {
+    "trAd": "CYCAS",
+    "ltAd": "CYCAS REVOLUTA",
+    "fiyat": "3500",
+    "litre": "",
+    "boy": "125-150",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 3500
+  },
+  {
+    "trAd": "KAYMAK ÇALISI",
+    "ltAd": "FEİJO SELLOWİANA",
+    "fiyat": "7500",
+    "litre": "160",
+    "boy": "80-100",
+    "cap": "",
+    "govde": "80-100",
+    "fiyatNum": 7500
+  },
+  {
+    "trAd": "KAUÇUK",
+    "ltAd": "FİCUS AUSTRALİS",
+    "fiyat": "40000",
+    "litre": "450",
+    "boy": "180-200",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 40000
+  },
+  {
+    "trAd": "KAUÇUK",
+    "ltAd": "FİCUS AUSTRALİS",
+    "fiyat": "30000",
+    "litre": "350",
+    "boy": "350-400",
+    "cap": "",
+    "govde": "Q45-50",
+    "fiyatNum": 30000
+  },
+  {
+    "trAd": "KAUÇUK",
+    "ltAd": "FİCUS AUSTRALİS EXTRA",
+    "fiyat": "35000",
+    "litre": "TEL SAKSI",
+    "boy": "550-600",
+    "cap": "",
+    "govde": "Q230-240",
+    "fiyatNum": 35000
+  },
+  {
+    "trAd": "KAUÇUK",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "40000",
+    "litre": "450",
+    "boy": "350-400",
+    "cap": "",
+    "govde": "Q55-60",
+    "fiyatNum": 40000
+  },
+  {
+    "trAd": "KAUÇUK",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "40000",
+    "litre": "450",
+    "boy": "350-400",
+    "cap": "",
+    "govde": "Q65-70",
+    "fiyatNum": 40000
+  },
+  {
+    "trAd": "KAUÇUK",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "40000",
+    "litre": "500",
+    "boy": "350-400",
+    "cap": "ÇATALLI GÖVDE",
+    "govde": "Q80-85",
+    "fiyatNum": 40000
+  },
+  {
+    "trAd": "KAUÇUK",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "30000",
+    "litre": "600",
+    "boy": "200+",
+    "cap": "",
+    "govde": "100+",
+    "fiyatNum": 30000
+  },
+  {
+    "trAd": "DEFNE",
+    "ltAd": "LAURUS NOBİLİS",
+    "fiyat": "7500",
+    "litre": "130",
+    "boy": "80-100",
+    "cap": "TOP FORM",
+    "govde": "60-80",
+    "fiyatNum": 7500
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER WHİTE",
+    "fiyat": "25000",
+    "litre": "",
+    "boy": "150+",
+    "cap": "",
+    "govde": "150+",
+    "fiyatNum": 25000
+  },
+  {
+    "trAd": "TESBİH AĞACI",
+    "ltAd": "MELİA AZEDARACH",
+    "fiyat": "8000",
+    "litre": "",
+    "boy": "200+",
+    "cap": "",
+    "govde": "Q25-30/30-35/35-40",
+    "fiyatNum": 8000
+  },
+  {
+    "trAd": "TESBİH AĞACI",
+    "ltAd": "MELİA AZEDARACH",
+    "fiyat": "20000",
+    "litre": "",
+    "boy": "200-250",
+    "cap": "ÇATALLI GÖVDE",
+    "govde": "Q85-90",
+    "fiyatNum": 20000
+  },
+  {
+    "trAd": "NAR",
+    "ltAd": "PUNİCA GRANATUM",
+    "fiyat": "5000",
+    "litre": "160",
+    "boy": "180-200",
+    "cap": "",
+    "govde": "Q35-40-45",
+    "fiyatNum": 5000
+  },
+  {
+    "trAd": "ŞEFLERA",
+    "ltAd": "SCHEFFLERA ARBORESCENS GOLD CAPELLA",
+    "fiyat": "10000",
+    "litre": "240",
+    "boy": "200+",
+    "cap": "",
+    "govde": "80-100",
+    "fiyatNum": 10000
+  },
+  {
+    "trAd": "ŞEFLERA",
+    "ltAd": "SCHEFFLERA ARBORESCENS GOLD CAPELLA",
+    "fiyat": "10000",
+    "litre": "350",
+    "boy": "200+",
+    "cap": "",
+    "govde": "80-100",
+    "fiyatNum": 10000
+  },
+  {
+    "trAd": "ILGIN",
+    "ltAd": "TAMARİX TETRANDRA",
+    "fiyat": "10000",
+    "litre": "450",
+    "boy": "200+",
+    "cap": "",
+    "govde": "80-100",
+    "fiyatNum": 10000
+  },
+  {
+    "trAd": "KAR TOPU",
+    "ltAd": "VİBURNUM LUCİDUM",
+    "fiyat": "10000",
+    "litre": "450",
+    "boy": "200+",
+    "cap": "",
+    "govde": "125+",
+    "fiyatNum": 10000
+  },
+  {
+    "trAd": "KAR TOPU",
+    "ltAd": "VİBURNUM LUCİDUM",
+    "fiyat": "25000",
+    "litre": "İTHAL SAKSI",
+    "boy": "200+",
+    "cap": "",
+    "govde": "100+",
+    "fiyatNum": 25000
+  },
+  {
+    "trAd": "YUKKA",
+    "ltAd": "YUCCA ELEPHATİENS",
+    "fiyat": "10000",
+    "litre": "245/350",
+    "boy": "150+",
+    "cap": "ÇOKLU DİKİM",
+    "govde": "100+",
+    "fiyatNum": 10000
+  },
+  {
+    "trAd": "HÜNNAP",
+    "ltAd": "ZİZİPHUS ZİZYPHUS",
+    "fiyat": "7500",
+    "litre": "110",
+    "boy": "200-225",
+    "cap": "",
+    "govde": "Q30-35/35-40",
+    "fiyatNum": 7500
+  },
+  {
+    "trAd": "KARA KAFA BİTKİSİ",
+    "ltAd": "AEOİNUM",
+    "fiyat": "500",
+    "litre": "7",
+    "boy": "30-35",
+    "cap": "S-25",
+    "govde": "35-40",
+    "fiyatNum": 500
+  },
+  {
+    "trAd": "AMERİKAN SABIRI",
+    "ltAd": "AGAVE AMERİCANA",
+    "fiyat": "250",
+    "litre": "7",
+    "boy": "20-30",
+    "cap": "S-25",
+    "govde": "20-30",
+    "fiyatNum": 250
+  },
+  {
+    "trAd": "AMERİKAN SABIRI",
+    "ltAd": "AGAVE AMERİCANA",
+    "fiyat": "400",
+    "litre": "20",
+    "boy": "30-40",
+    "cap": "S-35",
+    "govde": "30-40",
+    "fiyatNum": 400
+  },
+  {
+    "trAd": "AMERİKAN SABIRI",
+    "ltAd": "AGAVE AMERİCANA",
+    "fiyat": "1000",
+    "litre": "35",
+    "boy": "50-60",
+    "cap": "S-40",
+    "govde": "50-60",
+    "fiyatNum": 1000
+  },
+  {
+    "trAd": "AMERİKAN SABIRI",
+    "ltAd": "AGAVE AMERİCANA",
+    "fiyat": "2000",
+    "litre": "55 - 70",
+    "boy": "70-90",
+    "cap": "S-50",
+    "govde": "80-100",
+    "fiyatNum": 2000
+  },
+  {
+    "trAd": "AMERİKAN SABIRI",
+    "ltAd": "AGAVE AMERİCANA",
+    "fiyat": "7500",
+    "litre": "160",
+    "boy": "90",
+    "cap": "S-75",
+    "govde": "100+",
+    "fiyatNum": 7500
+  },
+  {
+    "trAd": "A.SABIRI ALACALI",
+    "ltAd": "AGAVE AMERİCANA VARİEGATA",
+    "fiyat": "250",
+    "litre": "10",
+    "boy": "20-25",
+    "cap": "S-28",
+    "govde": "40-50",
+    "fiyatNum": 250
+  },
+  {
+    "trAd": "A.SABIRI ALACALI",
+    "ltAd": "AGAVE AMERİCANA VARİEGATA",
+    "fiyat": "400",
+    "litre": "20",
+    "boy": "40-50",
+    "cap": "S-35",
+    "govde": "30-40",
+    "fiyatNum": 400
+  },
+  {
+    "trAd": "A.SABIRI ALACALI",
+    "ltAd": "AGAVE AMERİCANA VARİEGATA",
+    "fiyat": "1000",
+    "litre": "35",
+    "boy": "50-60",
+    "cap": "S-40",
+    "govde": "40-50",
+    "fiyatNum": 1000
+  },
+  {
+    "trAd": "A.SABIRI ALACALI",
+    "ltAd": "AGAVE AMERİCANA VARİEGATA",
+    "fiyat": "2000",
+    "litre": "55 - 70",
+    "boy": "60-70",
+    "cap": "S-50",
+    "govde": "80-90",
+    "fiyatNum": 2000
+  },
+  {
+    "trAd": "A.SABIRI ALACALI",
+    "ltAd": "AGAVE AMERİCANA VARİEGATA",
+    "fiyat": "7500",
+    "litre": "160",
+    "boy": "100+",
+    "cap": "S-75",
+    "govde": "100+",
+    "fiyatNum": 7500
+  },
+  {
+    "trAd": "AGAVE",
+    "ltAd": "AGAVE BRACTOSEA",
+    "fiyat": "600",
+    "litre": "7",
+    "boy": "30-50",
+    "cap": "S-25",
+    "govde": "15 20",
+    "fiyatNum": 600
+  },
+  {
+    "trAd": "İBRİK YAPRAKLI AGAVE",
+    "ltAd": "AGAVE DESMEETİANA VARİEGATA",
+    "fiyat": "1500",
+    "litre": "20",
+    "boy": "50-60",
+    "cap": "S-35",
+    "govde": "40-50",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "İBRİK YAPRAKLI AGAVE",
+    "ltAd": "AGAVE DESMEETİANA VARİEGATA",
+    "fiyat": "3000",
+    "litre": "35",
+    "boy": "60-80",
+    "cap": "S-40",
+    "govde": "60-80",
+    "fiyatNum": 3000
+  },
+  {
+    "trAd": "İBRİK YAPRAKLI AGAVE",
+    "ltAd": "AGAVE DESMETTİANA",
+    "fiyat": "600",
+    "litre": "7",
+    "boy": "20-30",
+    "cap": "S-25",
+    "govde": "20-30",
+    "fiyatNum": 600
+  },
+  {
+    "trAd": "İBRİK YAPRAKLI AGAVE",
+    "ltAd": "AGAVE DESMETTİANA",
+    "fiyat": "1000",
+    "litre": "20",
+    "boy": "70",
+    "cap": "S-35",
+    "govde": "70",
+    "fiyatNum": 1000
+  },
+  {
+    "trAd": "İBRİK YAPRAKLI AGAVE",
+    "ltAd": "AGAVE DESMETTİANA",
+    "fiyat": "2500",
+    "litre": "35",
+    "boy": "90-100",
+    "cap": "S-40",
+    "govde": "80-90",
+    "fiyatNum": 2500
+  },
+  {
+    "trAd": "",
+    "ltAd": "AGAVE DESMETTİANA ÜÇ KAFALI",
+    "fiyat": "7500",
+    "litre": "90",
+    "boy": "60-80",
+    "cap": "S-55",
+    "govde": "60-80",
+    "fiyatNum": 7500
+  },
+  {
+    "trAd": "AGAVE",
+    "ltAd": "AGAVE FEROX",
+    "fiyat": "250",
+    "litre": "7",
+    "boy": "15 20",
+    "cap": "S-20",
+    "govde": "15 20",
+    "fiyatNum": 250
+  },
+  {
+    "trAd": "AGAVE",
+    "ltAd": "AGAVE FEROX",
+    "fiyat": "1000",
+    "litre": "25",
+    "boy": "40-50",
+    "cap": "S-35",
+    "govde": "30-40",
+    "fiyatNum": 1000
+  },
+  {
+    "trAd": "AGAVE",
+    "ltAd": "AGAVE FEROX",
+    "fiyat": "2000",
+    "litre": "35",
+    "boy": "40-50",
+    "cap": "S-40",
+    "govde": "70-80",
+    "fiyatNum": 2000
+  },
+  {
+    "trAd": "AGAVE",
+    "ltAd": "AGAVE FEROX",
+    "fiyat": "15000",
+    "litre": "240",
+    "boy": "130-150",
+    "cap": "S-80",
+    "govde": "100-120",
+    "fiyatNum": 15000
+  },
+  {
+    "trAd": "AGAVE",
+    "ltAd": "AGAVE MAXİMİLANA/FEROX",
+    "fiyat": "600",
+    "litre": "7",
+    "boy": "10 20",
+    "cap": "S-25",
+    "govde": "10 20",
+    "fiyatNum": 600
+  },
+  {
+    "trAd": "AGAVE",
+    "ltAd": "AGAVE FLEXİSPİANA",
+    "fiyat": "2000",
+    "litre": "35",
+    "boy": "20-25",
+    "cap": "S-40",
+    "govde": "40-45",
+    "fiyatNum": 2000
+  },
+  {
+    "trAd": "AGAVE",
+    "ltAd": "AGAVE LOPHANTA",
+    "fiyat": "600",
+    "litre": "7",
+    "boy": "20-30",
+    "cap": "S-25",
+    "govde": "20-30",
+    "fiyatNum": 600
+  },
+  {
+    "trAd": "AGAVE",
+    "ltAd": "AGAVE LOPHANTA QUADRİCOLOR",
+    "fiyat": "600",
+    "litre": "5 7",
+    "boy": "10 15",
+    "cap": "S-22",
+    "govde": "30-40",
+    "fiyatNum": 600
+  },
+  {
+    "trAd": "",
+    "ltAd": "AGAVE MACROCANTHA",
+    "fiyat": "600",
+    "litre": "7",
+    "boy": "30-40",
+    "cap": "S-25",
+    "govde": "30-40",
+    "fiyatNum": 600
+  },
+  {
+    "trAd": "AGAVE",
+    "ltAd": "AGAVE MANGAVE",
+    "fiyat": "2500",
+    "litre": "20",
+    "boy": "30-40",
+    "cap": "S-35",
+    "govde": "30-40",
+    "fiyatNum": 2500
+  },
+  {
+    "trAd": "",
+    "ltAd": "AGAVE MANGAVE",
+    "fiyat": "3000",
+    "litre": "30",
+    "boy": "30-40",
+    "cap": "S-40",
+    "govde": "30-40",
+    "fiyatNum": 3000
+  },
+  {
+    "trAd": "AGAVE",
+    "ltAd": "AGAVE MANGAVE SNOW",
+    "fiyat": "2500",
+    "litre": "18",
+    "boy": "30-40",
+    "cap": "S-30",
+    "govde": "30-40",
+    "fiyatNum": 2500
+  },
+  {
+    "trAd": "AGAVE",
+    "ltAd": "AGAVE MAXİMİLANA",
+    "fiyat": "3000",
+    "litre": "35",
+    "boy": "50-60",
+    "cap": "S-40",
+    "govde": "50-60",
+    "fiyatNum": 3000
+  },
+  {
+    "trAd": "TERS ALACALI SABIRLIK",
+    "ltAd": "AGAVE MEDİOPİCTA ALBA",
+    "fiyat": "600",
+    "litre": "7",
+    "boy": "10 15",
+    "cap": "S-25",
+    "govde": "20-30",
+    "fiyatNum": 600
+  },
+  {
+    "trAd": "TERS ALACALI SABIRLIK",
+    "ltAd": "AGAVE MEDİOPİCTA ALBA",
+    "fiyat": "1500",
+    "litre": "20",
+    "boy": "30 40",
+    "cap": "S-35",
+    "govde": "15 20",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "TERS ALACALI SABIRLIK",
+    "ltAd": "AGAVE MEDİOPİCTA ALBA",
+    "fiyat": "3000",
+    "litre": "35",
+    "boy": "40 50",
+    "cap": "S-40",
+    "govde": "15 20",
+    "fiyatNum": 3000
+  },
+  {
+    "trAd": "TERS ALACALI SABIRLIK",
+    "ltAd": "AGAVE MEDİOPİCTA AUREA",
+    "fiyat": "1500",
+    "litre": "20-25",
+    "boy": "40 50",
+    "cap": "S-35",
+    "govde": "15 20",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "TERS ALACALI SABIRLIK",
+    "ltAd": "AGAVE MEDİOPİCTA AUREA",
+    "fiyat": "3000",
+    "litre": "30",
+    "boy": "40 50",
+    "cap": "S-40",
+    "govde": "15 20",
+    "fiyatNum": 3000
+  },
+  {
+    "trAd": "",
+    "ltAd": "AGAVE MEDİOPİCTA AUREA",
+    "fiyat": "7500",
+    "litre": "110",
+    "boy": "30-40",
+    "cap": "S-60",
+    "govde": "40-50",
+    "fiyatNum": 7500
+  },
+  {
+    "trAd": "AGAVE",
+    "ltAd": "AGAVE ÖZEL ÇEŞİT BEYAZ ALACALI",
+    "fiyat": "3000",
+    "litre": "35",
+    "boy": "80 100",
+    "cap": "S-40",
+    "govde": "50 60",
+    "fiyatNum": 3000
+  },
+  {
+    "trAd": "",
+    "ltAd": "AGAVE ÖZEL ÇEŞİT BEYAZ ALACALI",
+    "fiyat": "7500",
+    "litre": "110",
+    "boy": "30-40",
+    "cap": "S-60",
+    "govde": "40-50",
+    "fiyatNum": 7500
+  },
+  {
+    "trAd": "KELEBEK AGAVE",
+    "ltAd": "AGAVE POTOTORUM + VARİEGATA",
+    "fiyat": "600",
+    "litre": "7",
+    "boy": "20",
+    "cap": "S-25",
+    "govde": "15",
+    "fiyatNum": 600
+  },
+  {
+    "trAd": "KELEBEK AGAVE",
+    "ltAd": "AGAVE POTOTORUM + VARİEGATA",
+    "fiyat": "2500",
+    "litre": "20",
+    "boy": "50-60",
+    "cap": "S-35",
+    "govde": "30",
+    "fiyatNum": 2500
+  },
+  {
+    "trAd": "KELEBEK AGAVE",
+    "ltAd": "AGAVE POTOTORUM + VARİEGATA",
+    "fiyat": "3500",
+    "litre": "35",
+    "boy": "60-70",
+    "cap": "S-40",
+    "govde": "30",
+    "fiyatNum": 3500
+  },
+  {
+    "trAd": "AGAVE",
+    "ltAd": "AGAVE PARRY",
+    "fiyat": "3500",
+    "litre": "30",
+    "boy": "40-50",
+    "cap": "S-40",
+    "govde": "40-50",
+    "fiyatNum": 3500
+  },
+  {
+    "trAd": "AGAVE",
+    "ltAd": "AGAVE PARRASANA",
+    "fiyat": "3500",
+    "litre": "30",
+    "boy": "40-50",
+    "cap": "S-40",
+    "govde": "40-50",
+    "fiyatNum": 3500
+  },
+  {
+    "trAd": "AGAVE",
+    "ltAd": "AGAVE SİSALANA",
+    "fiyat": "2000",
+    "litre": "20",
+    "boy": "60-80",
+    "cap": "S-35",
+    "govde": "60-70",
+    "fiyatNum": 2000
+  },
+  {
+    "trAd": "AGAVE",
+    "ltAd": "AGAVE SİSALANA",
+    "fiyat": "3000",
+    "litre": "35",
+    "boy": "80-100",
+    "cap": "S-40",
+    "govde": "80-100",
+    "fiyatNum": 3000
+  },
+  {
+    "trAd": "KRALİÇE VİCTORYA SABIR.",
+    "ltAd": "AGAVE VİCTORY REGİNAE",
+    "fiyat": "1500",
+    "litre": "MAKROME 6 LİTRE",
+    "boy": "5 10",
+    "cap": "S-20",
+    "govde": "20-30",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "ALOE",
+    "ltAd": "ALOE WHİTE BEAUTY",
+    "fiyat": "500",
+    "litre": "5 7",
+    "boy": "20-25",
+    "cap": "S-22",
+    "govde": "30-35",
+    "fiyatNum": 500
+  },
+  {
+    "trAd": "",
+    "ltAd": "ALOE WHİTE BEAUTY",
+    "fiyat": "750",
+    "litre": "MAKROME 6 LİTRE",
+    "boy": "20-25",
+    "cap": "",
+    "govde": "30-35",
+    "fiyatNum": 750
+  },
+  {
+    "trAd": "",
+    "ltAd": "ALOE WHİTE BEAUTY EKSTRA ÇOKLU",
+    "fiyat": "1500",
+    "litre": "MAKROME 13 LİTRE",
+    "boy": "40-50",
+    "cap": "",
+    "govde": "30-35",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "ALOE",
+    "ltAd": "ALOE WHİTE BEAUTY",
+    "fiyat": "750",
+    "litre": "18",
+    "boy": "30-40",
+    "cap": "S-30",
+    "govde": "30-35",
+    "fiyatNum": 750
+  },
+  {
+    "trAd": "ALOE",
+    "ltAd": "ALOE ARBORESCENS",
+    "fiyat": "450",
+    "litre": "7",
+    "boy": "50",
+    "cap": "S-25",
+    "govde": "30 35",
+    "fiyatNum": 450
+  },
+  {
+    "trAd": "ALOE",
+    "ltAd": "ALOE DELAETİİ",
+    "fiyat": "450",
+    "litre": "7",
+    "boy": "40-45",
+    "cap": "S-25",
+    "govde": "30 35",
+    "fiyatNum": 450
+  },
+  {
+    "trAd": "ALOE",
+    "ltAd": "ALOE MACULATA",
+    "fiyat": "450",
+    "litre": "7",
+    "boy": "30-40",
+    "cap": "S-25",
+    "govde": "20-30",
+    "fiyatNum": 450
+  },
+  {
+    "trAd": "ALOE",
+    "ltAd": "ALOE VAOMBE",
+    "fiyat": "1500",
+    "litre": "20",
+    "boy": "30",
+    "cap": "S-35",
+    "govde": "60",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "ALOE",
+    "ltAd": "ALOE VERA",
+    "fiyat": "450",
+    "litre": "7",
+    "boy": "30-40",
+    "cap": "S-25",
+    "govde": "20-30",
+    "fiyatNum": 450
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "CEREUS FORBESİİ",
+    "fiyat": "5000",
+    "litre": "35",
+    "boy": "80-100",
+    "cap": "S-40",
+    "govde": "ÇOKLU 30-40",
+    "fiyatNum": 5000
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "CEREUS PERUVİANUS FLORİDA",
+    "fiyat": "7500",
+    "litre": "55",
+    "boy": "140-150",
+    "cap": "S-45",
+    "govde": "80-90",
+    "fiyatNum": 7500
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "CEREUS PERUVİANUS FLORİDA",
+    "fiyat": "10000",
+    "litre": "90",
+    "boy": "100",
+    "cap": "S-55",
+    "govde": "80",
+    "fiyatNum": 10000
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "CEREUS PERUVİANUS FLORİDA",
+    "fiyat": "10000",
+    "litre": "110",
+    "boy": "150",
+    "cap": "S-60",
+    "govde": "80-90",
+    "fiyatNum": 10000
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "CEREUS PERUVİANUS MONSTROSE",
+    "fiyat": "1500",
+    "litre": "7",
+    "boy": "30-50",
+    "cap": "S-25",
+    "govde": "15 20",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "CEREUS PERUVİANUS MONSTROSE",
+    "fiyat": "5000",
+    "litre": "35",
+    "boy": "90-100",
+    "cap": "S-40",
+    "govde": "40-50",
+    "fiyatNum": 5000
+  },
+  {
+    "trAd": "SUKULENT",
+    "ltAd": "SEDUM",
+    "fiyat": "50",
+    "litre": "1",
+    "boy": "5 10",
+    "cap": "S9,5 KARE",
+    "govde": "5 10",
+    "fiyatNum": 50
+  },
+  {
+    "trAd": "GÜMÜŞ MEŞALE",
+    "ltAd": "CLEİSTOCACTUS STRAUSİİ",
+    "fiyat": "3500",
+    "litre": "18",
+    "boy": "100-150",
+    "cap": "S-30",
+    "govde": "30-40",
+    "fiyatNum": 3500
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "CONSOLEA CORALLİCOLA (TEKLİ GÖVDE)",
+    "fiyat": "3500",
+    "litre": "20",
+    "boy": "160-180",
+    "cap": "S-35",
+    "govde": "50-70",
+    "fiyatNum": 3500
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "CONSOLEA CORALLİCOLA",
+    "fiyat": "3500",
+    "litre": "20",
+    "boy": "40 50",
+    "cap": "S-35",
+    "govde": "40 50",
+    "fiyatNum": 3500
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "CONSOLEA CORALLİCOLA (TEKLİ GÖVDE)",
+    "fiyat": "7500",
+    "litre": "55",
+    "boy": "200-250",
+    "cap": "S-45",
+    "govde": "80-100",
+    "fiyatNum": 7500
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "CONSOLEA CORALLİCOLA (ÇOKLU GÖVDE)",
+    "fiyat": "7500",
+    "litre": "55",
+    "boy": "90-100",
+    "cap": "S-45",
+    "govde": "60 80",
+    "fiyatNum": 7500
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "CRASSULA OVATA/HOBBİT/ARBORESCENS UNDULATİFOLİA  BONSAİ",
+    "fiyat": "1500",
+    "litre": "MAKROME 6 LİTRE",
+    "boy": "30 40",
+    "cap": "",
+    "govde": "20 25",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "CRASSULA OVATA/HOBBİT/ARBORESCENS UNDULATİFOLİA",
+    "fiyat": "150",
+    "litre": "1.5",
+    "boy": "5 10",
+    "cap": "S-15",
+    "govde": "5 10",
+    "fiyatNum": 150
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "CRASSULA OVATA",
+    "fiyat": "600",
+    "litre": "7 10",
+    "boy": "10 15",
+    "cap": "S-22",
+    "govde": "25 30",
+    "fiyatNum": 600
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "ECHİNOCACTUS GRUSONİİ",
+    "fiyat": "750",
+    "litre": "5",
+    "boy": "15-20",
+    "cap": "S-22",
+    "govde": "10",
+    "fiyatNum": 750
+  },
+  {
+    "trAd": "",
+    "ltAd": "ECHİNOCACTUS GRUSONİİ",
+    "fiyat": "1500",
+    "litre": "MAKROME 6 LİTRE",
+    "boy": "",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "ECHİNOPSİS OXYGANA",
+    "fiyat": "150",
+    "litre": "1.5",
+    "boy": "5 10",
+    "cap": "RS-15",
+    "govde": "10 15",
+    "fiyatNum": 150
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "ECHİNOPSİS OXYGANA",
+    "fiyat": "400",
+    "litre": "3",
+    "boy": "5 10",
+    "cap": "S-19",
+    "govde": "10 15",
+    "fiyatNum": 400
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "EUPHORBİA İNGENS",
+    "fiyat": "5000",
+    "litre": "35",
+    "boy": "100-125",
+    "cap": "S-40",
+    "govde": "40-50",
+    "fiyatNum": 5000
+  },
+  {
+    "trAd": "",
+    "ltAd": "EUPHORBİA İNGENS",
+    "fiyat": "5000",
+    "litre": "35",
+    "boy": "125-150 TEKLİ",
+    "cap": "S-40",
+    "govde": "30-40",
+    "fiyatNum": 5000
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "EUPHORBİA ABYSSİNİCA COWBOY",
+    "fiyat": "3500",
+    "litre": "20",
+    "boy": "70-80",
+    "cap": "S-35",
+    "govde": "40-50",
+    "fiyatNum": 3500
+  },
+  {
+    "trAd": "SÜTLEĞEN",
+    "ltAd": "EUPHORBİA TRİGONA + RUBRA",
+    "fiyat": "250",
+    "litre": "1.5",
+    "boy": "25-30",
+    "cap": "S-15",
+    "govde": "25-30",
+    "fiyatNum": 250
+  },
+  {
+    "trAd": "SÜTLEĞEN",
+    "ltAd": "EUPHORBİA TRİGONA + RUBRA",
+    "fiyat": "2000",
+    "litre": "RS9",
+    "boy": "60-80",
+    "cap": "S-25",
+    "govde": "30-40",
+    "fiyatNum": 2000
+  },
+  {
+    "trAd": "SÜTLEĞEN",
+    "ltAd": "EUPHORBİA TRİGONA + RUBRA",
+    "fiyat": "5000",
+    "litre": "35",
+    "boy": "100+",
+    "cap": "S-40",
+    "govde": "40-60",
+    "fiyatNum": 5000
+  },
+  {
+    "trAd": "",
+    "ltAd": "EUPHORBİA TİRUCALLİ (ÜRETİM)",
+    "fiyat": "250",
+    "litre": "1",
+    "boy": "5 10",
+    "cap": "S-9,5",
+    "govde": "5 10",
+    "fiyatNum": 250
+  },
+  {
+    "trAd": "GEYİK BOYNUZU",
+    "ltAd": "EUPHORBİA TİRUCALLİ",
+    "fiyat": "600",
+    "litre": "7 10",
+    "boy": "40-50",
+    "cap": "S-22",
+    "govde": "30-40",
+    "fiyatNum": 600
+  },
+  {
+    "trAd": "GEYİK BOYNUZU",
+    "ltAd": "EUPHORBİA TİRUCALLİ",
+    "fiyat": "3000",
+    "litre": "35",
+    "boy": "80-100",
+    "cap": "S-40",
+    "govde": "40-50",
+    "fiyatNum": 3000
+  },
+  {
+    "trAd": "GEYİK BOYNUZU",
+    "ltAd": "EUPHORBİA TİRUCALLİ",
+    "fiyat": "5000",
+    "litre": "55",
+    "boy": "70",
+    "cap": "S-45",
+    "govde": "60-70",
+    "fiyatNum": 5000
+  },
+  {
+    "trAd": "GEYİK BOYNUZU",
+    "ltAd": "EUPHORBİA TİRUCALLİ",
+    "fiyat": "15000",
+    "litre": "110",
+    "boy": "150-175",
+    "cap": "S-60",
+    "govde": "100-120",
+    "fiyatNum": 15000
+  },
+  {
+    "trAd": "GEYİK BOYNUZU",
+    "ltAd": "EUPHORBİA TİRUCALLİ",
+    "fiyat": "15000",
+    "litre": "350",
+    "boy": "180-200",
+    "cap": "",
+    "govde": "100-120",
+    "fiyatNum": 15000
+  },
+  {
+    "trAd": "GEYİK BOYNUZU",
+    "ltAd": "EUPHORBİA TİRUCALLİ",
+    "fiyat": "15000",
+    "litre": "ÇÖMLEK SAKSI",
+    "boy": "250-300",
+    "cap": "",
+    "govde": "100-150",
+    "fiyatNum": 15000
+  },
+  {
+    "trAd": "FERROKAKTÜS",
+    "ltAd": "FERROCACTUS EMORYİİ",
+    "fiyat": "150",
+    "litre": "1",
+    "boy": "5 10",
+    "cap": "S-10,5",
+    "govde": "5 10",
+    "fiyatNum": 150
+  },
+  {
+    "trAd": "FERROKAKTÜS",
+    "ltAd": "FERROCACTUS EMORYİİ",
+    "fiyat": "150",
+    "litre": "1.5",
+    "boy": "5 10",
+    "cap": "S-15 / RS - 15",
+    "govde": "5 10",
+    "fiyatNum": 150
+  },
+  {
+    "trAd": "FERROKAKTÜS",
+    "ltAd": "FERROCACTUS EMORYİİ",
+    "fiyat": "300",
+    "litre": "3.2",
+    "boy": "5 10",
+    "cap": "S-19",
+    "govde": "10 15",
+    "fiyatNum": 300
+  },
+  {
+    "trAd": "FERROKAKTÜS",
+    "ltAd": "FERROCACTUS EMORYİİ",
+    "fiyat": "500",
+    "litre": "5",
+    "boy": "5 10",
+    "cap": "S-22",
+    "govde": "15 20",
+    "fiyatNum": 500
+  },
+  {
+    "trAd": "FERROKAKTÜS",
+    "ltAd": "FERROCACTUS EMORYİİ",
+    "fiyat": "1000",
+    "litre": "MAKROME 6 LİTRE",
+    "boy": "",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 1000
+  },
+  {
+    "trAd": "FERROKAKTÜS",
+    "ltAd": "FERROCACTUS EMORYİİ ÜÇLÜ DİKİM",
+    "fiyat": "1000",
+    "litre": "MAKROME 6 LİTRE",
+    "boy": "10 15",
+    "cap": "",
+    "govde": "20",
+    "fiyatNum": 1000
+  },
+  {
+    "trAd": "FERROKAKTÜS",
+    "ltAd": "FERROCACTUS GLAUSCENS",
+    "fiyat": "1000",
+    "litre": "MAKROME 6 LİTRE",
+    "boy": "20-25",
+    "cap": "",
+    "govde": "20-25",
+    "fiyatNum": 1000
+  },
+  {
+    "trAd": "AGAVE",
+    "ltAd": "FURCRAEA SELLOA VAR. MARGİNATA",
+    "fiyat": "600",
+    "litre": "7",
+    "boy": "50-60",
+    "cap": "S-25",
+    "govde": "30-40",
+    "fiyatNum": 600
+  },
+  {
+    "trAd": "AGAVE",
+    "ltAd": "FURCRAEA SELLOA VAR. MARGİNATA",
+    "fiyat": "3500",
+    "litre": "35",
+    "boy": "80-90",
+    "cap": "S-40",
+    "govde": "90-110",
+    "fiyatNum": 3500
+  },
+  {
+    "trAd": "AGAVE",
+    "ltAd": "FURCRAEA SELLOA VAR. MARGİNATA",
+    "fiyat": "7500",
+    "litre": "90",
+    "boy": "125+",
+    "cap": "S-55",
+    "govde": "125+",
+    "fiyatNum": 7500
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "GYMNOCALYCİUM PFLANZİİ",
+    "fiyat": "300",
+    "litre": "1.5",
+    "boy": "5 10",
+    "cap": "RS-15",
+    "govde": "10 15",
+    "fiyatNum": 300
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "İTHAL KAKTÜS MİX",
+    "fiyat": "300",
+    "litre": "1.5",
+    "boy": "5 10",
+    "cap": "RS-15",
+    "govde": "5 10",
+    "fiyatNum": 300
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "İTHAL KAKTÜS",
+    "fiyat": "1500",
+    "litre": "5",
+    "boy": "40-60",
+    "cap": "S-22",
+    "govde": "10 15",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "İTHAL KAKTÜS - ESPESTOA LANATA",
+    "fiyat": "1500",
+    "litre": "5",
+    "boy": "30-40",
+    "cap": "S-22",
+    "govde": "10 15",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "İTHAL KAKTÜS - ESPESTOA LANATA",
+    "fiyat": "3000",
+    "litre": "18",
+    "boy": "80-100",
+    "cap": "S-30",
+    "govde": "30-40",
+    "fiyatNum": 3000
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "İTHAL KAKTÜS - STETSONİA CORYNE",
+    "fiyat": "1500",
+    "litre": "7 11",
+    "boy": "40-50",
+    "cap": "S-22",
+    "govde": "10 15",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "İTHAL KAKTÜS - ESPESTOA GUENTHERİ",
+    "fiyat": "1500",
+    "litre": "7 11",
+    "boy": "50-60",
+    "cap": "S-22",
+    "govde": "10 15",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "İTHAL KAKTÜS - PACHYCEREUS PRİNGLEİ",
+    "fiyat": "1500",
+    "litre": "7 11",
+    "boy": "30-40",
+    "cap": "S-22",
+    "govde": "10 15",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "İTHAL KAKTÜS - PACHYCEREUS PECHTEN - ABORİGİNUM",
+    "fiyat": "1500",
+    "litre": "7 11",
+    "boy": "40-60",
+    "cap": "S-22",
+    "govde": "10 15",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "İTHAL KAKTÜS - POLASCHİA CHİCHİPE",
+    "fiyat": "1500",
+    "litre": "7 11",
+    "boy": "60-70",
+    "cap": "S-22",
+    "govde": "10 15",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "İTHAL KAKTÜS - MYRTİLLOCACTUS GEOMETRİZANS",
+    "fiyat": "1500",
+    "litre": "7 11",
+    "boy": "50-60",
+    "cap": "S-22",
+    "govde": "20-30",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "SUKULENT",
+    "ltAd": "KALANCHOE BEHARENSİS FANG",
+    "fiyat": "800",
+    "litre": "20",
+    "boy": "30-40",
+    "cap": "S-35",
+    "govde": "20-30",
+    "fiyatNum": 800
+  },
+  {
+    "trAd": "SUKULENT",
+    "ltAd": "KALANCHOE BEHARENSİS FANG",
+    "fiyat": "1000",
+    "litre": "35",
+    "boy": "40",
+    "cap": "S-40",
+    "govde": "40",
+    "fiyatNum": 1000
+  },
+  {
+    "trAd": "GÜMÜŞ KAŞIK",
+    "ltAd": "KALANCHOE BRACTEATA",
+    "fiyat": "125",
+    "litre": "1.5",
+    "boy": "15 20",
+    "cap": "RS-15",
+    "govde": "10 15",
+    "fiyatNum": 125
+  },
+  {
+    "trAd": "GÜMÜŞ KAŞIK",
+    "ltAd": "KALANCHOE BRACTEATA",
+    "fiyat": "300",
+    "litre": "3.2",
+    "boy": "20-30",
+    "cap": "S-19",
+    "govde": "20 30",
+    "fiyatNum": 300
+  },
+  {
+    "trAd": "GÜMÜŞ KAŞIK",
+    "ltAd": "KALANCHOE BRACTEATA",
+    "fiyat": "600",
+    "litre": "7",
+    "boy": "30 50",
+    "cap": "S-25",
+    "govde": "20 30",
+    "fiyatNum": 600
+  },
+  {
+    "trAd": "PANDA KALANŞO",
+    "ltAd": "KALANCHOE TOMENTOSA PANDA",
+    "fiyat": "300",
+    "litre": "3",
+    "boy": "20-30",
+    "cap": "S-19",
+    "govde": "20-30",
+    "fiyatNum": 300
+  },
+  {
+    "trAd": "PANDA KALANŞO",
+    "ltAd": "KALANCHOE TOMENTOSA PANDA",
+    "fiyat": "600",
+    "litre": "7",
+    "boy": "20",
+    "cap": "S-25",
+    "govde": "30",
+    "fiyatNum": 600
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "MAMMİLERİA",
+    "fiyat": "100",
+    "litre": "1",
+    "boy": "10 15",
+    "cap": "S-12/S13",
+    "govde": "10 15",
+    "fiyatNum": 100
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "MAMMİLERİA      (YATAY BÜYÜYEN ÇOKLU)",
+    "fiyat": "500",
+    "litre": "MAKROME 2 LİTRE",
+    "boy": "15 20",
+    "cap": "",
+    "govde": "30 40",
+    "fiyatNum": 500
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "MAMMİLERİA      (YATAY BÜYÜYEN ÇOKLU)",
+    "fiyat": "1500",
+    "litre": "MAKROME 6 LİTRE",
+    "boy": "15 20",
+    "cap": "",
+    "govde": "30 40",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "",
+    "ltAd": "MAMMİLERİA      (YATAY BÜYÜYEN ÇOKLU-EKSTRA)",
+    "fiyat": "3000",
+    "litre": "MAKROME 13 LİTRE",
+    "boy": "",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 3000
+  },
+  {
+    "trAd": "ALACALI OPUNTİA",
+    "ltAd": "OPUNTİA COCHİNİLİFERA VARİEGATA",
+    "fiyat": "750",
+    "litre": "20",
+    "boy": "30-35",
+    "cap": "S-35",
+    "govde": "30-35",
+    "fiyatNum": 750
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "OPUNTİA COMPRESSA",
+    "fiyat": "1000",
+    "litre": "20",
+    "boy": "30-40",
+    "cap": "S-35",
+    "govde": "30-40",
+    "fiyatNum": 1000
+  },
+  {
+    "trAd": "",
+    "ltAd": "OPUNTİA CONSOLEA",
+    "fiyat": "1500",
+    "litre": "7",
+    "boy": "80-100",
+    "cap": "S-3",
+    "govde": "40-50",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "OPUNTİA TOMENTOSA",
+    "fiyat": "1000",
+    "litre": "20",
+    "boy": "30-40",
+    "cap": "S-35",
+    "govde": "30-40",
+    "fiyatNum": 1000
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "OPUNTİA TOMENTOSA",
+    "fiyat": "1500",
+    "litre": "30",
+    "boy": "100+",
+    "cap": "S-40",
+    "govde": "60-80",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "OPUNTİA CYLİNDRİCA",
+    "fiyat": "750",
+    "litre": "20",
+    "boy": "40-50",
+    "cap": "S-35",
+    "govde": "40-50",
+    "fiyatNum": 750
+  },
+  {
+    "trAd": "KAYNANA SOPASI",
+    "ltAd": "OPUNTİA CYLİNDRİCA",
+    "fiyat": "1500",
+    "litre": "30",
+    "boy": "40-50",
+    "cap": "S-40",
+    "govde": "40",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "KAYNANA SOPASI",
+    "ltAd": "OPUNTİA CYLİNDRİCA",
+    "fiyat": "2000",
+    "litre": "70",
+    "boy": "100-110",
+    "cap": "S-50",
+    "govde": "80-90",
+    "fiyatNum": 2000
+  },
+  {
+    "trAd": "KAYNANA DİLİ",
+    "ltAd": "OPUNTİA FİCUS İNDİCA",
+    "fiyat": "750",
+    "litre": "20",
+    "boy": "60-80",
+    "cap": "S-35",
+    "govde": "60-70",
+    "fiyatNum": 750
+  },
+  {
+    "trAd": "KAYNANA DİLİ",
+    "ltAd": "OPUNTİA FİCUS İNDİCA",
+    "fiyat": "2000",
+    "litre": "70/90",
+    "boy": "70-80",
+    "cap": "S-55",
+    "govde": "50-60",
+    "fiyatNum": 2000
+  },
+  {
+    "trAd": "TAVŞAN KULAĞI",
+    "ltAd": "OPUNTİA MİCRODİASY",
+    "fiyat": "75",
+    "litre": "0.8",
+    "boy": "5 10",
+    "cap": "RS-8,5",
+    "govde": "5 10",
+    "fiyatNum": 75
+  },
+  {
+    "trAd": "TAVŞAN KULAĞI",
+    "ltAd": "OPUNTİA MİCRODİASY",
+    "fiyat": "125",
+    "litre": "1.5",
+    "boy": "15 20",
+    "cap": "RS-15",
+    "govde": "15 20",
+    "fiyatNum": 125
+  },
+  {
+    "trAd": "TAVŞAN KULAĞI",
+    "ltAd": "OPUNTİA MİCRODİASY",
+    "fiyat": "500",
+    "litre": "7-7,5",
+    "boy": "20-25",
+    "cap": "S-22",
+    "govde": "15-20",
+    "fiyatNum": 500
+  },
+  {
+    "trAd": "TAVŞAN KULAĞI",
+    "ltAd": "OPUNTİA MİCRODİASY",
+    "fiyat": "1500",
+    "litre": "18",
+    "boy": "20-25",
+    "cap": "S-30",
+    "govde": "15-20",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "TAVŞAN KULAĞI",
+    "ltAd": "OPUNTİA MİCRODİASY ALBA",
+    "fiyat": "75",
+    "litre": "0.8",
+    "boy": "5 10",
+    "cap": "RS-8,5",
+    "govde": "5 10",
+    "fiyatNum": 75
+  },
+  {
+    "trAd": "TAVŞAN KULAĞI",
+    "ltAd": "OPUNTİA MİCRODİASY  ALBA",
+    "fiyat": "500",
+    "litre": "7-7,5",
+    "boy": "20-25",
+    "cap": "S-22",
+    "govde": "15-20",
+    "fiyatNum": 500
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "OPUNTİA POLYCANTHA",
+    "fiyat": "1500",
+    "litre": "20",
+    "boy": "80-90",
+    "cap": "S-35",
+    "govde": "50-60",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "KAKTÜS",
+    "ltAd": "OPUNTİA POLYCANTHA",
+    "fiyat": "2500",
+    "litre": "35",
+    "boy": "60-80",
+    "cap": "S-40",
+    "govde": "50-60",
+    "fiyatNum": 2500
+  },
+  {
+    "trAd": "MADAGASKAR PALMİYESİ",
+    "ltAd": "PACHYPODİUM LAMEREİ",
+    "fiyat": "2500",
+    "litre": "10",
+    "boy": "30-40",
+    "cap": "S-28",
+    "govde": "10 20",
+    "fiyatNum": 2500
+  },
+  {
+    "trAd": "MADAGASKAR PALMİYESİ",
+    "ltAd": "PACHYPODİUM LAMEREİ",
+    "fiyat": "4000",
+    "litre": "25",
+    "boy": "150+",
+    "cap": "S-35",
+    "govde": "10 20",
+    "fiyatNum": 4000
+  },
+  {
+    "trAd": "SUKULENT",
+    "ltAd": "PORTULACARİ AFRA",
+    "fiyat": "150",
+    "litre": "1.5",
+    "boy": "10 15",
+    "cap": "S-15",
+    "govde": "15 20",
+    "fiyatNum": 150
+  },
+  {
+    "trAd": "SUKULENT",
+    "ltAd": "PORTULACARİ AFRA",
+    "fiyat": "600",
+    "litre": "7",
+    "boy": "40-60",
+    "cap": "S-25",
+    "govde": "40 60",
+    "fiyatNum": 600
+  },
+  {
+    "trAd": "SUKULENT",
+    "ltAd": "PORTULACARİ AFRA BAMBULU",
+    "fiyat": "1500",
+    "litre": "25",
+    "boy": "80-100",
+    "cap": "S-35",
+    "govde": "40 60",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "SUKULENT",
+    "ltAd": "PORTULACARİA AFRA BONSAİ",
+    "fiyat": "1500",
+    "litre": "MAKROME 6/13 LİTRE",
+    "boy": "50-60",
+    "cap": "",
+    "govde": "50-60",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "",
+    "ltAd": "PORTULACARİA AFRA VARİEGATA (ÜRETİM)",
+    "fiyat": "75",
+    "litre": "1",
+    "boy": "5 10",
+    "cap": "S-9,5",
+    "govde": "5 10",
+    "fiyatNum": 75
+  },
+  {
+    "trAd": "",
+    "ltAd": "PORTULACARİA AFRA VARİEGATA",
+    "fiyat": "150",
+    "litre": "1.5",
+    "boy": "10 15",
+    "cap": "S-15",
+    "govde": "15 20",
+    "fiyatNum": 150
+  },
+  {
+    "trAd": "SUKULENT",
+    "ltAd": "PORTULACARİA AFRA VARİEGATA",
+    "fiyat": "600",
+    "litre": "7",
+    "boy": "40-60",
+    "cap": "S-25",
+    "govde": "30-40",
+    "fiyatNum": 600
+  },
+  {
+    "trAd": "SUKULENT",
+    "ltAd": "PORTULACARİA AFRA VARİEGATA",
+    "fiyat": "800",
+    "litre": "12.5",
+    "boy": "40-60",
+    "cap": "S-28",
+    "govde": "30-40",
+    "fiyatNum": 800
+  },
+  {
+    "trAd": "SUKULENT",
+    "ltAd": "PORTULACARİA AFRA VARİEGATA",
+    "fiyat": "800",
+    "litre": "MAKROME YAYVAN",
+    "boy": "40-60",
+    "cap": "",
+    "govde": "30-40",
+    "fiyatNum": 800
+  },
+  {
+    "trAd": "",
+    "ltAd": "ARANJMAN",
+    "fiyat": "100",
+    "litre": "",
+    "boy": "",
+    "cap": "RS-12",
+    "govde": "",
+    "fiyatNum": 100
+  },
+  {
+    "trAd": "",
+    "ltAd": "ARANJMAN",
+    "fiyat": "200",
+    "litre": "",
+    "boy": "",
+    "cap": "RS-15",
+    "govde": "",
+    "fiyatNum": 200
+  },
+  {
+    "trAd": "",
+    "ltAd": "ARANJMAN",
+    "fiyat": "250",
+    "litre": "",
+    "boy": "",
+    "cap": "MAKROME RS",
+    "govde": "",
+    "fiyatNum": 250
+  },
+  {
+    "trAd": "",
+    "ltAd": "ARANJMAN",
+    "fiyat": "350",
+    "litre": "",
+    "boy": "",
+    "cap": "MAKROME RS",
+    "govde": "",
+    "fiyatNum": 350
+  },
+  {
+    "trAd": "",
+    "ltAd": "ARANJMAN",
+    "fiyat": "200",
+    "litre": "",
+    "boy": "",
+    "cap": "KAYIK RS",
+    "govde": "",
+    "fiyatNum": 200
+  },
+  {
+    "trAd": "",
+    "ltAd": "ARANJMAN",
+    "fiyat": "1500",
+    "litre": "",
+    "boy": "",
+    "cap": "MAKROME 6 LİTRE",
+    "govde": "",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "TOPÇULAR",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "",
+    "litre": "BİRİM FİYAT",
+    "boy": "",
+    "cap": "TOPLAM",
+    "govde": "",
+    "fiyatNum": 0
+  },
+  {
+    "trAd": "Q10-12",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "1500",
+    "litre": "1",
+    "boy": "",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "Q12-14",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "2500",
+    "litre": "0",
+    "boy": "",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 2500
+  },
+  {
+    "trAd": "Q14-16",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "400",
+    "litre": "7",
+    "boy": "",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 400
+  },
+  {
+    "trAd": "Q16-18",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "4500",
+    "litre": "16",
+    "boy": "",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 4500
+  },
+  {
+    "trAd": "Q18-20",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "5000",
+    "litre": "51",
+    "boy": "",
+    "cap": "27",
+    "govde": "",
+    "fiyatNum": 5000
+  },
+  {
+    "trAd": "Q20-25",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "7500",
+    "litre": "61",
+    "boy": "",
+    "cap": "30",
+    "govde": "",
+    "fiyatNum": 7500
+  },
+  {
+    "trAd": "Q25-30",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "10000",
+    "litre": "35",
+    "boy": "",
+    "cap": "19",
+    "govde": "",
+    "fiyatNum": 10000
+  },
+  {
+    "trAd": "Q30-35",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "12500",
+    "litre": "25",
+    "boy": "",
+    "cap": "10",
+    "govde": "",
+    "fiyatNum": 12500
+  },
+  {
+    "trAd": "Q35-40",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "15000",
+    "litre": "6",
+    "boy": "",
+    "cap": "3",
+    "govde": "",
+    "fiyatNum": 15000
+  },
+  {
+    "trAd": "Q40-45",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "25000",
+    "litre": "1",
+    "boy": "",
+    "cap": "1",
+    "govde": "",
+    "fiyatNum": 25000
+  },
+  {
+    "trAd": "Q45-50",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "",
+    "litre": "0",
+    "boy": "",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 0
+  },
+  {
+    "trAd": "Q50-55",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "40000",
+    "litre": "",
+    "boy": "",
+    "cap": "1",
+    "govde": "",
+    "fiyatNum": 40000
+  },
+  {
+    "trAd": "Q60-65",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "40000",
+    "litre": "",
+    "boy": "",
+    "cap": "1",
+    "govde": "",
+    "fiyatNum": 40000
+  },
+  {
+    "trAd": "Q65-70",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "40000",
+    "litre": "",
+    "boy": "",
+    "cap": "1",
+    "govde": "",
+    "fiyatNum": 40000
+  },
+  {
+    "trAd": "TOPLAM",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "",
+    "litre": "203",
+    "boy": "",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 0
+  },
+  {
+    "trAd": "Q10-12",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "2000",
+    "litre": "0",
+    "boy": "",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 2000
+  },
+  {
+    "trAd": "Q12-14",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "2500",
+    "litre": "0",
+    "boy": "",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 2500
+  },
+  {
+    "trAd": "Q14-16",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "4000",
+    "litre": "0",
+    "boy": "",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 4000
+  },
+  {
+    "trAd": "Q16-18",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "4500",
+    "litre": "1",
+    "boy": "",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 4500
+  },
+  {
+    "trAd": "Q18-20",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "6000",
+    "litre": "10",
+    "boy": "",
+    "cap": "8",
+    "govde": "",
+    "fiyatNum": 6000
+  },
+  {
+    "trAd": "Q20-25",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "7500",
+    "litre": "13",
+    "boy": "",
+    "cap": "5",
+    "govde": "",
+    "fiyatNum": 7500
+  },
+  {
+    "trAd": "Q25-30",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "10000",
+    "litre": "14",
+    "boy": "",
+    "cap": "6",
+    "govde": "",
+    "fiyatNum": 10000
+  },
+  {
+    "trAd": "Q30-35",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "10000",
+    "litre": "4",
+    "boy": "",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 10000
+  },
+  {
+    "trAd": "Q35-40",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "",
+    "litre": "0",
+    "boy": "",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 0
+  },
+  {
+    "trAd": "Q40-45",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "",
+    "litre": "0",
+    "boy": "",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 0
+  },
+  {
+    "trAd": "Q45-50",
+    "ltAd": "FİCUS NİTİDA",
+    "fiyat": "",
+    "litre": "0",
+    "boy": "",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 0
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER ANGİOLOPUCCİ",
+    "fiyat": "2134",
+    "litre": "7",
+    "boy": "40 60",
+    "cap": "S-25",
+    "govde": "20 30",
+    "fiyatNum": 2134
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER ANGİOLOPUCCİ",
+    "fiyat": "333",
+    "litre": "20",
+    "boy": "100+",
+    "cap": "S-40",
+    "govde": "30 40",
+    "fiyatNum": 333
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER BEYAZ",
+    "fiyat": "398",
+    "litre": "7 ve 10",
+    "boy": "40 60",
+    "cap": "S-25",
+    "govde": "20 30",
+    "fiyatNum": 398
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER BEYAZ",
+    "fiyat": "272",
+    "litre": "20",
+    "boy": "80 100",
+    "cap": "S-35",
+    "govde": "40 50",
+    "fiyatNum": 272
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER BODUR KIRMIZI",
+    "fiyat": "634",
+    "litre": "10",
+    "boy": "15 20",
+    "cap": "S-28",
+    "govde": "5 10",
+    "fiyatNum": 634
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER BODUR KIRMIZI",
+    "fiyat": "268",
+    "litre": "20",
+    "boy": "35 40",
+    "cap": "S-35",
+    "govde": "40 60",
+    "fiyatNum": 268
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER BOYLU KIRMIZI",
+    "fiyat": "748",
+    "litre": "7 ve 10",
+    "boy": "40 60",
+    "cap": "S-28",
+    "govde": "30-40",
+    "fiyatNum": 748
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER BOYLU KIRMIZI",
+    "fiyat": "338",
+    "litre": "20",
+    "boy": "70 80",
+    "cap": "S-35",
+    "govde": "40 45",
+    "fiyatNum": 338
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER KATMERLİ PEMBE / PEMBE MİX",
+    "fiyat": "1312",
+    "litre": "10",
+    "boy": "125+",
+    "cap": "S-28",
+    "govde": "40-50",
+    "fiyatNum": 1312
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER MİX",
+    "fiyat": "46",
+    "litre": "35",
+    "boy": "150+",
+    "cap": "S-45",
+    "govde": "60-80",
+    "fiyatNum": 46
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER MİX",
+    "fiyat": "22",
+    "litre": "90 ve 110",
+    "boy": "100+",
+    "cap": "S-90",
+    "govde": "80 100",
+    "fiyatNum": 22
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER PAPAGAMBETTA",
+    "fiyat": "2958",
+    "litre": "7",
+    "boy": "40-50",
+    "cap": "S-25",
+    "govde": "30-40",
+    "fiyatNum": 2958
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER PAPAGAMBETTA",
+    "fiyat": "651",
+    "litre": "20",
+    "boy": "60 80",
+    "cap": "S-35",
+    "govde": "30 40",
+    "fiyatNum": 651
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER PAPAGAMBETTA",
+    "fiyat": "33",
+    "litre": "35",
+    "boy": "60 80",
+    "cap": "S-40",
+    "govde": "50 60",
+    "fiyatNum": 33
+  },
+  {
+    "trAd": "",
+    "ltAd": "NERİUM OLEANDER PAPAGAMBETTA",
+    "fiyat": "7",
+    "litre": "55",
+    "boy": "60-80",
+    "cap": "S-45",
+    "govde": "60-80",
+    "fiyatNum": 7
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER SALMON NANA",
+    "fiyat": "3876",
+    "litre": "7 ve 10",
+    "boy": "20 30",
+    "cap": "S-25",
+    "govde": "20 30",
+    "fiyatNum": 3876
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER SALMON NANA",
+    "fiyat": "792",
+    "litre": "20 ve 25",
+    "boy": "10 15",
+    "cap": "S-40",
+    "govde": "30 40",
+    "fiyatNum": 792
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER SALMON NANA",
+    "fiyat": "121",
+    "litre": "35",
+    "boy": "15 20",
+    "cap": "S-40",
+    "govde": "40 50",
+    "fiyatNum": 121
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER SALMON NANA",
+    "fiyat": "10",
+    "litre": "55",
+    "boy": "60-80",
+    "cap": "S-45",
+    "govde": "60-80",
+    "fiyatNum": 10
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER SARI ÇİÇEKLİ",
+    "fiyat": "192",
+    "litre": "20",
+    "boy": "60 80",
+    "cap": "S-35",
+    "govde": "30 40",
+    "fiyatNum": 192
+  },
+  {
+    "trAd": "",
+    "ltAd": "NERİUM OLEANDER SOLEİL LEVANT",
+    "fiyat": "224",
+    "litre": "20",
+    "boy": "40-50",
+    "cap": "S-35",
+    "govde": "30 40",
+    "fiyatNum": 224
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLEANDER SOLEİL LEVANT",
+    "fiyat": "22",
+    "litre": "35",
+    "boy": "40-60",
+    "cap": "S-40",
+    "govde": "30-35",
+    "fiyatNum": 22
+  },
+  {
+    "trAd": "ZAKKUM",
+    "ltAd": "NERİUM OLANDER MİX HARCI ALEM",
+    "fiyat": "1672",
+    "litre": "4 ve 5",
+    "boy": "40-50",
+    "cap": "S-19",
+    "govde": "30-35",
+    "fiyatNum": 1672
+  },
+  {
+    "trAd": "",
+    "ltAd": "NERİUM OLEANDER VARİEGEATA",
+    "fiyat": "120",
+    "litre": "7",
+    "boy": "30-40",
+    "cap": "S-25",
+    "govde": "30-40",
+    "fiyatNum": 120
+  },
+  {
+    "trAd": "10",
+    "ltAd": "PHOENİX ROEBELLİNİ ÜÇLÜ DİKİM",
+    "fiyat": "",
+    "litre": "1",
+    "boy": "",
+    "cap": "60-80",
+    "govde": "2500",
+    "fiyatNum": 0
+  },
+  {
+    "trAd": "25",
+    "ltAd": "PHOENİX ROEBELLİNİ ÜÇLÜ DİKİM",
+    "fiyat": "",
+    "litre": "4",
+    "boy": "",
+    "cap": "80-100",
+    "govde": "3000",
+    "fiyatNum": 0
+  },
+  {
+    "trAd": "55",
+    "ltAd": "PHOENİX ROEBELLİNİ ÜÇLÜ DİKİM",
+    "fiyat": "",
+    "litre": "2",
+    "boy": "",
+    "cap": "80-100",
+    "govde": "",
+    "fiyatNum": 0
+  },
+  {
+    "trAd": "25",
+    "ltAd": "CHAMAEROPS  HUMİLİS",
+    "fiyat": "",
+    "litre": "1",
+    "boy": "",
+    "cap": "80-100 TÜM BOY",
+    "govde": "",
+    "fiyatNum": 0
+  },
+  {
+    "trAd": "35",
+    "ltAd": "CHAMAEROPS  HUMİLİS",
+    "fiyat": "4500",
+    "litre": "1",
+    "boy": "",
+    "cap": "100-125 TÜM BOY",
+    "govde": "",
+    "fiyatNum": 4500
+  },
+  {
+    "trAd": "110",
+    "ltAd": "CHAMAEROPS  HUMİLİS",
+    "fiyat": "14000",
+    "litre": "1",
+    "boy": "",
+    "cap": "125-150 TÜM BOY",
+    "govde": "",
+    "fiyatNum": 14000
+  },
+  {
+    "trAd": "10",
+    "ltAd": "PHOENİX ROEBELLİNİ ÜÇLÜ DİKİM",
+    "fiyat": "2000",
+    "litre": "1",
+    "boy": "",
+    "cap": "60-80",
+    "govde": "",
+    "fiyatNum": 2000
+  },
+  {
+    "trAd": "25",
+    "ltAd": "PHOENİX ROEBELLİNİ ÜÇLÜ DİKİM",
+    "fiyat": "2400",
+    "litre": "4",
+    "boy": "",
+    "cap": "80-100",
+    "govde": "",
+    "fiyatNum": 2400
+  },
+  {
+    "trAd": "55",
+    "ltAd": "PHOENİX ROEBELLİNİ ÜÇLÜ DİKİM",
+    "fiyat": "5000",
+    "litre": "2",
+    "boy": "",
+    "cap": "80-100",
+    "govde": "",
+    "fiyatNum": 5000
+  },
+  {
+    "trAd": "25",
+    "ltAd": "CHAMAEROPS  HUMİLİS",
+    "fiyat": "1500",
+    "litre": "1",
+    "boy": "",
+    "cap": "80-100 TÜM BOY",
+    "govde": "",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "35",
+    "ltAd": "CHAMAEROPS  HUMİLİS",
+    "fiyat": "3500",
+    "litre": "1",
+    "boy": "",
+    "cap": "100-125 TÜM BOY",
+    "govde": "",
+    "fiyatNum": 3500
+  },
+  {
+    "trAd": "110",
+    "ltAd": "CHAMAEROPS  HUMİLİS",
+    "fiyat": "8500",
+    "litre": "1",
+    "boy": "",
+    "cap": "125-150 TÜM BOY",
+    "govde": "",
+    "fiyatNum": 8500
+  },
+  {
+    "trAd": "",
+    "ltAd": "ALOCASİA CUCULLATA",
+    "fiyat": "750",
+    "litre": "11 LİTRE",
+    "boy": "40-50",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 750
+  },
+  {
+    "trAd": "",
+    "ltAd": "ALOCASİA CUCULLATA",
+    "fiyat": "750",
+    "litre": "12,5 LİTRE",
+    "boy": "40-60",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 750
+  },
+  {
+    "trAd": "",
+    "ltAd": "ALOCASİA CUCULLATA",
+    "fiyat": "1250",
+    "litre": "35 LİTRE",
+    "boy": "70-90",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 1250
+  },
+  {
+    "trAd": "",
+    "ltAd": "ASPARAGUS DENSİFLORUS MEYERİİ",
+    "fiyat": "125",
+    "litre": "3 LİTRE",
+    "boy": "10 20",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 125
+  },
+  {
+    "trAd": "",
+    "ltAd": "ASPARAGUS DENSİFLORUS MEYERİİ",
+    "fiyat": "400",
+    "litre": "10 LİTRE",
+    "boy": "30-40",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 400
+  },
+  {
+    "trAd": "",
+    "ltAd": "ARECASTRUM ROMANZOFFİANUM",
+    "fiyat": "200",
+    "litre": "5 LİTRE",
+    "boy": "50-60",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 200
+  },
+  {
+    "trAd": "",
+    "ltAd": "CRASSULA HOBBİT",
+    "fiyat": "120",
+    "litre": "S15",
+    "boy": "10 15",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 120
+  },
+  {
+    "trAd": "",
+    "ltAd": "CRASSULA OVATA",
+    "fiyat": "120",
+    "litre": "S15",
+    "boy": "10 15",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 120
+  },
+  {
+    "trAd": "",
+    "ltAd": "CYCAS REVOLUTA",
+    "fiyat": "2000",
+    "litre": "12.5 LİTRE",
+    "boy": "40--60-80",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 2000
+  },
+  {
+    "trAd": "",
+    "ltAd": "DURANTA ERECTA GOLD EDGE",
+    "fiyat": "120",
+    "litre": "3 LİTRE",
+    "boy": "30-35",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 120
+  },
+  {
+    "trAd": "",
+    "ltAd": "DURANTA ERECTA GOLD EDGE",
+    "fiyat": "120",
+    "litre": "3/4 LİTRE",
+    "boy": "40-50",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 120
+  },
+  {
+    "trAd": "",
+    "ltAd": "DURANTA LEMON",
+    "fiyat": "105",
+    "litre": "3/4 LİTRE",
+    "boy": "30-35",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 105
+  },
+  {
+    "trAd": "",
+    "ltAd": "DURANTA LEMON",
+    "fiyat": "150",
+    "litre": "5 LİTRE",
+    "boy": "40-50",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 150
+  },
+  {
+    "trAd": "",
+    "ltAd": "EUPHORBİA MİLLİ",
+    "fiyat": "200",
+    "litre": "S17",
+    "boy": "20-30",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 200
+  },
+  {
+    "trAd": "",
+    "ltAd": "EUPHORBİA MİLLİ",
+    "fiyat": "200",
+    "litre": "RS19",
+    "boy": "20-30",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 200
+  },
+  {
+    "trAd": "",
+    "ltAd": "EUPHORBİA MİLLİ",
+    "fiyat": "200",
+    "litre": "3 LİTRE",
+    "boy": "30-40",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 200
+  },
+  {
+    "trAd": "",
+    "ltAd": "EUPHORBİA MİLLİ",
+    "fiyat": "550",
+    "litre": "11 LİTRE",
+    "boy": "40-50",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 550
+  },
+  {
+    "trAd": "",
+    "ltAd": "EUPHORBİA MİLLİ",
+    "fiyat": "550",
+    "litre": "7,5 LİTRE",
+    "boy": "30-40",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 550
+  },
+  {
+    "trAd": "",
+    "ltAd": "EUPHORBİA TİRUCALLİ",
+    "fiyat": "600",
+    "litre": "7/10 LİTRE",
+    "boy": "30-40",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 600
+  },
+  {
+    "trAd": "",
+    "ltAd": "KALANCHOE BRACTEATA",
+    "fiyat": "125",
+    "litre": "S15",
+    "boy": "10 15",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 125
+  },
+  {
+    "trAd": "",
+    "ltAd": "KALANCHOE BRACTEATA",
+    "fiyat": "600",
+    "litre": "11 LİTRE",
+    "boy": "30-40",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 600
+  },
+  {
+    "trAd": "",
+    "ltAd": "KALANCHOE TOMENTOSA PANDA",
+    "fiyat": "125",
+    "litre": "3 LİTRE",
+    "boy": "20-30",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 125
+  },
+  {
+    "trAd": "",
+    "ltAd": "KALANCHOE TOMENTOSA PANDA",
+    "fiyat": "600",
+    "litre": "7 LİTRE",
+    "boy": "30-40",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 600
+  },
+  {
+    "trAd": "",
+    "ltAd": "MELALEUCA ALTERNİFOLİA",
+    "fiyat": "400",
+    "litre": "10 LİTRE",
+    "boy": "40-50",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 400
+  },
+  {
+    "trAd": "",
+    "ltAd": "MELALEUCA ALTERNİFOLİA",
+    "fiyat": "400",
+    "litre": "12,5 LİTRE",
+    "boy": "40-50",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 400
+  },
+  {
+    "trAd": "",
+    "ltAd": "MELALEUCA ALTERNİFOLİA",
+    "fiyat": "950",
+    "litre": "35 LİTRE",
+    "boy": "60-0",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 950
+  },
+  {
+    "trAd": "",
+    "ltAd": "METROCİDERUS EXCELSA",
+    "fiyat": "650",
+    "litre": "15 LİTRE",
+    "boy": "30-40",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 650
+  },
+  {
+    "trAd": "",
+    "ltAd": "METROCİDERUS EXCELSA",
+    "fiyat": "1500",
+    "litre": "35 LİTRE",
+    "boy": "80-100",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "",
+    "ltAd": "METROCİDERUS EXCELSA",
+    "fiyat": "1500",
+    "litre": "35 LİTRE",
+    "boy": "BAMBULU 100+",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "",
+    "ltAd": "METROCİDERUS EXCELSA",
+    "fiyat": "6000",
+    "litre": "35 LİTRE",
+    "boy": "150+",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 6000
+  },
+  {
+    "trAd": "",
+    "ltAd": "METROCİDERUS EXCELSA",
+    "fiyat": "7500",
+    "litre": "55 LİTRE",
+    "boy": "180-200",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 7500
+  },
+  {
+    "trAd": "",
+    "ltAd": "MONSTERA DELİCİOSA",
+    "fiyat": "400",
+    "litre": "10 LİTRE",
+    "boy": "30-40",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 400
+  },
+  {
+    "trAd": "",
+    "ltAd": "MONSTERA DELİCİOSA",
+    "fiyat": "400",
+    "litre": "12,5 LİTRE",
+    "boy": "40-50",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 400
+  },
+  {
+    "trAd": "",
+    "ltAd": "MONSTERA DELİCİOSA",
+    "fiyat": "500",
+    "litre": "20 LİTRE",
+    "boy": "40-60",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 500
+  },
+  {
+    "trAd": "",
+    "ltAd": "MONSTERA DELİCİOSA",
+    "fiyat": "1000",
+    "litre": "35 LİTRE",
+    "boy": "60-80",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 1000
+  },
+  {
+    "trAd": "",
+    "ltAd": "NANDİNA OBSESSED SEİKA",
+    "fiyat": "175",
+    "litre": "5 LİTRE",
+    "boy": "20-30",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 175
+  },
+  {
+    "trAd": "",
+    "ltAd": "PLUMERİA",
+    "fiyat": "2000",
+    "litre": "35 LİTRE",
+    "boy": "80-125",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 2000
+  },
+  {
+    "trAd": "",
+    "ltAd": "PLUMERİA",
+    "fiyat": "4500",
+    "litre": "35 LİTRE",
+    "boy": "125-150",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 4500
+  },
+  {
+    "trAd": "",
+    "ltAd": "STRELİTZİA NİCOLAİ",
+    "fiyat": "2000",
+    "litre": "35 LİTRE",
+    "boy": "200+",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 2000
+  },
+  {
+    "trAd": "",
+    "ltAd": "STRELİTZİA NİCOLAİ",
+    "fiyat": "3500",
+    "litre": "55 LİTRE",
+    "boy": "200-250+",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 3500
+  },
+  {
+    "trAd": "",
+    "ltAd": "STRELİTZİA NİCOLAİ",
+    "fiyat": "3500",
+    "litre": "70 LİTRE",
+    "boy": "200-250+",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 3500
+  },
+  {
+    "trAd": "",
+    "ltAd": "STRELİTZİA REGİNEA",
+    "fiyat": "1500",
+    "litre": "12,5 LİTRE",
+    "boy": "60-80",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "",
+    "ltAd": "STRELİTZİA REGİNEA",
+    "fiyat": "1500",
+    "litre": "35 LİTRE",
+    "boy": "80-100",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 1500
+  },
+  {
+    "trAd": "",
+    "ltAd": "SUKULENT",
+    "fiyat": "50",
+    "litre": "S10,5",
+    "boy": "5 10",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 50
+  },
+  {
+    "trAd": "",
+    "ltAd": "SUKULENT",
+    "fiyat": "50",
+    "litre": "RS15",
+    "boy": "10 15",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 50
+  },
+  {
+    "trAd": "",
+    "ltAd": "SUKULENT",
+    "fiyat": "95",
+    "litre": "M18",
+    "boy": "15 20",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 95
+  },
+  {
+    "trAd": "",
+    "ltAd": "TECOMARİA CAPENSİS",
+    "fiyat": "250",
+    "litre": "10/12,5 LİTRE",
+    "boy": "40-50",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 250
+  },
+  {
+    "trAd": "",
+    "ltAd": "TECOMARİA CAPENSİS",
+    "fiyat": "700",
+    "litre": "35 LİTRE",
+    "boy": "60-80",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 700
+  },
+  {
+    "trAd": "",
+    "ltAd": "TRADESCANTİA ZEBRİNA",
+    "fiyat": "50",
+    "litre": "S15",
+    "boy": "10 15",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 50
+  },
+  {
+    "trAd": "",
+    "ltAd": "METROCİDERUS EXCELSA",
+    "fiyat": "350",
+    "litre": "7 LİTRE",
+    "boy": "40-60 CM",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 350
+  },
+  {
+    "trAd": "",
+    "ltAd": "METROCİDERUS EXCELSA",
+    "fiyat": "1250",
+    "litre": "35 LİTRE",
+    "boy": "100-125 CM",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 1250
+  },
+  {
+    "trAd": "",
+    "ltAd": "METROCİDERUS EXCELSA",
+    "fiyat": "1550",
+    "litre": "35 LİTRE",
+    "boy": "BAMBULU 100-125 CM",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 1550
+  },
+  {
+    "trAd": "",
+    "ltAd": "METROCİDERUS EXCELSA",
+    "fiyat": "5625",
+    "litre": "35 LİTRE",
+    "boy": "150+ CM",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 5625
+  },
+  {
+    "trAd": "",
+    "ltAd": "METROCİDERUS EXCELSA",
+    "fiyat": "8500",
+    "litre": "55 LİTRE",
+    "boy": "180-200 CM",
+    "cap": "",
+    "govde": "",
+    "fiyatNum": 8500
+  }
+]
