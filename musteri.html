@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#1b5e20">
+    <title>Eko Garden Katalog</title>
+    <link rel="manifest" href="manifest_musteri.json">
+    <meta name="apple-mobile-web-app-title" content="Eko Garden">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #2e7d32;
+            --primary-dark: #1b5e20;
+            --primary-light: #a5d6a7;
+            --text: #1a1a1a;
+            --text-light: #666;
+            --bg: #f1f5f0;
+        }
+
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            padding-top: 72px;
+            padding-bottom: 40px;
+        }
+
+        .sticky-header {
+            position: fixed; left: 0; right: 0; top: 0; z-index: 200;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+            padding: 12px 16px;
+            display: flex; align-items: center;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.25);
+        }
+        .logo-wrap { display: flex; align-items: center; gap: 10px; }
+        .logo-icon {
+            width: 44px; height: 44px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 12px; display: flex; align-items: center; justify-content: center;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        .logo-text h1 { font-size: 18px; font-weight: 900; color: white; letter-spacing: -0.3px; line-height: 1.1; }
+        .logo-text span { font-size: 10px; color: var(--primary-light); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+
+        .container { padding: 14px; }
+
+        .loading-card {
+            background: white; padding: 40px 20px; border-radius: 18px;
+            text-align: center; margin-bottom: 16px; border: 2px solid #e8f5e9;
+        }
+        .loading-card p { font-size: 14px; color: var(--text-light); margin-top: 12px; font-weight: 600; }
+        .spinner {
+            width: 40px; height: 40px; margin: 0 auto;
+            border: 4px solid var(--primary-light);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .search-container { margin-bottom: 14px; }
+        #search-input {
+            width: 100%; padding: 14px 20px; border-radius: 30px;
+            border: 2px solid transparent; background: white;
+            font-family: 'Nunito', sans-serif; font-size: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07); outline: none; transition: border 0.2s;
+        }
+        #search-input:focus { border-color: var(--primary-light); }
+        #stats { text-align: center; font-size: 12px; color: var(--text-light); margin-top: 8px; font-weight: 600; }
+
+        .plant-card {
+            background: white; border-radius: 16px; margin-bottom: 14px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06); overflow: hidden; border: 1px solid #e8f5e9;
+        }
+        .card-img-wrap {
+            width: 100%; height: 180px;
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            overflow: hidden;
+        }
+        .card-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+        .card-img-placeholder {
+            width: 100%; height: 100%;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            gap: 6px; color: var(--primary);
+        }
+        .card-img-placeholder span { font-size: 38px; }
+        .card-img-placeholder p { font-size: 11px; color: var(--text-light); font-weight: 600; }
+
+        .card-body { padding: 14px; }
+        .plant-title { font-weight: 900; font-size: 17px; color: var(--primary-dark); line-height: 1.2; }
+        .plant-latin { font-style: italic; color: var(--text-light); font-size: 13px; margin-top: 3px; }
+
+        .info-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+            margin-top: 12px; background: #f9fbf9; padding: 10px; border-radius: 10px;
+        }
+        .info-item { font-size: 13px; color: #444; }
+        .info-label { font-weight: 700; color: #999; font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; display: block; margin-bottom: 1px; }
+
+        .toast {
+            position: fixed; bottom: 30px; left: 50%;
+            transform: translateX(-50%) translateY(20px);
+            background: var(--primary-dark); color: white;
+            padding: 10px 20px; border-radius: 30px;
+            font-weight: 700; font-size: 14px; opacity: 0; transition: all 0.3s;
+            z-index: 400; white-space: nowrap;
+        }
+        .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+    </style>
+</head>
+<body>
+
+<div class="sticky-header">
+    <div class="logo-wrap">
+        <div class="logo-icon">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+                <path d="M14 4C14 4 8 8 8 15C8 18.31 10.69 21 14 21C17.31 21 20 18.31 20 15C20 8 14 4 14 4Z" fill="#a5d6a7"/>
+                <path d="M14 21V26M14 15C14 15 11 12 9 10M14 15C14 15 17 12 19 10" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+                <circle cx="14" cy="14" r="2.5" fill="white" opacity="0.6"/>
+            </svg>
+        </div>
+        <div class="logo-text">
+            <h1>Eko Garden</h1>
+            <span>Bitki Katalogu</span>
+        </div>
+    </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<div class="container">
+    <div class="loading-card" id="loading-box">
+        <div class="spinner"></div>
+        <p>Katalog yükleniyor...</p>
+    </div>
+    <div class="search-container" id="search-box" style="display:none;">
+        <input type="text" id="search-input" placeholder="🔍 Bitki adı veya özellik ara...">
+        <div id="stats"><span id="stats-text"></span></div>
+    </div>
+    <div id="catalog-list"></div>
+</div>
+
+<script>
+const REPO_BASE = 'https://aroqemr-pixel.github.io/Fiyat';
+const IMG_BASE  = REPO_BASE + '/images/';
+
+let searchIdx = [];
+let parsed    = [];
+let filtered  = [];
+
+const PAGE = 20;
+let rendered  = 0;
+let rendering = false;
+
+function escHtml(s) { return String(s).replace(/&/g,'&amp;').replace(/'/g,"&#39;").replace(/</g,'&lt;'); }
+function imgUrl(ltAd) { return IMG_BASE + encodeURIComponent(ltAd) + '.jpg'; }
+
+async function loadData() {
+    try {
+        const res = await fetch(REPO_BASE + '/data/urunler.json?t=' + Date.now());
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const data = await res.json();
+        parsed = data.map((p, i) => ({ ...p, id: i }));
+        searchIdx = parsed.map((p, idx) => ({
+            i: idx,
+            t: [p.trAd, p.ltAd, p.litre, p.boy, p.cap, p.govde].join(' ').toLocaleLowerCase('tr')
+        }));
+        filtered = parsed.slice();
+        document.getElementById('loading-box').style.display = 'none';
+        document.getElementById('search-box').style.display  = 'block';
+        resetList();
+    } catch(e) {
+        document.getElementById('loading-box').innerHTML =
+            '<p style="color:#c62828;font-size:14px;font-weight:700;">⚠️ Katalog yüklenemedi.</p>';
+    }
+}
+
+let debounceTimer = null;
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('search-input').addEventListener('input', function(e) {
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => {
+            const term = e.target.value.toLocaleLowerCase('tr').trim();
+            filtered = term
+                ? [...new Set(searchIdx.filter(s => s.t.includes(term)).map(s => s.i))].map(i => parsed[i])
+                : parsed.slice();
+            resetList();
+        }, 280);
+    });
+});
+
+function resetList() {
+    rendered = 0;
+    document.getElementById('catalog-list').innerHTML = '';
+    const st = document.getElementById('stats-text');
+    if (st) st.textContent = filtered.length + ' ürün listeleniyor.';
+    appendCards();
+}
+
+function appendCards() {
+    if (rendering) return;
+    rendering = true;
+    const list  = document.getElementById('catalog-list');
+    const batch = filtered.slice(rendered, rendered + PAGE);
+    if (!batch.length) { rendering = false; return; }
+    const frag = document.createDocumentFragment();
+    batch.forEach(p => frag.appendChild(buildCard(p)));
+    list.appendChild(frag);
+    rendered  += batch.length;
+    rendering  = false;
+}
+
+window.addEventListener('scroll', () => {
+    if (rendered >= filtered.length) return;
+    if (document.documentElement.scrollHeight - window.scrollY - window.innerHeight < 300) appendCards();
+}, { passive: true });
+
+function buildCard(p) {
+    const { id, trAd, ltAd, litre, boy, cap, govde } = p;
+
+    const card = document.createElement('div');
+    card.className = 'plant-card';
+    card.dataset.id = id;
+
+    const imgWrap = document.createElement('div');
+    imgWrap.className = 'card-img-wrap';
+    const img = document.createElement('img');
+    img.src = imgUrl(ltAd);
+    img.loading = 'lazy';
+    img.onerror = () => { imgWrap.innerHTML = '<div class="card-img-placeholder"><span>🌿</span><p>Fotoğraf Yok</p></div>'; };
+    imgWrap.appendChild(img);
+    card.appendChild(imgWrap);
+
+    const body = document.createElement('div');
+    body.className = 'card-body';
+    body.innerHTML = `
+        <div class="plant-title">${escHtml(trAd)}</div>
+        <div class="plant-latin">${escHtml(ltAd)}</div>
+        <div class="info-grid">
+            <div class="info-item"><span class="info-label">Litre</span>${escHtml(litre)}</div>
+            <div class="info-item"><span class="info-label">Boy</span>${escHtml(boy)}</div>
+            <div class="info-item"><span class="info-label">Çap</span>${escHtml(cap)}</div>
+            <div class="info-item"><span class="info-label">Gövde</span>${escHtml(govde)}</div>
+        </div>`;
+    card.appendChild(body);
+    return card;
+}
+
+function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg; t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2200);
+}
+
+loadData();
+</script>
+
+<script>
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/Fiyat/sw.js');
+}
+</script>
+</body>
+</html>
